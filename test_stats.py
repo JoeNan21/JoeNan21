@@ -22,7 +22,7 @@ def test_char_count():
 
 def test_word_frequency_normalized():
     freq = word_frequency("The the THE cat")
-    # After normalization all three 'the' variants should collapse
+    # After normalization all three 'the' variants collapse into one key.
     assert freq["the"] == 3
     assert freq["cat"] == 1
 
@@ -43,5 +43,6 @@ def test_sentence_count():
 
 
 def test_average_word_length():
-    assert average_word_length("hi bye") == 3.0
+    # "hi" = 2 chars, "bye" = 3 chars  →  avg = 2.5
+    assert average_word_length("hi bye") == 2.5
     assert average_word_length("") == 0.0
