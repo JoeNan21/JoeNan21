@@ -10,7 +10,9 @@ python stats.py "your text here"
 
 ## Features
 
-- Word count
-- Character count
+- Word count (punctuation excluded)
+- Character count (whitespace excluded)
+- Sentence count
+- Average word length
 - Word frequency analysis
-- Most common words
+- Most common words (stop words filtered)
