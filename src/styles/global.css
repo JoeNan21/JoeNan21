@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-base: #0a0a0a;
+  --bg-surface: #111111;
+  --bg-elevated: #1a1a1a;
+  --bg-border: #2a2a2a;
+  --accent-gold: #c9a84c;
+  --accent-teal: #2a6b6b;
+  --text-primary: #f0ede8;
+  --text-muted: #9a9590;
+  --status-green: #22c55e;
+  --status-amber: #f59e0b;
+  --status-red: #ef4444;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg-base);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--bg-border);
+  border-radius: 3px;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes caos-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.caos-pulse {
+  animation: caos-pulse 1.4s ease-in-out infinite;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-col {
+  scroll-snap-align: start;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded px-4 text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+    min-height: 44px;
+  }
+  .btn-gold {
+    @apply bg-gold text-black hover:bg-[#d6b55c];
+  }
+  .btn-teal {
+    @apply bg-teal text-ink hover:bg-[#347e7e];
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink border border-line hover:border-gold hover:text-gold;
+  }
+  .btn-danger {
+    @apply bg-transparent text-bad border border-bad/40 hover:bg-bad/10;
+  }
+  .btn-icon {
+    @apply inline-flex items-center justify-center rounded border border-line text-muted hover:text-gold hover:border-gold transition-colors;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .input {
+    @apply w-full rounded bg-elevated border border-line px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-gold focus:outline-none;
+    min-height: 44px;
+  }
+  .textarea {
+    @apply w-full rounded bg-elevated border border-line px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-gold focus:outline-none;
+  }
+  .card {
+    @apply rounded bg-surface border border-line;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-medium tracking-wide uppercase;
+  }
+  .label {
+    @apply block text-[11px] tracking-[0.12em] uppercase text-muted mb-1.5 font-medium;
+  }
+}
