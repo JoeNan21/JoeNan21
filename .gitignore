@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Local DB and credentials
+caos.db
+caos.db-journal
+gmail_token.json
+credentials.json
