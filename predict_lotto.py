@@ -118,6 +118,42 @@ def overdue(draws, pool=40, window=10):
 
 
 # ---------------------------------------------------------------------------
+# Triple Dip ($20) ticket - 8 Lotto+Powerball lines + 2 Strike lines
+# Hand-tuned blend of hot, overdue, and consensus numbers for draw #2590
+# ---------------------------------------------------------------------------
+
+TRIPLE_DIP = {
+    "lotto_powerball": [
+        ([8, 17, 29, 32, 38, 40],  7),
+        ([6, 17, 21, 24, 38, 40],  7),
+        ([8, 14, 19, 22, 36, 38],  5),
+        ([10, 17, 21, 29, 34, 40], 10),
+        ([6, 12, 19, 24, 32, 38],  7),
+        ([8, 17, 22, 29, 36, 40],  3),
+        ([12, 14, 21, 24, 38, 40], 10),
+        ([8, 10, 17, 32, 34, 38],  7),
+    ],
+    "strike": [
+        [17, 29, 38, 40],
+        [8, 21, 24, 32],
+    ],
+}
+
+
+def print_triple_dip():
+    print("\n" + "-" * 62)
+    print("  $20 TRIPLE DIP  -  DRAW #2590  (Sat 30 May 2026)")
+    print("-" * 62)
+    print("\n  Lotto + Powerball (8 lines):")
+    for i, (main, pb) in enumerate(TRIPLE_DIP["lotto_powerball"]):
+        line = " ".join(f"{n:02d}" for n in main)
+        print(f"    {chr(65 + i)}   {line}   PB: {pb:02d}")
+    print("\n  Strike (2 lines):")
+    for label, nums in zip(("Primary  ", "Secondary"), TRIPLE_DIP["strike"]):
+        print(f"    {label}: " + " ".join(f"{n:02d}" for n in nums))
+
+
+# ---------------------------------------------------------------------------
 # Main report
 # ---------------------------------------------------------------------------
 
@@ -174,6 +210,8 @@ def print_report():
     print(f"\n  Strategy 4 - Random quick-pick (seeded #{2590})")
     print(f"    Main      : {qp}")
     print(f"    Powerball : {qp_pb}")
+
+    print_triple_dip()
 
     print("\n" + "=" * 62)
     print("  DISCLAIMER")
