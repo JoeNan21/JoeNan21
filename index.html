@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Nanai Consulting — Revenue Systems for Modern B2B Teams. AI-enabled revenue systems, pipeline discipline, and commercial growth for NZ & AU businesses." />
+<title>Nanai Consulting — Revenue Systems for Modern B2B Teams</title>
+<meta name="theme-color" content="#0F172A" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230E7490'/%3E%3Cstop offset='1' stop-color='%23D4A373'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='800' fill='%230F172A' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nanai Consulting — Revenue Systems for Modern B2B Teams" />
+<meta property="og:description" content="Helping NZ & AU businesses build AI-enabled revenue systems, pipeline discipline, and commercial growth." />
+<meta property="og:site_name" content="Nanai Consulting" />
+<meta property="og:locale" content="en_NZ" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Nanai Consulting — Revenue Systems for Modern B2B Teams" />
+<meta name="twitter:description" content="AI-enabled revenue systems, pipeline discipline, and commercial growth for NZ & AU B2B teams." />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nanai Consulting",
+  "description": "B2B sales training and revenue systems strategy for NZ & AU businesses. AI-enabled revenue systems, pipeline discipline, and commercial growth.",
+  "founder": { "@type": "Person", "name": "Joey Nanai", "jobTitle": "Founder & Principal Strategist" },
+  "areaServed": ["New Zealand", "Australia"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Auckland", "addressCountry": "NZ" },
+  "knowsAbout": ["B2B Sales Training", "Revenue Systems", "AI Sales Workflows", "Pipeline Management", "Enterprise Sales Strategy"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F172A;
+    --graphite: #1E293B;
+    --graphite-soft: #243245;
+    --teal: #0E7490;
+    --teal-bright: #14a3c2;
+    --gold: #D4A373;
+    --gold-soft: #e6c096;
+    --offwhite: #F8FAFC;
+    --muted: #94a3b8;
+    --border: rgba(248, 250, 252, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--offwhite);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .gold { color: var(--gold); }
+  .teal { color: var(--teal-bright); }
+
+  a { color: inherit; text-decoration: none; }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 200;
+    padding: 0.75rem 1.25rem;
+    background: var(--teal);
+    color: var(--offwhite);
+    border-radius: 0 0 8px 0;
+    font-weight: 600;
+  }
+  .skip-link:focus { left: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .hero-glow { animation: none; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ============ NAV ============ */
+  nav.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(15, 23, 42, 0.72);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  nav.site-nav.scrolled {
+    border-bottom-color: var(--border);
+    background: rgba(15, 23, 42, 0.92);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .logo {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.14em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--gold) 100%);
+    position: relative;
+    box-shadow: 0 0 24px rgba(14, 116, 144, 0.45);
+  }
+  .logo-mark::after {
+    content: 'N';
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 0.85rem;
+    color: var(--navy);
+    font-weight: 800;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.25rem;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.92rem;
+    color: var(--muted);
+    transition: color 0.2s ease;
+    position: relative;
+  }
+  .nav-links a:hover { color: var(--offwhite); }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.78rem 1.4rem;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--teal);
+    color: var(--offwhite);
+    box-shadow: 0 0 0 1px rgba(20, 163, 194, 0.2), 0 8px 30px -10px rgba(14, 116, 144, 0.6);
+  }
+  .btn-primary:hover {
+    background: var(--teal-bright);
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 1px rgba(20, 163, 194, 0.4), 0 12px 36px -10px rgba(14, 116, 144, 0.9);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--offwhite);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    color: var(--offwhite);
+    cursor: pointer;
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8rem 0 5rem;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14, 116, 144, 0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 100%, rgba(212, 163, 115, 0.10) 0%, transparent 60%),
+      var(--navy);
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(248, 250, 252, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(248, 250, 252, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 30%, transparent 80%);
+  }
+  .hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(14, 116, 144, 0.18) 0%, transparent 70%);
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(40px);
+    animation: pulse 8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+    50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: rgba(30, 41, 59, 0.5);
+    margin-bottom: 1.75rem;
+  }
+  .eyebrow .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 12px var(--gold);
+  }
+  h1.hero-title {
+    font-size: clamp(2.5rem, 6.5vw, 5rem);
+    margin-bottom: 1.5rem;
+  }
+  h1.hero-title .gold {
+    background: linear-gradient(120deg, var(--gold) 0%, var(--gold-soft) 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero-sub {
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+    line-height: 1.65;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    max-width: 700px;
+  }
+  .hero-meta-item .num {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--offwhite);
+  }
+  .hero-meta-item .num .gold { color: var(--gold); }
+  .hero-meta-item .label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+
+  /* ============ SECTION COMMON ============ */
+  section {
+    padding: 7rem 0;
+    position: relative;
+  }
+  .section-head {
+    max-width: 760px;
+    margin-bottom: 4rem;
+  }
+  .section-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-bright);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .section-tag::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--teal-bright);
+  }
+  h2.section-title {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    margin-bottom: 1.25rem;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 640px;
+  }
+
+  /* ============ ABOUT ============ */
+  .about {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--graphite) 50%, var(--navy) 100%);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-portrait {
+    aspect-ratio: 4/5;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(212, 163, 115, 0.25) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(14, 116, 144, 0.3) 0%, transparent 50%),
+      linear-gradient(160deg, var(--graphite) 0%, var(--navy) 100%);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+  }
+  .about-portrait::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(248, 250, 252, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(248, 250, 252, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .portrait-initials {
+    font-family: 'Sora', sans-serif;
+    font-size: 8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--teal-bright) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.05em;
+  }
+  .portrait-tag {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  .portrait-tag .name {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .portrait-tag .role {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  .portrait-tag .flag {
+    font-size: 0.82rem;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .about-body p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+  }
+  .about-body p strong { color: var(--offwhite); font-weight: 500; }
+  .trust-badge {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(212, 163, 115, 0.08) 0%, rgba(14, 116, 144, 0.08) 100%);
+    border: 1px solid rgba(212, 163, 115, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .trust-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+    color: var(--navy);
+    display: grid;
+    place-items: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    box-shadow: 0 0 24px rgba(212, 163, 115, 0.3);
+  }
+  .trust-text { font-size: 0.95rem; }
+  .trust-text .head {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    color: var(--offwhite);
+    margin-bottom: 0.15rem;
+  }
+  .trust-text .sub { color: var(--muted); font-size: 0.88rem; }
+
+  /* ============ SERVICES ============ */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .service-card {
+    padding: 2rem;
+    border-radius: 14px;
+    background: linear-gradient(180deg, var(--graphite) 0%, rgba(30, 41, 59, 0.4) 100%);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(14, 116, 144, 0.18) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(14, 116, 144, 0.4);
+  }
+  .service-card:hover::before { opacity: 1; }
+  .service-num {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 1.75rem;
+  }
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(14, 116, 144, 0.15);
+    border: 1px solid rgba(14, 116, 144, 0.3);
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--teal-bright);
+  }
+  .service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  .service-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  /* ============ RESULTS ============ */
+  .results {
+    background: var(--graphite);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .result-card {
+    padding: 2.25rem;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.4) 100%);
+    border: 1px solid var(--border);
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .result-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 163, 115, 0.3);
+  }
+  .result-metric {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .result-metric .unit {
+    font-size: 1.5rem;
+    color: var(--gold-soft);
+  }
+  .result-label {
+    font-size: 0.85rem;
+    color: var(--teal-bright);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .result-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+  .result-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  .result-tag {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(14, 116, 144, 0.12);
+    border: 1px solid rgba(14, 116, 144, 0.25);
+    color: var(--teal-bright);
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ============ SPEAKING ============ */
+  .speaking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .speaking-topics {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .speaking-topics li {
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    background: var(--graphite);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+  .speaking-topics li:hover {
+    border-color: rgba(14, 116, 144, 0.5);
+    transform: translateX(4px);
+  }
+  .topic-num {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+    width: 32px;
+  }
+  .topic-text {
+    font-weight: 500;
+    color: var(--offwhite);
+    font-size: 1rem;
+  }
+  .speaking-card {
+    padding: 3rem;
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(14, 116, 144, 0.22) 0%, transparent 60%),
+      linear-gradient(180deg, var(--graphite) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .speaking-card .quote {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 2rem;
+    color: var(--offwhite);
+  }
+  .speaking-card .quote-mark {
+    font-size: 4rem;
+    color: var(--gold);
+    line-height: 0;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-family: 'Sora', sans-serif;
+  }
+  .speaking-card p {
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--graphite) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 0%, rgba(14, 116, 144, 0.18) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+  .contact-info h2 { margin-bottom: 1.5rem; }
+  .contact-info p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  .contact-details { display: grid; gap: 1.25rem; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contact-item .ico {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(14, 116, 144, 0.12);
+    border: 1px solid rgba(14, 116, 144, 0.3);
+    display: grid;
+    place-items: center;
+    color: var(--teal-bright);
+    flex-shrink: 0;
+  }
+  .contact-item .lbl {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.1rem;
+  }
+  .contact-item .val {
+    font-weight: 500;
+    color: var(--offwhite);
+  }
+
+  form.contact-form {
+    padding: 2.5rem;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border);
+    box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.6);
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .field { margin-bottom: 1.25rem; }
+  .field label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  .field input,
+  .field textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--offwhite);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--teal-bright);
+    box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.18);
+  }
+  .field textarea { resize: vertical; min-height: 140px; }
+  .form-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 1.05rem 1.4rem;
+    font-size: 1rem;
+  }
+  .form-note {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 1rem;
+  }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--gold);
+    font-family: 'Sora', sans-serif;
+    font-size: 1.1rem;
+  }
+  .form-success.show { display: block; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--border);
+    background: var(--navy);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .footer-copy {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  .footer-links a {
+    color: var(--muted);
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ============ REVEAL ANIMATIONS ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-grid, .speaking-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .results-grid { grid-template-columns: 1fr; }
+    .about-portrait { max-width: 460px; margin: 0 auto; width: 100%; }
+  }
+  @media (max-width: 720px) {
+    .container { padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav-links.open {
+      display: flex;
+      position: absolute;
+      top: 72px;
+      left: 0; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: rgba(15, 23, 42, 0.98);
+      padding: 1rem 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-links.open li { width: 100%; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+    .nav-links.open li:last-child { border-bottom: none; padding-top: 1rem; }
+    .nav-links.open .btn-primary { width: 100%; justify-content: center; }
+    section { padding: 5rem 0; }
+    .hero { padding: 7rem 0 4rem; }
+    .hero-meta { gap: 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .speaking-card { padding: 2rem; }
+    form.contact-form { padding: 1.75rem; }
+    .portrait-initials { font-size: 5rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#home" class="skip-link">Skip to content</a>
+
+<!-- NAV -->
+<nav class="site-nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark"></span>
+      <span>NANAI CONSULTING</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn btn-primary">Book a Call</a></li>
+    </ul>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-content">
+    <div class="eyebrow reveal"><span class="dot"></span> B2B Revenue Systems · NZ &amp; AU</div>
+    <h1 class="hero-title reveal reveal-delay-1">
+      <span class="gold">Revenue Systems</span><br/>
+      for Modern B2B Teams
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">
+      Helping NZ &amp; AU businesses build AI-enabled revenue systems, pipeline discipline, and commercial growth — without the noise of hustle culture.
+    </p>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a href="#contact" class="btn btn-primary">
+        Book a Revenue Call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="btn btn-ghost">Explore Services</a>
+    </div>
+    <div class="hero-meta reveal reveal-delay-4">
+      <div class="hero-meta-item">
+        <div class="num"><span class="gold">#1</span> Globally</div>
+        <div class="label">SAP Sales Competition · 11,000+ participants</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="num"><span class="gold">10+</span> Years</div>
+        <div class="label">Enterprise B2B Sales · NZ &amp; AU</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="num"><span class="gold">AI-</span>Enabled</div>
+        <div class="label">Modern Revenue Architecture</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">About</div>
+      <h2 class="section-title">Enterprise Sales Experience.<br/><span class="gold">Operator-Level</span> Thinking.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-portrait reveal">
+        <div class="portrait-initials">JN</div>
+        <div class="portrait-tag">
+          <div>
+            <div class="name">Joey Nanai</div>
+            <div class="role">Founder &amp; Principal Strategist</div>
+          </div>
+          <div class="flag">Auckland · NZ</div>
+        </div>
+      </div>
+      <div class="about-body reveal reveal-delay-1">
+        <p>
+          Joey Nanai is a <strong>B2B sales trainer and revenue systems strategist</strong> working with high-growth teams across New Zealand and Australia. His work sits at the intersection of <strong>enterprise sales discipline</strong>, <strong>modern AI tooling</strong>, and <strong>commercial operating systems</strong>.
+        </p>
+        <p>
+          Coming from a decade inside enterprise sales — closing complex, multi-stakeholder deals across SaaS, services, and platform technology — Joey now helps founders and revenue leaders rebuild how their teams sell, forecast, and scale.
+        </p>
+        <p>
+          The Nanai approach is calm, structural, and deeply commercial. No hype. No noise. Just systems that move the number.
+        </p>
+        <div class="trust-badge">
+          <div class="trust-icon">#1</div>
+          <div class="trust-text">
+            <div class="head">Ranked #1 Globally</div>
+            <div class="sub">SAP Global Sales Competition · 11,000+ participants worldwide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Services</div>
+      <h2 class="section-title">Built for teams who sell <span class="gold">complex revenue</span>.</h2>
+      <p class="section-sub">Six core engagements — designed to embed inside your commercial function, not float above it.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
+        <h3>Revenue Systems Audit</h3>
+        <p>A structural review of how your team generates, qualifies, forecasts, and closes revenue. Outputs the bottlenecks costing you the number.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg></div>
+        <h3>AI Revenue Workflow Design</h3>
+        <p>Map and deploy AI into the commercial stack — prospecting, research, prep, follow-up — so reps spend more time in real conversations.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Sales Leadership Coaching</h3>
+        <p>1:1 and team coaching for sales leaders learning to manage forecast, performance, and culture in a modern revenue environment.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Pipeline &amp; CRM Optimisation</h3>
+        <p>Rebuild your pipeline stages, deal hygiene, and CRM signal so forecasting becomes a strategic asset — not a guess.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">05</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2L4 7v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V7l-8-5z"/></svg></div>
+        <h3>Enterprise Sales Strategy</h3>
+        <p>Go-to-market design for teams moving up-market — account selection, motion design, executive selling, and win-rate engineering.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">06</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div>
+        <h3>Speaking &amp; Workshops</h3>
+        <p>Keynotes and immersive workshops for sales kick-offs, leadership offsites, and founder programmes across NZ and AU.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Results</div>
+      <h2 class="section-title">Outcomes, not <span class="gold">activity</span>.</h2>
+      <p class="section-sub">Selected engagements across SaaS, professional services, and technology platforms.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="result-metric">+47<span class="unit">%</span></div>
+        <div class="result-label">Pipeline Coverage</div>
+        <h3>SaaS Scale-Up · Auckland</h3>
+        <p>Restructured pipeline stages and qualification standards. Forecast accuracy moved from 62% to 91% inside two quarters.</p>
+        <span class="result-tag">Pipeline · CRM</span>
+      </div>
+      <div class="result-card reveal reveal-delay-1">
+        <div class="result-metric">3.2<span class="unit">x</span></div>
+        <div class="result-label">Outbound Productivity</div>
+        <h3>B2B Services · Sydney</h3>
+        <p>Deployed an AI-enabled prospecting workflow across an 18-rep team. Meaningful conversations per rep tripled within eight weeks.</p>
+        <span class="result-tag">AI Workflow · Enablement</span>
+      </div>
+      <div class="result-card reveal reveal-delay-2">
+        <div class="result-metric">+$4.8M<span class="unit"></span></div>
+        <div class="result-label">Enterprise Revenue</div>
+        <h3>Tech Platform · ANZ</h3>
+        <p>Designed an enterprise GTM motion targeting the top 200 accounts. Added $4.8M in qualified pipeline inside year one.</p>
+        <span class="result-tag">Strategy · Enterprise</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section class="speaking" id="speaking">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Speaking</div>
+      <h2 class="section-title">Keynotes &amp; <span class="gold">workshops</span>.</h2>
+      <p class="section-sub">Sharp, structural sessions for sales kick-offs, leadership offsites, and founder programmes.</p>
+    </div>
+    <div class="speaking-grid">
+      <ul class="speaking-topics">
+        <li class="reveal"><span class="topic-num">T·01</span><span class="topic-text">The Modern Revenue Operating System</span></li>
+        <li class="reveal reveal-delay-1"><span class="topic-num">T·02</span><span class="topic-text">AI Inside the Sales Motion — What Actually Works</span></li>
+        <li class="reveal reveal-delay-2"><span class="topic-num">T·03</span><span class="topic-text">Pipeline Discipline for Founders &amp; First Sales Leaders</span></li>
+        <li class="reveal reveal-delay-3"><span class="topic-num">T·04</span><span class="topic-text">Executive Selling in the AI Era</span></li>
+        <li class="reveal reveal-delay-4"><span class="topic-num">T·05</span><span class="topic-text">From Activity to Outcomes — Rebuilding Sales Culture</span></li>
+      </ul>
+      <div class="speaking-card reveal reveal-delay-2">
+        <span class="quote-mark">&ldquo;</span>
+        <div class="quote">Joey delivers the rare combination — enterprise sales depth, AI fluency, and a calm, structural way of teaching that actually lands with revenue teams.</div>
+        <p>Available for keynotes, workshops, and team off-sites across New Zealand, Australia, and the wider APAC region. Tailored to your company stage, sales motion, and revenue ambition.</p>
+        <a href="#contact" class="btn btn-primary">
+          Speaking Enquiry
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-tag">Contact</div>
+        <h2 class="section-title">Let's build your <span class="gold">revenue system</span>.</h2>
+        <p>Tell us about your team, your number, and where the system is leaking. We'll come back within one business day.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <div class="lbl">Email</div>
+              <div class="val">hello@nanaiconsulting.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="lbl">Based</div>
+              <div class="val">Auckland, New Zealand</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div>
+              <div class="lbl">Working with</div>
+              <div class="val">Teams across NZ, AU &amp; APAC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" placeholder="Where you work" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your team, sales motion, and where the system is leaking..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">
+          Book A Revenue Systems Call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-note">Replies within one business day · NZ &amp; AU hours</div>
+        <div class="form-success" id="formSuccess">
+          ✓ Thank you. Your request has landed — Joey will reply within one business day.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-copy">© <span id="year"></span> Nanai Consulting · Revenue Systems for Modern B2B Teams</div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav border on scroll
+  const nav = document.getElementById('siteNav');
+  const onScroll = () => {
+    if (window.scrollY > 16) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Form
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+    if (!name || !email || !message) {
+      form.querySelectorAll('input, textarea').forEach(f => {
+        if (f.required && !f.value.trim()) f.style.borderColor = 'rgba(212, 163, 115, 0.6)';
+      });
+      return;
+    }
+    form.querySelectorAll('.field, .form-row, .form-submit, .form-note').forEach(el => el.style.display = 'none');
+    success.classList.add('show');
+  });
+  form.querySelectorAll('input, textarea').forEach(f => {
+    f.addEventListener('input', () => f.style.borderColor = '');
+  });
+</script>
+
+</body>
+</html>
