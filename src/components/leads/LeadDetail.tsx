@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CalendarPlus,
@@ -18,6 +18,7 @@ import { Pill } from '@/components/ui/Pill'
 import { Dot } from '@/components/ui/Dot'
 import { Button } from '@/components/ui/Button'
 import { useLeadsStore } from '@/store/LeadsContext'
+import { DepositRequestPanel } from '@/components/leads/DepositRequestPanel'
 import {
   formatNZDate,
   gapColour,
@@ -48,6 +49,11 @@ export function LeadDetail({
   const { setStage, update, appendNote, logContact, remove } = useLeadsStore()
   const [note, setNote] = useState('')
   const [confirming, setConfirming] = useState<'lost' | 'delete' | null>(null)
+  const [depositPanel, setDepositPanel] = useState<'deposit-request' | 'date-hold' | null>(null)
+
+  useEffect(() => {
+    if (!open) setDepositPanel(null)
+  }, [open])
 
   const gap = useMemo(() => (lead ? hoursSince(lead.lastContact) : null), [lead])
 
@@ -126,29 +132,61 @@ export function LeadDetail({
           </div>
         </div>
 
-        {/* Quick Actions */}
-        <div className="grid grid-cols-2 gap-2">
-          <Button variant="gold" onClick={() => go(`/composer?leadId=${lead.id}`)}>
-            <Mail size={16} /> Draft Message
-          </Button>
-          <Button variant="teal" onClick={handleBookVisit}>
-            <CalendarPlus size={16} /> Book Visit
-          </Button>
-          <Button variant="ghost" onClick={() => logContact(lead.id)}>
-            <Phone size={16} /> Log Contact
-          </Button>
-          <Button variant="ghost" onClick={() => go(`/tools?leadId=${lead.id}&tab=prep`)}>
-            <Wrench size={16} /> Prep Me
-          </Button>
-          <Button variant="ghost" onClick={() => go(`/tools?leadId=${lead.id}&tab=summary`)}>
-            <Notebook size={16} /> Process Notes
-          </Button>
-          {lead.stage !== 'confirmed' && (
-            <Button variant="ghost" onClick={() => handleStageChange('confirmed')}>
-              <CheckCircle2 size={16} /> Mark Confirmed
+        {/* Quick Actions or Close Panel */}
+        {lead.stage === 'post-visit' ? (
+          <div
+            className="rounded border-l-4 p-4 space-y-3"
+            style={{ backgroundColor: 'rgba(124,29,29,0.25)', borderLeftColor: '#ef4444' }}
+          >
+            <div className="text-[11px] uppercase tracking-wider font-semibold" style={{ color: '#ef4444' }}>
+              Close or Park
+            </div>
+            <div className="space-y-2">
+              <Button variant="gold" className="w-full" onClick={() => setDepositPanel('deposit-request')}>
+                Request Deposit
+              </Button>
+              <Button variant="teal" className="w-full" onClick={() => setDepositPanel('date-hold')}>
+                Offer Date Hold
+              </Button>
+              <Button variant="ghost" className="w-full" onClick={() => setConfirming('lost')}>
+                Mark Lost
+              </Button>
+            </div>
+            {depositPanel && (
+              <DepositRequestPanel
+                lead={lead}
+                messageType={depositPanel}
+                onClose={() => setDepositPanel(null)}
+                onCopy={(text) => {
+                  appendNote(lead.id, `Sent ${depositPanel === 'deposit-request' ? 'deposit request' : 'date hold offer'}: ${text.slice(0, 80)}…`)
+                }}
+              />
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-2">
+            <Button variant="gold" onClick={() => go(`/composer?leadId=${lead.id}`)}>
+              <Mail size={16} /> Draft Message
             </Button>
-          )}
-        </div>
+            <Button variant="teal" onClick={handleBookVisit}>
+              <CalendarPlus size={16} /> Book Visit
+            </Button>
+            <Button variant="ghost" onClick={() => logContact(lead.id)}>
+              <Phone size={16} /> Log Contact
+            </Button>
+            <Button variant="ghost" onClick={() => go(`/tools?leadId=${lead.id}&tab=prep`)}>
+              <Wrench size={16} /> Prep Me
+            </Button>
+            <Button variant="ghost" onClick={() => go(`/tools?leadId=${lead.id}&tab=summary`)}>
+              <Notebook size={16} /> Process Notes
+            </Button>
+            {lead.stage !== 'confirmed' && (
+              <Button variant="ghost" onClick={() => handleStageChange('confirmed')}>
+                <CheckCircle2 size={16} /> Mark Confirmed
+              </Button>
+            )}
+          </div>
+        )}
 
         {/* Stage mover */}
         <div>

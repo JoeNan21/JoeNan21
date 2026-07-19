@@ -169,6 +169,7 @@ export function buildMessagePrompt(
 }
 
 export function buildMorningPriorityPrompt(leads: Lead[]): string {
+  const postVisit = leads.filter((l) => l.stage === 'post-visit')
   const summary = leads
     .filter((l) => l.stage !== 'lost' && l.stage !== 'confirmed')
     .map(
@@ -178,12 +179,17 @@ export function buildMorningPriorityPrompt(leads: Lead[]): string {
     .join('\n')
 
   return [
+    postVisit.length > 0
+      ? `CLOSE DIRECTIVE: ${postVisit.length} lead${postVisit.length > 1 ? 's are' : ' is'} post-visit. These must close or park today — no drift.`
+      : '',
     'You have the active pipeline below. Return ONE sentence stating the single most important action right now and why.',
     'No preamble. No list. No markdown. Just one direct sentence (max 30 words).',
     '',
     'PIPELINE:',
     summary || '(no active leads)',
-  ].join('\n')
+  ]
+    .filter(Boolean)
+    .join('\n')
 }
 
 export function buildSuggestedActionsPrompt(leads: Lead[]): string {

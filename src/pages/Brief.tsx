@@ -18,7 +18,7 @@ export function BriefPage() {
   const navigate = useNavigate()
   const { leads } = useLeadsStore()
   const { settings } = useSettingsStore()
-  const { sorted, overdueNew, overduePostVisit, stale, todayVisits } = usePriority(leads)
+  const { sorted, overdueNew, stale, todayVisits } = usePriority(leads)
   const priorityAI = useClaude(settings.apiKey)
   const [suggested, setSuggested] = useState<string>('')
   const [loadingSuggested, setLoadingSuggested] = useState(false)
@@ -63,11 +63,60 @@ export function BriefPage() {
     }
   }
 
-  // Overdue combined
-  const overdue = [...overdueNew, ...overduePostVisit]
+  // Post-visit leads within 72h — shown in close directive banner
+  const postVisit72h = useMemo(() => {
+    return leads
+      .filter((l) => {
+        if (l.stage !== 'post-visit') return false
+        const h = hoursSince(l.visitDate)
+        return h != null && h <= 72
+      })
+      .sort((a, b) => {
+        const ha = hoursSince(a.visitDate) ?? 0
+        const hb = hoursSince(b.visitDate) ?? 0
+        return hb - ha
+      })
+  }, [leads])
 
   return (
     <div className="p-4 md:p-6 space-y-5 max-w-5xl mx-auto">
+      {/* Close Directive Banner */}
+      {postVisit72h.length > 0 && (
+        <div
+          className="rounded border-l-4 p-4 space-y-2"
+          style={{ backgroundColor: '#7c1d1d', borderLeftColor: '#ef4444' }}
+        >
+          <div className="text-[11px] uppercase tracking-wider font-semibold" style={{ color: '#ef4444' }}>
+            Close Directive
+          </div>
+          {postVisit72h.map((lead) => {
+            const h = hoursSince(lead.visitDate) ?? 0
+            const prefix = h <= 48 ? '⚡' : '🔴'
+            const timeText =
+              h < 24
+                ? `${Math.round(h)}h ago`
+                : `${Math.round(h / 24)}d ago`
+            return (
+              <div key={lead.id} className="flex items-center justify-between gap-2">
+                <div className="text-sm" style={{ color: '#f0ede8' }}>
+                  {prefix} <span className="font-semibold">{lead.name}</span>
+                  <span className="text-xs ml-1.5" style={{ color: '#9a9590' }}>
+                    visited {timeText}
+                  </span>
+                </div>
+                <button
+                  onClick={() => setOpenLead(lead)}
+                  className="rounded px-3 py-1.5 text-xs font-semibold border transition-colors hover:bg-bad/10"
+                  style={{ minHeight: 36, color: '#ef4444', borderColor: 'rgba(239,68,68,0.4)' }}
+                >
+                  Close Now →
+                </button>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-start justify-between gap-3 flex-wrap">
         <div>
@@ -157,16 +206,13 @@ export function BriefPage() {
         )}
       </Section>
 
-      {/* Overdue */}
+      {/* Overdue — new enquiries only (post-visit handled by Close Directive Banner) */}
       <Section title="Overdue Follow-Ups" icon={<AlertTriangle size={14} />}>
-        {overdue.length === 0 ? (
+        {overdueNew.length === 0 ? (
           <EmptyState title="Nothing overdue" body="Response times look clean." />
         ) : (
           <div className="space-y-2">
-            {overdue.map((lead) => {
-              const reason = overdueNew.includes(lead)
-                ? 'Enquiry unreplied'
-                : 'Post-visit follow-up due'
+            {overdueNew.map((lead) => {
               const gap = hoursSince(lead.lastContact)
               return (
                 <div
@@ -182,7 +228,7 @@ export function BriefPage() {
                       <div className="text-ink font-semibold text-sm truncate">{lead.name}</div>
                     </div>
                     <div className="text-muted text-[11px] mt-0.5">
-                      {reason} · {gapLabel(gap)}
+                      Enquiry unreplied · {gapLabel(gap)}
                     </div>
                   </button>
                   <Button

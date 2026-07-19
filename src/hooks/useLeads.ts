@@ -4,6 +4,24 @@ import { KEYS, readJSON, writeJSON } from '@/lib/storage'
 import { buildSampleLeads } from '@/lib/sampleData'
 import { todayISO } from '@/lib/dates'
 
+function applyPostVisitTrigger(lead: Lead): Lead {
+  const now = new Date()
+  const followUpDue = new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString()
+  const stamp = now.toLocaleString('en-NZ', {
+    day: 'numeric',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+  const entry = `[${stamp}] Visit completed — 24h follow-up due`
+  return {
+    ...lead,
+    followUpDue,
+    lastContact: now.toISOString(),
+    notes: lead.notes ? `${lead.notes}\n${entry}` : entry,
+  }
+}
+
 function loadInitial(): Lead[] {
   const bootstrapped = localStorage.getItem(KEYS.bootstrapped)
   if (!bootstrapped) {
@@ -69,7 +87,16 @@ export function useLeads() {
   }, [])
 
   const setStage = useCallback((id: string, stage: Stage) => {
-    setLeads((prev) => prev.map((l) => (l.id === id ? { ...l, stage } : l)))
+    setLeads((prev) =>
+      prev.map((l) => {
+        if (l.id !== id) return l
+        const updated: Lead = { ...l, stage }
+        if (stage === 'post-visit' && l.stage !== 'post-visit') {
+          return applyPostVisitTrigger(updated)
+        }
+        return updated
+      }),
+    )
   }, [])
 
   const appendNote = useCallback((id: string, text: string) => {
