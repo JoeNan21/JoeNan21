@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { articleById } from '../data';
+import { articleById } from '../content';
 import { useLanguage } from '../context/LanguageContext';
 import { ReviewBadge } from '../components/ReviewBadge';
 import { BookmarkButton } from '../components/BookmarkButton';

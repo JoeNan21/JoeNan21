@@ -1,4 +1,4 @@
-import { ceremonies, articles, glossary, phrases } from '../data';
+import { ceremonies, articles, glossary, phrases } from '../content';
 
 export interface SearchHit {
   id: string;

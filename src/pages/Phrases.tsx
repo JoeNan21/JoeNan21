@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { phrases } from '../data';
+import { phrases } from '../content';
 import { useLanguage } from '../context/LanguageContext';
-import type { PhraseCategory } from '../data/types';
+import type { PhraseCategory } from '../content/types';
 import { ReviewBadge } from '../components/ReviewBadge';
 
 const categories: { id: PhraseCategory | 'all'; label_en: string; label_sm: string }[] = [

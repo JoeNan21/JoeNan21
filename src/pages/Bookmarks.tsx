@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useBookmarks } from '../context/BookmarkContext';
-import { ceremonyById, articleById } from '../data';
+import { ceremonyById, articleById } from '../content';
 import { useLanguage } from '../context/LanguageContext';
 
 export function Bookmarks() {

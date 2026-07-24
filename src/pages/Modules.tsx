@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ceremonies, articles } from '../data';
+import { ceremonies, articles } from '../content';
 import { useLanguage } from '../context/LanguageContext';
 import { ReviewBadge } from '../components/ReviewBadge';
 

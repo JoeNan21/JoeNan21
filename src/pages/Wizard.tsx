@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { events, roles, questions, findAnswer } from '../data/wizard';
+import { events, roles, questions, findAnswer } from '../content/wizard';
 import { useLanguage } from '../context/LanguageContext';
 
 type Step = 1 | 2 | 3 | 4;

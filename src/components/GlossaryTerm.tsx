@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { glossaryById } from '../data';
+import { glossaryById } from '../content';
 import { useLanguage } from '../context/LanguageContext';
 
 export function GlossaryTerm({ id, children }: { id: string; children: React.ReactNode }) {

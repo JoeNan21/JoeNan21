@@ -43,8 +43,8 @@ src/
 ├── App.tsx                     # routes
 ├── components/                 # Layout, SearchBar, LanguageToggle, BookmarkButton, ReviewBadge, GlossaryTerm
 ├── context/                    # LanguageContext (lang + t + pick), BookmarkContext
-├── content/ui/{en,sm}.json     # all UI chrome strings — never hardcode user-facing copy
-├── data/
+├── content/
+│   ├── ui/{en,sm}.json         # all UI chrome strings — never hardcode user-facing copy
 │   ├── types.ts                # Ceremony, Article, GlossaryEntry, Phrase, ReviewStatus
 │   ├── ceremonies.ts           # ten ceremonies, each with roles/steps/prepare/wear/mistakes
 │   ├── articles.ts             # reference articles (fa'amatai overview, fa'alavelave, 'ie toga, dress)
@@ -52,7 +52,7 @@ src/
 │   ├── phrases.ts              # bilingual phrase library w/ pronunciation
 │   ├── wizard.ts               # decision-tree answers for the Protocol Wizard
 │   ├── reviewPatches.ts        # reviewer overrides — see "Cultural Review" below
-│   └── index.ts                # exports raw data with patches applied
+│   └── index.ts                # exports raw content with patches applied
 ├── lib/
 │   ├── search.ts               # tiny in-memory search across all content
 │   └── reviewExport.ts         # builds the markdown bundle for /review

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { glossary } from '../data';
+import { glossary } from '../content';
 import { useLanguage } from '../context/LanguageContext';
 import { ReviewBadge } from '../components/ReviewBadge';
 

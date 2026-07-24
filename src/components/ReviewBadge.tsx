@@ -1,4 +1,4 @@
-import type { ReviewStatus } from '../data/types';
+import type { ReviewStatus } from '../content/types';
 import { useLanguage } from '../context/LanguageContext';
 
 export function ReviewBadge({ review }: { review: ReviewStatus }) {
