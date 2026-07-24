@@ -4,19 +4,13 @@ import { useLanguage } from '../context/LanguageContext';
 import { ReviewBadge } from '../components/ReviewBadge';
 
 export function Modules() {
-  const { t, pick, lang } = useLanguage();
+  const { t, pick } = useLanguage();
   return (
     <div className="container-wide py-10 md:py-16">
       <header className="mb-12 animate-fadeUp">
         <div className="tile-eyebrow mb-2">{t('nav.modules')}</div>
-        <h1 className="font-display text-3xl md:text-5xl text-navy">
-          {lang === 'sm' ? 'Vaega o le tusi fa’asino' : 'The library'}
-        </h1>
-        <p className="lede mt-4 max-w-prose">
-          {lang === 'sm'
-            ? 'O sauniga ma le fa’amatalaga atoa o tu, fa’amatai, ma le fa’alavelave.'
-            : 'Every ceremony and the full body of articles on protocol, fa’amatai, and obligation.'}
-        </p>
+        <h1 className="font-display text-3xl md:text-5xl text-navy">{t('modules.library.title')}</h1>
+        <p className="lede mt-4 max-w-prose">{t('modules.library.subtitle')}</p>
       </header>
 
       <section className="mb-16 animate-fadeUp">
@@ -44,7 +38,7 @@ export function Modules() {
       </section>
 
       <section className="animate-fadeUp">
-        <div className="tile-eyebrow mb-4">{lang === 'sm' ? 'Tala fa’avae' : 'Reference articles'}</div>
+        <div className="tile-eyebrow mb-4">{t('modules.referenceArticles')}</div>
         <div className="grid sm:grid-cols-2 gap-4">
           {articles.map((a) => (
             <Link key={a.id} to={`/article/${a.id}`} className="tile">

@@ -1,5 +1,5 @@
 import { ceremonies, articles, glossary, phrases } from '../content';
-import type { Ceremony, Article, GlossaryEntry, Phrase, ReviewStatus } from '../content/types';
+import type { Ceremony, Article, GlossaryEntry, Phrase, ReviewStatus } from '../types/content';
 
 function statusLabel(r: ReviewStatus): string {
   if (r.status === 'approved') {

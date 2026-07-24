@@ -1,4 +1,5 @@
-import type { ReviewStatus } from './types';
+import type { ReviewStatus } from '../types/content';
+import patchData from './review-patch.json';
 
 export interface PatchEntry {
   fields?: Record<string, string>;
@@ -7,13 +8,10 @@ export interface PatchEntry {
 
 export type PatchSet = Record<string, PatchEntry>;
 
-export const ceremonyPatches: PatchSet = {};
-
-export const articlePatches: PatchSet = {};
-
-export const glossaryPatches: PatchSet = {};
-
-export const phrasePatches: PatchSet = {};
+export const ceremonyPatches: PatchSet = (patchData.ceremonyPatches ?? {}) as PatchSet;
+export const articlePatches: PatchSet = (patchData.articlePatches ?? {}) as PatchSet;
+export const glossaryPatches: PatchSet = (patchData.glossaryPatches ?? {}) as PatchSet;
+export const phrasePatches: PatchSet = (patchData.phrasePatches ?? {}) as PatchSet;
 
 export function applyPatch<T extends { id: string; review: ReviewStatus }>(
   item: T,

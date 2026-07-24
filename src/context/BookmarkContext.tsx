@@ -8,7 +8,7 @@ interface BookmarkContextValue {
 
 const BookmarkContext = createContext<BookmarkContextValue | null>(null);
 
-const STORAGE_KEY = 'tautua:bookmarks';
+const STORAGE_KEY = 'tautua_bookmarks';
 
 export function BookmarkProvider({ children }: { children: ReactNode }) {
   const [bookmarks, setBookmarks] = useState<string[]>(() => {

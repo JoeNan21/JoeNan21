@@ -12,7 +12,7 @@ export default defineConfig({
         name: 'Tautua — Samoan Protocol Reference',
         short_name: 'Tautua',
         description:
-          'Bilingual Samoan protocol, fa’amatai, and fa’alavelave reference for the diaspora.',
+          'Bilingual Samoan protocol, faʻamatai, and faʻalavelave reference for the diaspora.',
         theme_color: '#0D1B2A',
         background_color: '#F7F3EE',
         display: 'standalone',

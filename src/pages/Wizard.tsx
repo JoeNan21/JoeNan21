@@ -122,24 +122,27 @@ export function Wizard() {
                     </li>
                   ))}
                 </ol>
-                {answer.link && (
-                  <Link
-                    to={answer.link.kind === 'ceremony' ? `/ceremony/${answer.link.id}` : `/article/${answer.link.id}`}
-                    className="btn-ghost mt-8"
-                  >
-                    {lang === 'sm' ? 'Va’ai le tala atoa' : 'Read the full protocol'}
-                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M1 5h12M9 1l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </Link>
-                )}
+                {(() => {
+                  const link =
+                    answer.link ??
+                    (event && event !== 'faalavelave' && event !== 'ava'
+                      ? { kind: 'ceremony' as const, id: event }
+                      : event === 'ava'
+                        ? { kind: 'ceremony' as const, id: 'ava' }
+                        : { kind: 'article' as const, id: 'faalavelave-overview' });
+                  const to = link.kind === 'ceremony' ? `/ceremony/${link.id}` : `/article/${link.id}`;
+                  return (
+                    <Link to={to} className="btn-ghost mt-8">
+                      {t('wizard.seeFullGuide')}
+                      <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M1 5h12M9 1l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </Link>
+                  );
+                })()}
               </>
             ) : (
-              <p className="font-serif text-base text-navy/75">
-                {lang === 'sm'
-                  ? 'E le’i maua se tali patino. Ia matau, e tatau ona talanoa pea ma lou matai mo le aiga ma le nu’u.'
-                  : 'No specific answer is recorded yet for this combination. Speak with your matai for guidance specific to your aiga and nu’u.'}
-              </p>
+              <p className="font-serif text-base text-navy/75">{t('wizard.noAnswer')}</p>
             )}
           </div>
           <div className="mt-6 flex justify-between">

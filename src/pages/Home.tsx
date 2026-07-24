@@ -14,10 +14,10 @@ const moduleTiles = [
 ];
 
 const quickEvents: { id: string; label_en: string; label_sm: string }[] = [
-  { id: 'wedding', label_en: 'Wedding', label_sm: `Fa'aipoipoga` },
+  { id: 'wedding', label_en: 'Wedding', label_sm: 'Faʻaipoipoga' },
   { id: 'funeral', label_en: 'Funeral / ifoga', label_sm: 'Maliu' },
-  { id: 'faalavelave', label_en: `Fa'alavelave`, label_sm: `Fa'alavelave` },
-  { id: 'saofai', label_en: `Title bestowal`, label_sm: `Saofa'i` },
+  { id: 'faalavelave', label_en: 'Faʻalavelave', label_sm: 'Faʻalavelave' },
+  { id: 'saofai', label_en: 'Title bestowal', label_sm: 'Saofaʻi' },
   { id: 'white-sunday', label_en: 'White Sunday', label_sm: 'Lotu a Tamaiti' },
   { id: 'fono', label_en: 'Fono', label_sm: 'Fono' },
   { id: 'church', label_en: 'Church service', label_sm: 'Lotu' },
@@ -66,11 +66,7 @@ export function Home() {
             <p className="font-display italic text-xl md:text-2xl text-navy leading-snug">
               "{t('app.principle')}"
             </p>
-            <p className="mt-3 text-sm text-navy/65">
-              {lang === 'sm'
-                ? 'O le mataupu silisili o le aganu\'u Sāmoa, ma o le agaga o lenei tusi fa\'asino.'
-                : 'The guiding principle of Samoan life, and the spirit of this reference.'}
-            </p>
+            <p className="mt-3 text-sm text-navy/65">{t('app.principle.context')}</p>
           </div>
         </aside>
       </section>

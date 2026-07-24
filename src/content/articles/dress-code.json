@@ -1,0 +1,44 @@
+{
+  "id": "dress-code",
+  "title_en": "Dress Code by Event",
+  "title_sm": "Lāʻei e tusa ai ma le sauniga",
+  "eyebrow_en": "Practical",
+  "eyebrow_sm": "Aoga",
+  "body_en": "Samoan formal dress codes are clear and worth taking seriously. The wrong outfit at a saofa'i or funeral is not just a fashion mistake — it reads as disrespect. When in doubt, ask your aiga or err on the side of more covered, more formal, and darker.",
+  "body_sm": "E manino lāʻei aloaʻia Sāmoa ma e tāua le tausi. O se lāʻei sese i se saofaʻi po o se maliu e le na o le sese o le lāʻei — e iloa o le le faʻaaloalo. Pe a masalo, fesili i lou aiga, po o le fai i se mea ua ufiufi, aloaʻia, ma pogisa.",
+  "sections": [
+    {
+      "step": 1,
+      "title_en": "Church and Sunday",
+      "title_sm": "Lotu ma le Aso Sa",
+      "body_en": "Women: puletasi or long modest dress; head covered (a hat or scarf) for the service. Men: ie faitaga and white shirt with tie, or full suit. Children: clean and tucked in; girls in dresses, boys in shirts.",
+      "body_sm": "Tamaʻitaʻi: puletasi po o se ofu umi faʻaaloalo; pulou le ulu mo le lotu. Alii: ie faitaga ma se ofu paʻepaʻe ma le fusi ua, po o se suti atoatoa. Tamaiti: mama ma lāʻei lelei; tamaʻitaʻi i ofu, tama i ofutino."
+    },
+    {
+      "step": 2,
+      "title_en": "Funeral",
+      "title_sm": "Maliu",
+      "body_en": "Black or very dark colours. Conservative. No bright prints. Shoulders covered.",
+      "body_sm": "Lanu uliuli pe pogisa. Faʻaaloalo. Aua ni lanu fiafia. Pulou tauʻau."
+    },
+    {
+      "step": 3,
+      "title_en": "Wedding / saofa'i",
+      "title_sm": "Faʻaipoipoga / saofaʻi",
+      "body_en": "Formal puletasi or formal suit. White or coordinated palette as agreed by the aiga. Ie faitaga is appropriate for matai and for many guests.",
+      "body_sm": "Puletasi aloaʻia po o se suti aloaʻia. Paʻepaʻe po o ni lanu ua malilie i ai le aiga. E talafeagai le ie faitaga mo matai ma le tele o malo."
+    },
+    {
+      "step": 4,
+      "title_en": "Casual family / village context",
+      "title_sm": "Aiga / nuʻu i aso masani",
+      "body_en": "Lavalava and t-shirt, modest. Still avoid swimwear or shorts in village centres.",
+      "body_sm": "Lavalava ma se mitiafu, faʻaaloalo. Aua lava ofu taʻele po o ofu pupuʻu i le ogatotonu o le nuʻu."
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewer": null,
+    "review_date": null
+  }
+}

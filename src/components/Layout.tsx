@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { LanguageToggle } from './LanguageToggle';
+import { BottomNav } from './BottomNav';
 
 export function Layout() {
   const { t } = useLanguage();
@@ -30,7 +31,7 @@ export function Layout() {
               <span className="text-[10px] uppercase tracking-[0.2em] text-navy/55">{t('app.tagline')}</span>
             </span>
           </Link>
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1" aria-label="Primary desktop">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
@@ -49,7 +50,7 @@ export function Layout() {
           <div className="flex items-center gap-2">
             <Link
               to="/bookmarks"
-              className="hidden sm:inline-flex p-2 rounded-sm text-navy/60 hover:text-navy"
+              className="inline-flex p-2 rounded-sm text-navy/60 hover:text-navy"
               aria-label={t('nav.bookmarks')}
             >
               <svg width="16" height="18" viewBox="0 0 16 18" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
@@ -59,31 +60,13 @@ export function Layout() {
             <LanguageToggle />
           </div>
         </div>
-        <div className="md:hidden border-t border-navy/10 bg-sand">
-          <div className="container-wide flex gap-1 overflow-x-auto py-2 text-sm">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === '/'}
-                className={({ isActive }) =>
-                  `shrink-0 rounded-sm px-3 py-1.5 transition-colors ${
-                    isActive ? 'bg-navy text-sand font-medium' : 'text-navy/70'
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </div>
-        </div>
       </header>
 
-      <main className="flex-1 animate-fadeIn">
+      <main className="flex-1 animate-fadeIn pb-24 md:pb-0">
         <Outlet />
       </main>
 
-      <footer className="mt-16 border-t border-navy/10 bg-navy text-sand/85">
+      <footer className="mt-16 border-t border-navy/10 bg-navy text-sand/85 pb-20 md:pb-0">
         <div className="container-wide py-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -92,11 +75,13 @@ export function Layout() {
             </div>
             <div className="text-xs text-sand/55 space-y-1">
               <div>© {new Date().getFullYear()} Tautua</div>
-              <Link to="/review" className="hover:text-ochre underline underline-offset-4">Cultural review export</Link>
+              <Link to="/review" className="hover:text-ochre underline underline-offset-4">{t('footer.reviewLink')}</Link>
             </div>
           </div>
         </div>
       </footer>
+
+      <BottomNav />
     </div>
   );
 }

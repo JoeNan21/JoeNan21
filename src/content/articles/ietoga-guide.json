@@ -1,0 +1,38 @@
+{
+  "id": "ietoga-guide",
+  "title_en": "'Ie Toga — Fine Mats",
+  "title_sm": "ʻIe Tōga",
+  "eyebrow_en": "Cultural Currency",
+  "eyebrow_sm": "O le aganuʻu",
+  "body_en": "'Ie toga are finely woven mats made from the inner bast of the paogo (pandanus) leaf. A single 'ie toga can take months — sometimes years — to weave. They are not floor mats; they are the cultural currency of Samoa, presented at every fa'alavelave. The value of an 'ie toga reflects its age, its fineness of weave, its history (the named pieces are remembered), and the family that presents it.",
+  "body_sm": "O ʻie tōga o ni mea fofola e lalaga lelei mai i le paʻu o totonu o le lau o le paogo. E mafai ona fai i ni masina po o ni tausaga le lalaga o se tasi ʻie tōga. E le o ni fala fofola; o le mea taua o le aganuʻu Sāmoa, e tuʻuina atu i soʻo se faʻalavelave. E faia le tāua o se ʻie tōga i lona tausaga, le lelei o le lalaga, lona talaʻaga (e manatua ʻie tōga e i ai igoa), ma le aiga e tuʻuina atu.",
+  "sections": [
+    {
+      "step": 1,
+      "title_en": "Grading and value",
+      "title_sm": "Vasega ma le tāua",
+      "body_en": "The finest 'ie toga — known as 'ie o le mālō or named historic mats — are reserved for the heaviest fa'alavelave (state funerals, major saofa'i, royal exchanges). Most 'ie toga in family life are well-woven but not named, and circulate among aiga at weddings and funerals. Quality is judged by the tightness of weave, the fineness of the strips, and the condition of the edges.",
+      "body_sm": "O ʻie tōga sili — ua taʻua o ʻie o le mālō po o ʻie ua i ai igoa — e teu mo faʻalavelave sili ona mamafa (maliu o le mālō, saofaʻi tetele, fefaʻasoaaʻiga o le mālō). O le tele o ʻie tōga i le aiga e lalaga lelei ae leai ni igoa, e faʻafesoaina i le va o aiga i faʻaipoipoga ma maliu. E faʻavae le lelei i le mau o le lalaga, le lelei o le sili, ma le tulaga o le tafatafa."
+    },
+    {
+      "step": 2,
+      "title_en": "When to give and when to receive",
+      "title_sm": "Tuʻuina atu ma talia",
+      "body_en": "If your aiga is hosting, you receive. If you are visiting as a contributing aiga, you give. The number given is read carefully — too few and the host will note it; too many and you may have overshot what the occasion calls for. Ask your sa'o before deciding alone.",
+      "body_sm": "Pe afai o lou aiga o loʻo talimalo, e talia. Pe afai e te asiasi e te faʻasaga ai, e tuʻuina atu. E fuatia ma le tatau le aofaʻi — pe afai e itiiti, e iloa e le aiga; pe afai e tele tele, e sili atu i le mea talafeagai. Fesili i lou saʻo aʻo leʻi faʻaiu naʻo oe."
+    },
+    {
+      "step": 3,
+      "title_en": "Storage and care",
+      "title_sm": "Teuga ma le tausiga",
+      "body_en": "'Ie toga are folded carefully — never crumpled — and stored flat or rolled in a dry place. Many aiga keep them in dedicated cloth wraps. Do not sit on, walk over, or place objects on an 'ie toga.",
+      "body_sm": "Gaugau lelei ʻie tōga — aua neʻi nono — ma teu i se nofoaga mago, gaugau pe taʻai. E tele aiga e teu i totonu o ie faʻapitoa. Aua e te nofo, savali, po o tuʻu soʻo se mea i luga o se ʻie tōga."
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewer": null,
+    "review_date": null,
+    "varies_by_nuu": true
+  }
+}

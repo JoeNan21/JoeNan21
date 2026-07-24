@@ -1,21 +1,21 @@
 import { useEffect, useMemo, useState } from 'react';
 import { phrases } from '../content';
 import { useLanguage } from '../context/LanguageContext';
-import type { PhraseCategory } from '../content/types';
+import type { PhraseCategory } from '../types/content';
 import { ReviewBadge } from '../components/ReviewBadge';
 
-const categories: { id: PhraseCategory | 'all'; label_en: string; label_sm: string }[] = [
-  { id: 'all', label_en: 'All', label_sm: 'Uma' },
-  { id: 'greetings', label_en: 'Greetings & respect', label_sm: 'Fa’afeiloa’iga' },
-  { id: 'condolences', label_en: 'Condolences', label_sm: 'Fa’afetai-alofa' },
-  { id: 'blessings', label_en: 'Blessings', label_sm: 'Fa’amanuiaga' },
-  { id: 'lauga', label_en: 'Lauga / formal speech', label_sm: 'Lauga' },
-  { id: 'church', label_en: 'Church', label_sm: 'Lotu' },
-  { id: 'faalavelave', label_en: 'Fa’alavelave', label_sm: 'Fa’alavelave' },
+const categories: { id: PhraseCategory | 'all'; key: string }[] = [
+  { id: 'all', key: 'phrases.cat.all' },
+  { id: 'greetings', key: 'phrases.cat.greetings' },
+  { id: 'condolences', key: 'phrases.cat.condolences' },
+  { id: 'blessings', key: 'phrases.cat.blessings' },
+  { id: 'lauga', key: 'phrases.cat.lauga' },
+  { id: 'church', key: 'phrases.cat.church' },
+  { id: 'faalavelave', key: 'phrases.cat.faalavelave' },
 ];
 
 export function Phrases() {
-  const { t, pick, lang } = useLanguage();
+  const { t, pick } = useLanguage();
   const [cat, setCat] = useState<PhraseCategory | 'all'>('all');
 
   const filtered = useMemo(() => (cat === 'all' ? phrases : phrases.filter((p) => p.category === cat)), [cat]);
@@ -33,11 +33,7 @@ export function Phrases() {
       <header className="mb-8 animate-fadeUp">
         <div className="tile-eyebrow mb-2">{t('nav.phrases')}</div>
         <h1 className="font-display text-3xl md:text-5xl text-navy">{t('modules.phrases')}</h1>
-        <p className="lede mt-4 max-w-prose">
-          {lang === 'sm'
-            ? 'Fa’aupuga aloga’ia ma masani, fa’asoa i gagana e lua ma le faaleoga.'
-            : 'Formal and everyday phrases, paired with pronunciation guidance.'}
-        </p>
+        <p className="lede mt-4 max-w-prose">{t('phrases.subtitle')}</p>
       </header>
 
       <div className="flex flex-wrap gap-2 mb-8">
@@ -48,7 +44,7 @@ export function Phrases() {
             onClick={() => setCat(c.id)}
             className={`pill cursor-pointer ${cat === c.id ? 'bg-navy text-sand border-navy' : 'hover:bg-navy/5'}`}
           >
-            {lang === 'sm' ? c.label_sm : c.label_en}
+            {t(c.key)}
           </button>
         ))}
       </div>

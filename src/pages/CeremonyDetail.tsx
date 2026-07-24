@@ -12,7 +12,7 @@ export function CeremonyDetail() {
   if (!ceremony) {
     return (
       <div className="container-tight py-20 text-center">
-        <p className="text-navy/60">Not found.</p>
+        <p className="text-navy/60">{t('common.notFound')}</p>
         <Link to="/modules" className="mt-4 inline-block underline">{t('common.back')}</Link>
       </div>
     );
@@ -41,12 +41,8 @@ export function CeremonyDetail() {
         <p className="lede mt-5">{pick(ceremony, 'overview')}</p>
         {ceremony.review.varies_by_nuu && (
           <div className="mt-6 rounded-sm border-l-4 border-ochre bg-ochre/5 px-4 py-3 text-sm text-navy/80">
-            <strong className="font-medium text-ochre-600">
-              {lang === 'sm' ? 'E fesuia’i e tusa ai ma le nu’u.' : 'Varies by nu’u.'}
-            </strong>{' '}
-            {lang === 'sm'
-              ? 'Talanoa ma matai o lou aiga po o le nu’u mo tu fa’apitoa.'
-              : 'Speak with the matai of your aiga or village for protocol specific to your context.'}
+            <strong className="font-medium text-ochre-600">{t('variesByNuu.label')}</strong>{' '}
+            {t('variesByNuu.note')}
           </div>
         )}
       </header>

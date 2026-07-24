@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { ReviewBadge } from '../components/ReviewBadge';
 
 export function Glossary() {
-  const { t, pick, lang } = useLanguage();
+  const { t, pick } = useLanguage();
   const [q, setQ] = useState('');
 
   const filtered = useMemo(() => {
@@ -31,18 +31,14 @@ export function Glossary() {
       <header className="mb-8 animate-fadeUp">
         <div className="tile-eyebrow mb-2">{t('nav.glossary')}</div>
         <h1 className="font-display text-3xl md:text-5xl text-navy">{t('modules.glossary')}</h1>
-        <p className="lede mt-4 max-w-prose">
-          {lang === 'sm'
-            ? 'O upu uma o lo’o aoga i totonu o le tusi fa’asino, fa’asoa i gagana e lua.'
-            : 'Every term used across the app, defined in both languages.'}
-        </p>
+        <p className="lede mt-4 max-w-prose">{t('glossary.subtitle')}</p>
       </header>
 
       <input
         type="search"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder={lang === 'sm' ? 'Su’e se upu…' : 'Filter terms…'}
+        placeholder={t('glossary.filter')}
         className="w-full rounded-sm border border-navy/15 bg-white/70 px-4 py-3 text-sm placeholder:text-navy/40 focus:outline-none focus:border-ochre focus:bg-white mb-8"
       />
 

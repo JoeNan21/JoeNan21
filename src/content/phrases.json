@@ -1,0 +1,254 @@
+[
+  {
+    "id": "phrase.talofa-lava",
+    "category": "greetings",
+    "sm": "Tālofa lava",
+    "en": "Hello / formal greeting",
+    "pronunciation": "TAH-lo-fah LAH-vah",
+    "context_en": "Standard formal greeting. Always safe.",
+    "context_sm": "Faʻafeiloaʻiga masani. E saʻo lava i soʻo se taimi.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.malo",
+    "category": "greetings",
+    "sm": "Mālō",
+    "en": "Greetings / well met",
+    "pronunciation": "MAH-loh",
+    "context_en": "Casual greeting between peers.",
+    "context_sm": "Faʻafeiloaʻiga masani i le va o uo.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.faafetai-tele",
+    "category": "greetings",
+    "sm": "Faʻafetai tele lava",
+    "en": "Thank you very much",
+    "pronunciation": "fah-ah-feh-TYE TEH-leh LAH-vah",
+    "context_en": "Formal thanks. Use openly and often.",
+    "context_sm": "Faʻafetai aloaʻia. Faʻaaogā soʻo.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.tofa-soifua",
+    "category": "greetings",
+    "sm": "Tofā soifua",
+    "en": "Goodbye (formal, to one staying)",
+    "pronunciation": "TOH-fah soy-FOO-ah",
+    "context_en": "Formal farewell. The reply is 'Soifua' or 'Tofā ia'.",
+    "context_sm": "Tofa aloaʻia. O le tali, ʻSoifuaʻ po o ʻTofā iaʻ.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.malo-le-onosai",
+    "category": "condolences",
+    "sm": "Mālō le onosaʻi",
+    "en": "Well borne; congratulations on your endurance",
+    "pronunciation": "MAH-loh leh oh-noh-SAH-ee",
+    "context_en": "Said to someone who has endured hardship or loss.",
+    "context_sm": "Fai i se tagata ua onosaʻi i le faigatā po o se gasegase.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.alofa-atu",
+    "category": "condolences",
+    "sm": "Alofa atu",
+    "en": "Love to you / our love is with you",
+    "pronunciation": "ah-LOH-fah AH-too",
+    "context_en": "Expression of sympathy and solidarity.",
+    "context_sm": "Faʻaaliga o le alofa ma le mafutaga.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.malie-lau-afioga",
+    "category": "lauga",
+    "sm": "Mālie lau afioga",
+    "en": "Well said, your honour (to a high chief)",
+    "pronunciation": "MAH-lee-eh lau ah-FEE-oh-ngah",
+    "context_en": "Said in acknowledgement of a chief's speech.",
+    "context_sm": "Fai e faʻailoa ai le faʻalogo ma le talia o le lauga a se aliʻi.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.manuia",
+    "category": "blessings",
+    "sm": "Manuia",
+    "en": "Blessings / well-being",
+    "pronunciation": "mah-NOO-ee-ah",
+    "context_en": "Catch-all blessing — manuia le aso, manuia le aiga, etc.",
+    "context_sm": "Faʻamanuia lautele — manuia le aso, manuia le aiga, ma isi.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.manuia-le-aso-fanau",
+    "category": "blessings",
+    "sm": "Manuia le aso fanau",
+    "en": "Happy birthday",
+    "pronunciation": "mah-NOO-ee-ah leh AH-so fah-NAU",
+    "context_en": "Birthday greeting.",
+    "context_sm": "Faʻafeiloaʻiga i se aso fanau.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.viia-le-atua",
+    "category": "church",
+    "sm": "Viʻia le Atua",
+    "en": "Praise be to God",
+    "pronunciation": "VEE-ee-ah leh ah-TOO-ah",
+    "context_en": "Common in church and at the start of blessings.",
+    "context_sm": "Masani i totonu o le lotu ma le amataga o tatalo.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.tulou",
+    "category": "lauga",
+    "sm": "Tulou",
+    "en": "Excuse me (formal, when crossing in front of someone or interrupting)",
+    "pronunciation": "TOO-loh",
+    "context_en": "Said when passing in front of seated matai or interrupting a gathering.",
+    "context_sm": "Fai pe a sopo i luma o matai pe faʻalavelave i se aofia.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.ia-manuia",
+    "category": "blessings",
+    "sm": "Ia manuia",
+    "en": "May it go well / blessings",
+    "pronunciation": "EE-ah mah-NOO-ee-ah",
+    "context_en": "A blessing to close a conversation or a meal.",
+    "context_sm": "Faʻamanuia e faʻaiʻu ai se talanoaga po o se taumafataga.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.susu-mai",
+    "category": "greetings",
+    "sm": "Sūsū mai",
+    "en": "Welcome (formal, said to a chief or honoured guest)",
+    "pronunciation": "SOO-soo MY",
+    "context_en": "Formal welcome to a matai or honoured guest.",
+    "context_sm": "Talimalo aloaʻia i se matai po o se tagata mamalu.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.faamolemole",
+    "category": "greetings",
+    "sm": "Faʻamolemole",
+    "en": "Please",
+    "pronunciation": "fah-ah-moh-leh-MOH-leh",
+    "context_en": "Polite please / if you would.",
+    "context_sm": "Faʻamolemole faʻaaloalogia.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.malo-le-soifua",
+    "category": "greetings",
+    "sm": "Mālō le soifua",
+    "en": "Greetings — well done in life / well that you are alive",
+    "pronunciation": "MAH-loh leh soy-FOO-ah",
+    "context_en": "Used in lauga as honourable greeting.",
+    "context_sm": "Faʻaaogāina i lauga e fai ma faʻafeiloaʻiga aloaʻia.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.faafetai-le-fesoasoani",
+    "category": "faalavelave",
+    "sm": "Faʻafetai le fesoasoani",
+    "en": "Thank you for the help / contribution",
+    "pronunciation": "fah-ah-feh-TYE leh feh-soh-ah-SOH-ah-nee",
+    "context_en": "Acknowledge a contribution to a fa'alavelave.",
+    "context_sm": "Faʻafetai mo se fesoasoani i se faʻalavelave.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.faatoesega",
+    "category": "faalavelave",
+    "sm": "Faʻatoesega",
+    "en": "Apology — I cannot fully meet this obligation at this time",
+    "pronunciation": "fah-ah-toh-eh-SEH-ngah",
+    "context_en": "Formally and humbly conveying you cannot meet the full fa'alavelave expectation.",
+    "context_sm": "Faʻailoa atu ma le faʻaaloalo e le mafai ona faʻataunuʻu atoatoa le faʻamoemoe.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "phrase.amene",
+    "category": "church",
+    "sm": "Amene",
+    "en": "Amen",
+    "pronunciation": "ah-MEH-neh",
+    "context_en": "Closes a prayer.",
+    "context_sm": "Faʻaiʻu o se tatalo.",
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  }
+]

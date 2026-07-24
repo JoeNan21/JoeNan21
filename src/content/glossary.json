@@ -1,0 +1,387 @@
+[
+  {
+    "id": "aiga",
+    "term": "Aiga",
+    "pronunciation": "EYE-ngah",
+    "meaning_en": "Family — in the extended sense, including all descendants and connected lines, not just the household.",
+    "meaning_sm": "O le aiga atoa, e aofia ai uso, tuagane, ma le gafa atoa, ae le na o le aiga vavalalata.",
+    "related": [
+      "aiga-potopoto"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "aiga-potopoto",
+    "term": "Aiga potopoto",
+    "pronunciation": "EYE-ngah poh-toh-POH-toh",
+    "meaning_en": "The whole extended family gathered — the decision-making body of the aiga.",
+    "meaning_sm": "O le aiga atoa ua potopoto — o le aoao e faia faʻaiʻuga mo le aiga.",
+    "related": [
+      "aiga",
+      "fono"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "alii",
+    "term": "Ali'i",
+    "pronunciation": "ah-LEE-ee",
+    "meaning_en": "A chief — one of the two main classes of matai. Ali'i represent the dignity and lineage of the title.",
+    "meaning_sm": "Aliʻi — o se tasi o vasega muamua e lua o matai. E faʻaali e aliʻi le mamalu ma le gafa o le suafa.",
+    "related": [
+      "matai",
+      "tulafale"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "ava",
+    "term": "'Ava",
+    "pronunciation": "AH-vah",
+    "meaning_en": "Kava — the ceremonial drink prepared from the root of Piper methysticum. The 'ava ceremony opens formal matai gatherings.",
+    "meaning_sm": "ʻAva — o le mea inu paia ua palu mai i le aʻa o le ʻava. E tatala ai aofia o matai.",
+    "related": [
+      "taupou",
+      "taufa",
+      "tanoa"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "faalavelave",
+    "term": "Fa'alavelave",
+    "pronunciation": "fah-ah-lah-veh-LAH-veh",
+    "meaning_en": "A major family obligation — most often a funeral, wedding, saofa'i, or other family event requiring contribution. Both the event and the contribution are called fa'alavelave.",
+    "meaning_sm": "O se faʻalavelave i le aiga — e masani ai i maliu, faʻaipoipoga, saofaʻi, ma isi mea e manaʻomia ai se fesoasoani. E taʻua le sauniga ma le fesoasoani o le faʻalavelave.",
+    "related": [
+      "ietoga",
+      "aiga-potopoto"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null,
+      "varies_by_nuu": true
+    }
+  },
+  {
+    "id": "faamatai",
+    "term": "Fa'amatai",
+    "pronunciation": "fah-ah-mah-TYE",
+    "meaning_en": "The chiefly system — the social and political structure of Samoa, organising aiga and nu'u under matai.",
+    "meaning_sm": "O le faʻamatai — o le faiga ma le faasoasoa o aiga ma nuʻu i Sāmoa, e taʻitaʻi e matai.",
+    "related": [
+      "matai",
+      "fono",
+      "nuu"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "faaipoipoga",
+    "term": "Fa'aipoipoga",
+    "pronunciation": "fah-ah-ee-poy-POH-ngah",
+    "meaning_en": "Wedding ceremony.",
+    "meaning_sm": "O le sauniga o le faʻaipoipoga.",
+    "related": [],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "faifeau",
+    "term": "Faife'au",
+    "pronunciation": "fah-ee-FEH-au",
+    "meaning_en": "Minister of the church. Holds significant authority alongside the matai in village life.",
+    "meaning_sm": "O le taʻitaʻi o le ekalesia. E tāua lona pule faʻatasi ma matai i le ola o le nuʻu.",
+    "related": [],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "faipule",
+    "term": "Faipule",
+    "pronunciation": "fye-POO-leh",
+    "meaning_en": "A village representative — historically, a matai who held a political/legislative role.",
+    "meaning_sm": "O se sui o le nuʻu — o se matai sa umia se tofi faʻapolokiki.",
+    "related": [
+      "matai"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "fono",
+    "term": "Fono",
+    "pronunciation": "FOH-noh",
+    "meaning_en": "A formal meeting — of the village (fono a le nu'u), of the aiga, or of the country.",
+    "meaning_sm": "O se fonotaga aloaʻia — o le nuʻu, o le aiga, po o le atunuʻu.",
+    "related": [
+      "matai",
+      "nuu"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "ifoga",
+    "term": "Ifoga",
+    "pronunciation": "ee-FOH-ngah",
+    "meaning_en": "A ceremonial act of contrition in which the offending aiga sits under fine mats at the home of the offended aiga, awaiting acceptance and forgiveness.",
+    "meaning_sm": "O le sauniga o le faʻaleleiga, e nonofo ai le aiga ua sese i lalo o ʻie tōga i le aiga ua sese i ai, e faʻatali seʻi talia.",
+    "related": [
+      "ietoga"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "ietoga",
+    "term": "'Ie toga / 'Ie tōga",
+    "pronunciation": "EE-eh TOH-ngah",
+    "meaning_en": "Fine mats — the highest cultural currency in Samoa, woven from pandanus, presented at every major fa'alavelave.",
+    "meaning_sm": "O ʻie tōga — o le mea sili ona tāua i le aganuʻu Sāmoa, e lalaga i le lau o le paogo, e tuʻuina atu i faʻalavelave.",
+    "related": [
+      "faalavelave"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "lauga",
+    "term": "Lauga",
+    "pronunciation": "lah-OO-ngah",
+    "meaning_en": "A formal Samoan oratorical speech — opens and closes every formal gathering. Follows a strict order: God, the place, the matai, the family, the matter at hand.",
+    "meaning_sm": "O le lauga aloaʻia — e tatala ma faʻaiʻu ai soʻo se aofia aloaʻia. E mulimuli i le faʻasologa: le Atua, le nofoaga, matai, le aiga, ma le mataupu.",
+    "related": [
+      "tulafale"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "manaia",
+    "term": "Manaia",
+    "pronunciation": "mah-NYE-ah",
+    "meaning_en": "The ceremonial son of a chief — counterpart to the taupou. Holds an honoured place in the procession.",
+    "meaning_sm": "O le atalii faʻaaloalogia o se matai — e tutusa ma le taupou. E iai lona nofoaga faʻaaloalogia.",
+    "related": [
+      "taupou"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "matai",
+    "term": "Matai",
+    "pronunciation": "mah-TYE",
+    "meaning_en": "A holder of a Samoan chiefly title. Matai are responsible to their aiga and to their village.",
+    "meaning_sm": "O lē e umia se suafa Sāmoa. E i ai le tiute o matai i lo latou aiga ma le nuʻu.",
+    "related": [
+      "alii",
+      "tulafale",
+      "saofai"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "nuu",
+    "term": "Nu'u",
+    "pronunciation": "NOO-oo",
+    "meaning_en": "Village. The fundamental unit of Samoan social structure.",
+    "meaning_sm": "O le nuʻu — o le iunite muamua o le faasoasoa o le aganuʻu Sāmoa.",
+    "related": [
+      "fono",
+      "matai"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "saofai",
+    "term": "Saofa'i",
+    "pronunciation": "sah-oh-FYE",
+    "meaning_en": "The ceremony of bestowing a matai title.",
+    "meaning_sm": "O le sauniga o le tuʻuina atu o se suafa matai.",
+    "related": [
+      "matai"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null,
+      "varies_by_nuu": true
+    }
+  },
+  {
+    "id": "sao",
+    "term": "Sa'o",
+    "pronunciation": "SAH-oh",
+    "meaning_en": "The head matai of an aiga — holds the senior title and authority.",
+    "meaning_sm": "O le matai sili o se aiga — e umia le suafa maualuga ma le pule.",
+    "related": [
+      "matai",
+      "aiga"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "tanoa",
+    "term": "Tanoa",
+    "pronunciation": "tah-NOH-ah",
+    "meaning_en": "Carved wooden bowl in which the 'ava is prepared.",
+    "meaning_sm": "O le ipu laʻau tofitofi e palu ai le ʻava.",
+    "related": [
+      "ava"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "taufa",
+    "term": "Taufa",
+    "pronunciation": "TAU-fah",
+    "meaning_en": "The person who mixes the 'ava — often the taupou.",
+    "meaning_sm": "O le tagata e palu le ʻava — e masani lava ona avea ma taupou.",
+    "related": [
+      "ava",
+      "taupou"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "taupou",
+    "term": "Taupou",
+    "pronunciation": "TAU-poh-oo",
+    "meaning_en": "The ceremonial daughter of a chief — traditional preparer of the 'ava and ceremonial representative.",
+    "meaning_sm": "O le afafine faʻaaloalogia o se matai — e masani ona palu le ʻava ma fai ma sui aloaʻia.",
+    "related": [
+      "manaia",
+      "ava"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "toona",
+    "term": "To'ona'i",
+    "pronunciation": "toh-oh-NAH-ee",
+    "meaning_en": "The Sunday lunch — the weekly family meal after church.",
+    "meaning_sm": "O le taumafataga o le Aso Sa ina ua maeʻa le lotu.",
+    "related": [],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "tulafale",
+    "term": "Tulafale",
+    "pronunciation": "too-lah-FAH-leh",
+    "meaning_en": "Talking chief / orator. Tulafale carry the speech rights and ceremonial knowledge of the aiga.",
+    "meaning_sm": "Tulafale — o le matai e fofogaina lauga ma faʻaali le poto o le aganuʻu o le aiga.",
+    "related": [
+      "matai",
+      "alii",
+      "lauga"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "umu",
+    "term": "Umu",
+    "pronunciation": "OO-moo",
+    "meaning_en": "The traditional above-ground earth oven of hot stones — the Samoan way of cooking the Sunday meal.",
+    "meaning_sm": "O le umu — o le faʻasaga masani Sāmoa e faʻaogāina maʻa vevela e vela ai le taumafataga o le Aso Sa.",
+    "related": [
+      "toona"
+    ],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  },
+  {
+    "id": "tautua",
+    "term": "Tautua",
+    "pronunciation": "tau-TOO-ah",
+    "meaning_en": "Service. The cultural value of serving one's aiga and village — the path to leadership runs through tautua.",
+    "meaning_sm": "O le tautua — o le faʻaaogāina o le tagata mo le aiga ma le nuʻu. O le ala i le pule, o le tautua.",
+    "related": [],
+    "review": {
+      "status": "draft",
+      "reviewer": null,
+      "review_date": null
+    }
+  }
+]
