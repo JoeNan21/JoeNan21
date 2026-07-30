@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0D1B2A"/>
+  <g transform="translate(256 320)">
+    <text text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="320" fill="#C9882E">T</text>
+  </g>
+  <circle cx="256" cy="420" r="10" fill="#C9882E"/>
+</svg>

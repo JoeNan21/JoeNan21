@@ -1,0 +1,14 @@
+{
+  "ceremonyPatches": {},
+  "articlePatches": {},
+  "glossaryPatches": {
+    "tautua": {
+      "review": {
+        "status": "approved",
+        "reviewer": "Tautua editorial team",
+        "review_date": "2026-07-24"
+      }
+    }
+  },
+  "phrasePatches": {}
+}

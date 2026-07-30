@@ -1,0 +1,661 @@
+{
+  "events": [
+    {
+      "id": "wedding",
+      "label_en": "Wedding",
+      "label_sm": "Faʻaipoipoga"
+    },
+    {
+      "id": "funeral",
+      "label_en": "Funeral / ifoga",
+      "label_sm": "Maliu / Ifoga"
+    },
+    {
+      "id": "faalavelave",
+      "label_en": "Faʻalavelave",
+      "label_sm": "Faʻalavelave"
+    },
+    {
+      "id": "ava",
+      "label_en": "ʻAva ceremony",
+      "label_sm": "Sauniga o le ʻAva"
+    },
+    {
+      "id": "saofai",
+      "label_en": "Title bestowal (saofaʻi)",
+      "label_sm": "Saofaʻi"
+    },
+    {
+      "id": "white-sunday",
+      "label_en": "White Sunday",
+      "label_sm": "Lotu a Tamaiti"
+    },
+    {
+      "id": "church-dedication",
+      "label_en": "Church dedication",
+      "label_sm": "Faʻapaʻiaga falesā"
+    },
+    {
+      "id": "birthday-first",
+      "label_en": "First birthday",
+      "label_sm": "Aso fanau muamua"
+    },
+    {
+      "id": "graduation",
+      "label_en": "Graduation",
+      "label_sm": "Faʻauʻuga"
+    }
+  ],
+  "roles": [
+    {
+      "id": "guest",
+      "label_en": "Guest",
+      "label_sm": "Mālō"
+    },
+    {
+      "id": "family-hosting",
+      "label_en": "Family of the hosting aiga",
+      "label_sm": "Aiga e talimālō"
+    },
+    {
+      "id": "family-visiting",
+      "label_en": "Family of a visiting aiga",
+      "label_sm": "Aiga asiasi"
+    },
+    {
+      "id": "matai",
+      "label_en": "Matai",
+      "label_sm": "Matai"
+    },
+    {
+      "id": "tulafale",
+      "label_en": "Tulāfale",
+      "label_sm": "Tulāfale"
+    }
+  ],
+  "questions": [
+    {
+      "id": "what-to-bring",
+      "label_en": "What do I bring?",
+      "label_sm": "O le ā e te aumai?"
+    },
+    {
+      "id": "what-to-wear",
+      "label_en": "What do I wear?",
+      "label_sm": "O le ā e te ofuina?"
+    },
+    {
+      "id": "when-to-arrive",
+      "label_en": "When do I arrive?",
+      "label_sm": "O afea e te taunuʻu ai?"
+    },
+    {
+      "id": "how-to-greet",
+      "label_en": "How do I greet matai?",
+      "label_sm": "O le faʻafeiloaʻi matai?"
+    },
+    {
+      "id": "where-to-sit",
+      "label_en": "Where do I sit?",
+      "label_sm": "O fea e te nofo ai?"
+    },
+    {
+      "id": "how-to-give",
+      "label_en": "How do I give my contribution?",
+      "label_sm": "Tuʻuina atu o le fesoasoani?"
+    },
+    {
+      "id": "cant-contribute",
+      "label_en": "I cannot contribute the full amount",
+      "label_sm": "E lē mafai ona ou faʻataunuʻu"
+    }
+  ],
+  "answers": [
+    {
+      "event": "wedding",
+      "role": "guest",
+      "question": "what-to-bring",
+      "title_en": "Wedding — Guest — What to bring",
+      "title_sm": "Faʻaipoipoga — Mālō — Mea e aumai",
+      "guidance_en": [
+        "A cash gift in an envelope marked clearly with your name. Even a modest amount is welcome — what matters is that you are present and contributing.",
+        "If you are close to either family, ask if they are collecting ʻie tōga; if so, you may add one.",
+        "Do not bring elaborate wrapped gifts (toasters, blenders). Cash and ʻie tōga are the cultural norm."
+      ],
+      "guidance_sm": [
+        "O se meaalofa tupe i totonu o se teutusi ma lou igoa. E lava lava se aofaʻi itiiti — o le mea tāua o lou auai ma le fesoasoani.",
+        "Pe afai e te vavalalata ma se tasi o aiga, fesili pe o loʻo aoaoina ʻie tōga; pe afai e ioe, e mafai ona e faʻaopoopo se tasi.",
+        "Aua ni meaalofa tetele ua afifia (toaster, blender). O le tupe ma le ʻie tōga le mea masani o le aganuʻu."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "wedding"
+      }
+    },
+    {
+      "event": "wedding",
+      "role": "guest",
+      "question": "what-to-wear",
+      "title_en": "Wedding — Guest — What to wear",
+      "title_sm": "Faʻaipoipoga — Mālō — Lāʻei",
+      "guidance_en": [
+        "Women: puletasi or formal dress. Shoulders covered. Modest length. Head covered for the church service.",
+        "Men: ie faitaga and white shirt with tie, or full suit.",
+        "Avoid bright tourist prints, very short hems, or anything beachy."
+      ],
+      "guidance_sm": [
+        "Tamāʻitaʻi: puletasi po o se ofu aloaʻia. Pulou tauʻau. Ofu e talafeagai. Pulou le ulu mo le lotu.",
+        "Aliʻi: ie faitaga ma se ofu paʻepaʻe ma le fusi ua, po o se suti atoatoa.",
+        "Aua le ofuina o mea faʻaturisi, ofu pupuʻu, po o mea o le matafaga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "wedding"
+      }
+    },
+    {
+      "event": "wedding",
+      "role": "guest",
+      "question": "when-to-arrive",
+      "title_en": "Wedding — Guest — When to arrive",
+      "title_sm": "Faʻaipoipoga — Mālō — Taimi e taunuʻu ai",
+      "guidance_en": [
+        "Arrive 30 minutes before the stated church start time. Samoan services start on time; the reception rarely does.",
+        "For the reception, arrive at the stated time — you may wait, but do not walk in after the matai have been seated.",
+        "If you must arrive late, wait at the entrance for a break in the lāuga before finding a seat."
+      ],
+      "guidance_sm": [
+        "Taunuʻu i le 30 minute aʻo leʻi amata le lotu. E amata i lona taimi le sauniga; ae le masani ai le faleoʻo.",
+        "Mo le faleoʻo, taunuʻu i le taimi ua taʻua — e mafai ona faʻatali, ae aua le ulufale pe a uma ona nonofo matai.",
+        "Pe afai e te tuai, faʻatali i le faitotoʻa seʻia oʻo i se malaga i le lāuga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "wedding"
+      }
+    },
+    {
+      "event": "wedding",
+      "role": "family-hosting",
+      "question": "what-to-bring",
+      "title_en": "Wedding — Hosting family — What to prepare",
+      "title_sm": "Faʻaipoipoga — Aiga talimālō — Mea e saunia",
+      "guidance_en": [
+        "Confer with your matai/saʻo on the aigaʼs collective contribution.",
+        "ʻIe tōga: many — for presentation to the other family and for distribution to attending matai.",
+        "Substantial food: umu, additional cooked dishes, drinks.",
+        "Cash for sua, taupou ula gifts, and the wider exchange.",
+        "Take an inventory beforehand — quantity will be noted."
+      ],
+      "guidance_sm": [
+        "Fesili i lou matai/saʻo e uiga i le fesoasoani a le aiga atoa.",
+        "ʻIe tōga: e tele — mo le isi aiga ma mo matai uma o le aoao.",
+        "Meaʻai e tele: umu, meaʻai faʻaopoopo, mea inu.",
+        "Tupe mo le sua, ula a le taupou, ma le tuʻufaʻatasiga atoa.",
+        "Fai se lisi aʻo leʻi oʻo le aso — e faʻamauina."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "wedding"
+      }
+    },
+    {
+      "event": "wedding",
+      "role": "matai",
+      "question": "what-to-bring",
+      "title_en": "Wedding — Matai — What to prepare",
+      "title_sm": "Faʻaipoipoga — Matai — Sauniuniga",
+      "guidance_en": [
+        "Confer with your saʻo and the aiga potopoto before deciding your personal contribution.",
+        "You will be called in the ʻava; be present in the matai line and respond to your suafa.",
+        "Named ʻie tōga carry more weight than count alone — bring what represents your standing.",
+        "Prepare a short lāuga in case you are asked to speak on behalf of the aiga."
+      ],
+      "guidance_sm": [
+        "Fesili i lou saʻo ma le aiga potopoto aʻo leʻi filifili lau fesoasoani.",
+        "O le a taʻua oe i le ʻava; nofo i le laina o matai, ma tali i lou suafa.",
+        "E sili atu le tāua o ʻie tōga ua i ai igoa, nai lo le aofaʻi. Aumai le mea e fetaui ma lou tulaga.",
+        "Sauni se lāuga puʻupuʻu, atonu e fesili atu oe e tautala mo le aiga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "wedding"
+      }
+    },
+    {
+      "event": "funeral",
+      "role": "family-visiting",
+      "question": "what-to-bring",
+      "title_en": "Funeral — Visiting family — What to bring",
+      "title_sm": "Maliu — Aiga asiasi — Mea e aumai",
+      "guidance_en": [
+        "Confer with your matai before going. The aigaʼs contribution will usually be coordinated together.",
+        "ʻIe tōga: the heaviest contribution. The number is decided by your matai.",
+        "Cash in named envelopes per branch of the aiga.",
+        "Food contribution if requested by the bereaved aiga.",
+        "Plan to stay for the lāuga, the meal, and the burial — not just one of these."
+      ],
+      "guidance_sm": [
+        "Fesili i lou matai aʻo leʻi alu. E masani lava ona soalaupule fesoasoani a le aiga atoa.",
+        "ʻIe tōga: o le fesoasoani sili ona mamafa. E filifili e lou matai le aofaʻi.",
+        "Tupe i teutusi ua i ai igoa o lala taʻitasi o le aiga.",
+        "Meaʻai pe afai ua manaʻomia e le aiga ua tigāina.",
+        "Fuafua e te nofo mo le lāuga, le taumafataga, ma le falelauasiga — ae le na o le tasi."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "funeral"
+      }
+    },
+    {
+      "event": "funeral",
+      "role": "guest",
+      "question": "what-to-bring",
+      "title_en": "Funeral — Guest — What to bring",
+      "title_sm": "Maliu — Mālō — Mea e aumai",
+      "guidance_en": [
+        "A cash contribution in a named envelope. This is the minimum — every visitor is expected to contribute.",
+        "If you are close to the family, ask if you should bring ʻie tōga or food. Do not assume — ask.",
+        "Black or very dark clothing. No exceptions."
+      ],
+      "guidance_sm": [
+        "Se fesoasoani tupe i se teutusi ma lou igoa. O le mea sili ona pito i lalo — e faʻamoemoeina mālō uma e fesoasoani.",
+        "Pe afai e te vavalalata ma le aiga, fesili pe e aumai ʻie tōga po o meaʻai. Aua neʻi manatu naʻo oe — fesili.",
+        "Lāʻei uliuli pe pogisa lava. E leai se tuusaunoaga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "funeral"
+      }
+    },
+    {
+      "event": "funeral",
+      "role": "guest",
+      "question": "how-to-greet",
+      "title_en": "Funeral — Greeting the bereaved",
+      "title_sm": "Maliu — Faʻafeiloaʻi le aiga ua tigāina",
+      "guidance_en": [
+        "Approach softly. A handshake or quiet embrace is appropriate. Lower your voice.",
+        "Use mālō le onosaʻi (well borne) or alofa atu (love to you).",
+        "Do not ask how the deceased died. Do not stay too long in the line if many are waiting."
+      ],
+      "guidance_sm": [
+        "Faʻalatalata ma le filemū. E talafeagai se lulu lima po o se fusi puʻupuʻu. Tautala lemū.",
+        "Faʻaaogā mālō le onosaʻi po o alofa atu.",
+        "Aua e te fesili pe na maliu faʻapefea. Aua le tu umi i le laina pe afai e tele e faʻatali."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "funeral"
+      }
+    },
+    {
+      "event": "funeral",
+      "role": "family-hosting",
+      "question": "what-to-bring",
+      "title_en": "Funeral — Bereaved aiga — What to prepare",
+      "title_sm": "Maliu — Aiga tigāina — Mea e saunia",
+      "guidance_en": [
+        "Notify the extended aiga, church, and matai of the village early — through the failauga.",
+        "Prepare space to receive visiting aiga over multiple days, and to record contributions.",
+        "Umu and food for many. Every visitor eats.",
+        "Designate a tulāfale to receive lāuga and call out contributions publicly.",
+        "Prepare the fanua (family plot) for burial ahead of time."
+      ],
+      "guidance_sm": [
+        "Faʻasilasila i le aiga potopoto, le lotu, ma matai o le nuʻu — e ala i le failauga.",
+        "Sauni le nofoaga e talia ai aiga asiasi i aso e tele, ma faʻamauina fesoasoani.",
+        "Umu ma meaʻai mo tagata e toʻatele. E ʻai mālō uma.",
+        "Tofia se tulāfale e talia lāuga, ma taʻua aloaʻia fesoasoani.",
+        "Sauni le fanua o le aiga mo le falelauasiga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "funeral"
+      }
+    },
+    {
+      "event": "funeral",
+      "role": "matai",
+      "question": "how-to-give",
+      "title_en": "Funeral — Matai — Delivering the aigaʼs contribution",
+      "title_sm": "Maliu — Matai — Tuʻuina atu o le fesoasoani",
+      "guidance_en": [
+        "Lead the aigaʼs procession to the gate. Do not enter until welcomed by the host tulāfale.",
+        "Your tulāfale delivers the lāuga first: God, the deceased, the aiga, then the gift.",
+        "Present ʻie tōga first, then cash envelopes named aloud, then food.",
+        "Wait for the host acknowledgement before sitting."
+      ],
+      "guidance_sm": [
+        "Taʻimua i le savavaliga o le aiga i le faitotoʻa. Aua le ulufale seʻia faʻafeiloaʻia e le tulāfale o le aiga.",
+        "E muamua lāuga a lau tulāfale: le Atua, le ua maliu, le aiga, ona sosoʻo ai lea ma le meaalofa.",
+        "Faʻaali muamua ʻie tōga, ona sosoʻo ai lea ma teutusi tupe ua taʻua aloaʻia, ona sosoʻo ai ma meaʻai.",
+        "Faʻatali le faʻafetai a le aiga aʻo leʻi nofo."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "funeral"
+      }
+    },
+    {
+      "event": "faalavelave",
+      "role": "guest",
+      "question": "what-to-bring",
+      "title_en": "Faʻalavelave — Guest — What to bring",
+      "title_sm": "Faʻalavelave — Mālō — Mea e aumai",
+      "guidance_en": [
+        "A cash contribution is the baseline for any faʻalavelave you are invited to. Name your envelope.",
+        "For a heavy faʻalavelave (funeral, saofaʻi, church dedication), ask your matai whether ʻie tōga are also expected of you.",
+        "For a lighter one (birthday, graduation), cash and presence are usually enough."
+      ],
+      "guidance_sm": [
+        "O se fesoasoani tupe le mea muamua i soʻo se faʻalavelave e valaʻau atu ai oe. Tusi lou igoa i le teutusi.",
+        "Mo se faʻalavelave mamafa (maliu, saofaʻi, faʻapaʻiaga falesā), fesili i lou matai pe e faʻamoemoe atu oe e aumai ʻie tōga.",
+        "Mo se faʻalavelave māmā (aso fanau, faʻauʻuga), e lava le tupe ma lou auai."
+      ],
+      "link": {
+        "kind": "article",
+        "id": "faalavelave-overview"
+      }
+    },
+    {
+      "event": "faalavelave",
+      "role": "family-visiting",
+      "question": "how-to-give",
+      "title_en": "Faʻalavelave — Visiting aiga — How to give",
+      "title_sm": "Faʻalavelave — Aiga asiasi — Tuʻuina atu",
+      "guidance_en": [
+        "Move as one aiga. Do not deliver contributions individually — the collective act is the honour.",
+        "Your tulāfale offers a lāuga on arrival. Only after the host receives may the gifts be laid out.",
+        "ʻIe tōga first, cash second (each envelope named), food third.",
+        "Wait for the host tulāfaleʼs acknowledgement of each item before proceeding."
+      ],
+      "guidance_sm": [
+        "Alu faʻatasi le aiga. Aua le tuʻuina atu fesoasoani taʻitasi — o le gaoioiga faʻatasi o le faʻaaloalo.",
+        "E ofo mai e lau tulāfale se lāuga i le taunuʻuga. Pe a maeʻa ona talia e le aiga, ona faʻaali ai lea o meaalofa.",
+        "ʻIe tōga muamua, tupe lua (taʻua taʻitasi teutusi), meaʻai tolu.",
+        "Faʻatali le faʻafetai a le tulāfale o le aiga i mea taʻitasi, aʻo leʻi faʻaauau."
+      ],
+      "link": {
+        "kind": "article",
+        "id": "faalavelave-overview"
+      }
+    },
+    {
+      "event": "faalavelave",
+      "role": "family-hosting",
+      "question": "how-to-give",
+      "title_en": "Faʻalavelave — Hosting aiga — How to receive",
+      "title_sm": "Faʻalavelave — Aiga talimālō — Talia o fesoasoani",
+      "guidance_en": [
+        "Designate a tulāfale to call each contribution aloud as it lands — name of giver, aiga, item.",
+        "Keep a written or mental register. The names read out today are the obligations owed tomorrow.",
+        "Every contribution deserves acknowledgement in the moment. Silence read as disrespect.",
+        "The saʻo speaks at the close: thanks to God, thanks to each contributing aiga by name."
+      ],
+      "guidance_sm": [
+        "Tofia se tulāfale e taʻu aloaʻia le fesoasoani a ō mai — igoa o le tagata, le aiga, ma le meaalofa.",
+        "Faʻamau i pepa pe i le manatu. O igoa ua taʻua i le aso nei, o tiute ia o taeao.",
+        "E tatau ona faʻafetai i fesoasoani taʻitasi i le taimi. O le filemū e faʻamatalaina ai le lē faʻaaloalo.",
+        "E tautala le saʻo i le faʻaiʻuga: faʻafetai i le Atua, faʻafetai i aiga taʻitasi ua fesoasoani, i o latou igoa."
+      ],
+      "link": {
+        "kind": "article",
+        "id": "faalavelave-overview"
+      }
+    },
+    {
+      "event": "ava",
+      "role": "guest",
+      "question": "how-to-greet",
+      "title_en": "ʻAva — Guest — How to behave in the ceremony",
+      "title_sm": "ʻAva — Mālō — Amio i le sauniga",
+      "guidance_en": [
+        "Sit cross-legged, quiet, legs never pointed at the tanoa or the matai.",
+        "Do not talk during the mixing or distribution. Silence is the mark of the sauniga.",
+        "If a cup is offered to you (rare as a guest), receive with both hands, pour a small libation to the ground, drink in one, return the cup.",
+        "Never step over the fau, the tanoa, or in front of a seated matai."
+      ],
+      "guidance_sm": [
+        "Nofo faʻavaevae, filemū, aua neʻi faʻasaga vae i le tanoa po o matai.",
+        "Aua le tautala aʻo palu ma tufa le ʻava. O le filemū o le faʻailoga o le sauniga.",
+        "Pe afai e ofoina atu se ipu ia te oe (e seāseā mo se mālō), talia i lima e lua, sasaa se vaega itiiti i le eleʻele, inu i le tasi, toe tuʻu atu le ipu.",
+        "Aua le sopoia le fau, le tanoa, po o matai o loʻo nonofo."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "ava"
+      }
+    },
+    {
+      "event": "ava",
+      "role": "matai",
+      "question": "how-to-greet",
+      "title_en": "ʻAva — Matai — Receiving your cup",
+      "title_sm": "ʻAva — Matai — Talia lou ipu",
+      "guidance_en": [
+        "When the tulāfale calls your suafa, respond quietly to acknowledge.",
+        "Receive the cup with both hands. Pour the taumafa (libation) onto the ground or into a shell before drinking.",
+        "Drink in a single motion. Return the cup with both hands.",
+        "Do not begin any lāuga or discussion until every cup in the order has been served."
+      ],
+      "guidance_sm": [
+        "Pe a taʻua e le tulāfale lou suafa, tali atu ma le filemū.",
+        "Talia le ipu i lima e lua. Sasaa le taumafa i le eleʻele po o se ipu niu aʻo leʻi inu.",
+        "Inu i le tasi sapasapaiga. Toe tuʻu atu le ipu i lima e lua.",
+        "Aua le amata soʻo se lāuga po o se talanoaga, seʻia maeʻa le tufa o ipu uma."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "ava"
+      }
+    },
+    {
+      "event": "ava",
+      "role": "tulafale",
+      "question": "how-to-give",
+      "title_en": "ʻAva — Tulāfale — Calling the cups",
+      "title_sm": "ʻAva — Tulāfale — Taʻuina o ipu",
+      "guidance_en": [
+        "Confirm the rank order of aliʻi and tulāfale present before the mixing begins.",
+        "Call the first cup for the most senior aliʻi, naming their suafa in full.",
+        "Continue in strict order: aliʻi (by rank), tulāfale (by rank), then any visitors and lower-rank matai.",
+        "Never skip or reverse the order — the order is the ceremony."
+      ],
+      "guidance_sm": [
+        "Faʻamaonia le faʻasologa o le mamalu o aliʻi ma tulāfale, aʻo leʻi amata le palu.",
+        "Taʻu le ipu muamua mo le aliʻi silisili, ma faʻaigoa lona suafa atoa.",
+        "Faʻaauau i le faʻasologa: aliʻi (i lona faʻasologa), tulāfale (i lona faʻasologa), ona sosoʻo ai lea ma mālō ma isi matai.",
+        "Aua neʻi soona faʻasese le faʻasologa — o le faʻasologa lava lea o le sauniga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "ava"
+      }
+    },
+    {
+      "event": "ava",
+      "role": "family-hosting",
+      "question": "what-to-bring",
+      "title_en": "ʻAva — Host aiga — What to prepare",
+      "title_sm": "ʻAva — Aiga talimālō — Sauniuniga",
+      "guidance_en": [
+        "ʻAva root (aʻa), well dried.",
+        "The tanoa (carved bowl), the fau (strainer of hibiscus bast), and enough ipu (cups) for every matai present.",
+        "A skilled taupou or taufa to mix.",
+        "Cleared, quiet space; no phones, no children running through."
+      ],
+      "guidance_sm": [
+        "Aʻa o le ʻava, ua mago lelei.",
+        "O le tanoa, le fau, ma ipu e lava mo matai uma.",
+        "Se taupou po o se taufa ua tomai i le palu.",
+        "Nofoaga ua faʻamamā, filemū; leai ni telefoni, ni tamaiti tamomoʻe."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "ava"
+      }
+    },
+    {
+      "event": "saofai",
+      "role": "family-hosting",
+      "question": "what-to-bring",
+      "title_en": "Saofaʻi — Bestowing aiga — What to prepare",
+      "title_sm": "Saofaʻi — Aiga tuʻuina — Sauniuniga",
+      "guidance_en": [
+        "ʻIe tōga in significant number — this is a major faʻalavelave.",
+        "Cash for the village fono (consult your saʻo on the amount).",
+        "ʻAva root.",
+        "Pigs, taro, and an umu sufficient to feed the village fono.",
+        "Formal lāʻei for the candidate and all aiga members at the saofaʻi."
+      ],
+      "guidance_sm": [
+        "ʻIe tōga e tele — o se faʻalavelave mamafa.",
+        "Tupe mo le fono a le nuʻu (fesili i lou saʻo mo le aofaʻi).",
+        "Aʻa o le ʻava.",
+        "Puaʻa, talo, ma se umu ua lava e fafaga ai le fono a le nuʻu.",
+        "Lāʻei aloaʻia mo le sui ma le aiga atoa i le saofaʻi."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "saofai"
+      }
+    },
+    {
+      "event": "saofai",
+      "role": "matai",
+      "question": "how-to-greet",
+      "title_en": "Saofaʻi — New matai — First words",
+      "title_sm": "Saofaʻi — Matai fou — Uluaʻi upu",
+      "guidance_en": [
+        "When your new suafa is called for your first ʻava cup, respond quietly — this is your acceptance.",
+        "Speak last in the lāuga. Speak briefly. Thank God, the fono of the nuʻu, and the aiga.",
+        "Do not celebrate. The saofaʻi is not a promotion — it is a burden acknowledged.",
+        "From this day, you answer to the aiga, the nuʻu, and the lotu. Say so plainly."
+      ],
+      "guidance_sm": [
+        "Pe a taʻua lou suafa fou mo lau uluaʻi ipu ʻava, tali ma le filemū — o lou talia lea o le suafa.",
+        "Tautala mulimuli i lāuga. Tautala puʻupuʻu. Faʻafetai i le Atua, i le fono a le nuʻu, ma le aiga.",
+        "Aua le faʻafiafia. E le o se siitaga le saofaʻi — o se avega ua talia.",
+        "Talu mai lenei aso, e te tali atu i le aiga, i le nuʻu, ma le lotu. Taʻu manino atu."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "saofai"
+      }
+    },
+    {
+      "event": "saofai",
+      "role": "guest",
+      "question": "what-to-wear",
+      "title_en": "Saofaʻi — Guest — What to wear",
+      "title_sm": "Saofaʻi — Mālō — Lāʻei",
+      "guidance_en": [
+        "Formal. Do not dress down for a saofaʻi — it is one of the heaviest cultural moments an aiga will host.",
+        "Women: puletasi, modest, shoulders covered.",
+        "Men: ie faitaga and white shirt with tie, or a dark suit.",
+        "No prints, no beachwear, no sandals."
+      ],
+      "guidance_sm": [
+        "Aloaʻia. Aua le māmā le lāʻei mo le saofaʻi — o se tasi o taimi sili ona mamafa i le aganuʻu.",
+        "Tamāʻitaʻi: puletasi, faʻaaloalo, pulou tauʻau.",
+        "Aliʻi: ie faitaga ma se ofu paʻepaʻe ma le fusi ua, po o se suti pogisa.",
+        "Aua ni mea faʻaturisi, ni mea o le matafaga, ni sevae māmā."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "saofai"
+      }
+    },
+    {
+      "event": "saofai",
+      "role": "family-visiting",
+      "question": "what-to-bring",
+      "title_en": "Saofaʻi — Visiting aiga — What to bring",
+      "title_sm": "Saofaʻi — Aiga asiasi — Mea e aumai",
+      "guidance_en": [
+        "ʻIe tōga in respectful number — reflecting your aigaʼs relationship to the bestowing aiga.",
+        "Cash in named envelopes.",
+        "Formal lāʻei.",
+        "Time — a saofaʻi runs long. Do not plan a departure before the closing lāuga."
+      ],
+      "guidance_sm": [
+        "ʻIe tōga faʻaaloalo — e faʻatatau i le faiā o lou aiga i le aiga tuʻuina.",
+        "Tupe i teutusi ua taʻua igoa.",
+        "Lāʻei aloaʻia.",
+        "Taimi — e umi le saofaʻi. Aua neʻi fuafua e alu ese aʻo leʻi maeʻa le lāuga faʻaiʻuga."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "saofai"
+      }
+    },
+    {
+      "event": "white-sunday",
+      "role": "family-hosting",
+      "question": "what-to-bring",
+      "title_en": "White Sunday — What to prepare",
+      "title_sm": "Lotu a Tamaiti — Mea e saunia",
+      "guidance_en": [
+        "White lāʻei for every child of the aiga.",
+        "A memorised verse or song per child — even the youngest.",
+        "A larger-than-usual Sunday lunch. The children are served first.",
+        "No gifts to adults — this day belongs to the children."
+      ],
+      "guidance_sm": [
+        "Lāʻei paʻepaʻe mo tamaiti uma o le aiga.",
+        "Se tauloto po o se pese ua sauni — e oʻo lava i e laiti.",
+        "Se toʻonaʻi e tele atu nai lo le masani. E muaʻi tausi tamaiti.",
+        "Aua ni meaalofa i tagata matutua — o le aso e mo tamaiti."
+      ],
+      "link": {
+        "kind": "ceremony",
+        "id": "white-sunday"
+      }
+    },
+    {
+      "event": "*",
+      "role": "*",
+      "question": "cant-contribute",
+      "title_en": "I cannot contribute the full amount",
+      "title_sm": "E lē mafai ona ou faʻataunuʻu atoatoa",
+      "guidance_en": [
+        "Communicate as early as possible. Speak to your matai, your saʻo, or — if you are external — directly to the host aigaʼs tulāfale.",
+        "Use the word faʻatoesega (apology). State plainly: 'O loʻu faʻatoesega' — this is my apology.",
+        "Send what you can with respect. A small contribution well-named and accompanied by an explanation is honoured.",
+        "Do not send nothing without word. Silence is the failure; partial contribution with communication is not."
+      ],
+      "guidance_sm": [
+        "Talanoa vave. Fesili i lou matai, lou saʻo, po o — pe afai e te i fafo — faʻasaʻo atu i le tulāfale o le aiga e talimalo.",
+        "Faʻaaogā le upu faʻatoesega. Taʻu manino atu: ʻO loʻu faʻatoesega.ʻ",
+        "Tuʻuina atu le mea e mafai ma le faʻaaloalo. O se fesoasoani itiiti ma le igoa ma le faʻamatalaga e faʻaaloalogia.",
+        "Aua le auina atu se mea aunoa ma le tala. O le filemū — o le sese; o le fesoasoani itiiti ma le talanoaga — e lē sese."
+      ],
+      "link": {
+        "kind": "article",
+        "id": "faalavelave-overview"
+      }
+    },
+    {
+      "event": "*",
+      "role": "guest",
+      "question": "where-to-sit",
+      "title_en": "Where do I sit as a guest?",
+      "title_sm": "O fea e nofo ai se mālō?",
+      "guidance_en": [
+        "Not in the matai row — that is the front. Behind the matai of your aiga, or in the guest seating indicated by the host tulāfale.",
+        "Wait to be shown; do not pick a seat alone.",
+        "If sitting on the floor in a fale samoa, keep legs crossed or tucked under — never pointed at the matai."
+      ],
+      "guidance_sm": [
+        "Aua i le laina o matai — o luma lena. I tua o matai o lou aiga, po o le nofoaga o mālō ua faʻasino e le tulāfale.",
+        "Faʻatali seʻi faʻasino atu; aua naʻo oe e faʻaiʻu.",
+        "Pe afai o le a nofo i lalo i se fale samoa, faʻatautau vae i lalo — aua neʻi faʻasaga vae i matai."
+      ],
+      "link": {
+        "kind": "article",
+        "id": "faamatai-overview"
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "faamatai-overview",
+  "title_en": "What is the Faʻamatai?",
+  "title_sm": "O le ā le Faʻamatai?",
+  "eyebrow_en": "Faʻamatai",
+  "eyebrow_sm": "Faʻamatai",
+  "body_en": "The faʻamatai is the chiefly system that organises Samoan family and village life. Every aiga has matai — title-holders responsible for the family, its lands, and its standing. Every nuʻu (village) has a fono — a council of its matai — which manages village affairs. The system rests on a single principle: O le ala i le pule o le tautua. The path to leadership is service.",
+  "body_sm": "O le faʻamatai o le faiga o le taʻitaʻiga e faʻatulagaina ai le aiga ma le nuʻu Sāmoa. E i ai matai o ia aiga ma ia aiga — e umia suafa, e faʻatautaia le aiga, ona fanua, ma lona mamalu. E i ai le fono a ia nuʻu ma ia nuʻu — o le aoao o matai e tausia le nuʻu. O le faiga atoa e faʻavae i se mataupu silisili e tasi: O le ala i le pule o le tautua.",
+  "sections": [
+    {
+      "step": 1,
+      "title_en": "Aliʻi and Tulāfale",
+      "title_sm": "Aliʻi ma Tulāfale",
+      "body_en": "Matai fall into two main classes. Aliʻi carry the dignity and lineage of the title — they speak less but their word weighs more. Tulāfale (orators) hold the speech rights of the aiga — they deliver lāuga, manage protocol, and represent the aliʻi in public exchange. Both are matai; neither is above the other. The system requires both.",
+      "body_sm": "E vaevaeina matai i ni vasega tetele e lua. O aliʻi e faʻaali le mamalu ma le gafa o le suafa — e itiiti a latou tautalaga ae e mamafa. O tulāfale e umia le tofi o le tautala — e fofogaina lāuga, faʻatautaia tū, ma fai ma sui o aliʻi i le tuʻufaʻatasiga aloaʻia. E tutusa matai e lua — e leai se isi e sili. E manaʻomia uma e le faiga."
+    },
+    {
+      "step": 2,
+      "title_en": "The aiga and the saʻo",
+      "title_sm": "O le aiga ma le saʻo",
+      "body_en": "Every aiga has a saʻo — the head matai who carries the senior title. The saʻo has the authority to bestow titles, manage family land, and represent the aiga in the village fono. The saʻo consults the aiga potopoto on big decisions; they do not act alone.",
+      "body_sm": "E i ai le saʻo o ia aiga ma ia aiga — o le matai sili e umia le suafa maualuga. E iai le pule o le saʻo e tuʻuina atu suafa, faʻatautaia fanua o le aiga, ma fai ma sui o le aiga i le fono a le nuʻu. E fesili le saʻo i le aiga potopoto i faʻaiʻuga tetele; e le tuʻutuʻu naʻo ia."
+    },
+    {
+      "step": 3,
+      "title_en": "The fono and the nuʻu",
+      "title_sm": "O le fono ma le nuʻu",
+      "body_en": "The village fono is the council of matai of a nuʻu. It meets regularly. Matters of village discipline, faʻalavelave, church support, and visiting parties are handled here. Seating in the fono follows precise rank; speaking order follows from the host tulāfale.",
+      "body_sm": "O le fono a le nuʻu o le aoao o matai. E fono soʻo. E faʻatautaia ai pulega o le nuʻu, faʻalavelave, fesoasoani i le lotu, ma malō asiasi. E i ai le faʻasologa o le nofoa; e taʻimua e le tulāfale o le aiga le faʻasologa o tautalaga."
+    },
+    {
+      "step": 4,
+      "title_en": "How titles are bestowed",
+      "title_sm": "Le tuʻuina atu o suafa",
+      "body_en": "A matai title belongs to the aiga, not to an individual. When a title becomes vacant, the aiga potopoto meets — sometimes for months — to agree on a successor. The candidate is chosen on demonstrated tautua, character, knowledge, and ability to serve. The title is then conferred at a saofaʻi ceremony in front of the village fono. The bestowing is itself a faʻalavelave: ʻie tōga, money, and food are presented to the village.",
+      "body_sm": "E i ai se suafa matai i totonu o se aiga, ae le i se tagata. Pe a avanoa se suafa, e fono le aiga potopoto — e oʻo lava i ni masina — e mālilie ai i se sui. E filifilia le sui i lana tautua, amio, poto, ma le mafai ona tausi. Ona tuʻuina atu ai lea o le suafa i se sauniga saofaʻi i luma o le fono a le nuʻu. O le tuʻuina atu o le suafa, o se faʻalavelave foʻi: e tuʻuina atu ʻie tōga, tupe, ma meaʻai i le nuʻu."
+    },
+    {
+      "step": 5,
+      "title_en": "Obligations of a matai",
+      "title_sm": "Tiute o le matai",
+      "body_en": "A matai answers to three constituencies at once — the aiga (family), the nuʻu (village), and the lotu (church). Aiga: maintain family lands, arbitrate disputes, speak for family in the fono, carry the titleʼs mamalu with dignity. Nuʻu: attend fono, contribute to village faʻalavelave, uphold village tapu. Lotu: support the faifeʻau, contribute to church buildings and events. Falling short in any one erodes the standing of the title.",
+      "body_sm": "E tali atu se matai i itu e tolu i le taimi e tasi — le aiga, le nuʻu, ma le lotu. Aiga: tausia fanua o le aiga, faʻamalilie feeseʻeseaiga, tautala mo le aiga i le fono, tausia le mamalu o le suafa. Nuʻu: auai i fono, fesoasoani i faʻalavelave a le nuʻu, faʻamaonia tapu a le nuʻu. Lotu: fesoasoani i le faifeʻau, foaʻi i falesā ma sauniga. O le lē faʻataunuʻuina o soʻo se tasi, e faʻaituau ai le mamalu o le suafa."
+    },
+    {
+      "step": 6,
+      "title_en": "Tapu and protocol around titles",
+      "title_sm": "Tapu ma tū o suafa",
+      "body_en": "A title carries tapu — behaviours reserved to it, and behaviours forbidden to it. Never seat someone in front of a matai in the fono. Never call a matai by their given name in a formal setting — use the suafa. Never eat before the matai has been served. In the ʻava, matai are called in strict order. To break these is to disrespect not the person but the office; and through the office, the aiga.",
+      "body_sm": "E i ai le tapu o le suafa — o amio faʻapitoa mo le suafa, ma amio e sā. Aua le tuʻu se tagata i luma o le matai i le fono. Aua le faʻaigoa se matai i lona igoa faʻavae i se aofia aloaʻia — faʻaaogā le suafa. Aua le taumafa aʻo leʻi tausi le matai. I le ʻava, e faʻasologa faʻamamalu matai. O le tuʻimomomo o ia mea, e lē faʻaaloalo ai i le suafa; ma o le suafa, o le aiga."
+    },
+    {
+      "step": 7,
+      "title_en": "The fono in session — speaking order and lāuga",
+      "title_sm": "Le fono — faʻasologa o lāuga",
+      "body_en": "In session, matai sit in strict rank. The host tulāfale opens with a lāuga that honours God, the fenuā, the seated matai, then names the matter. Response follows from the visiting tulāfale in kind. Aliʻi speak sparingly and with weight. Interruption during a lāuga is a serious breach. A fono can run late into the night; the meal follows the resolution, not the reverse.",
+      "body_sm": "I le fono, e nonofo matai i le faʻasologa o le mamalu. E amata e le tulāfale o le aiga i se lāuga e faʻaaloalo i le Atua, i le fenuā, i matai o le aofia, ona ta ai lea le mataupu. E tali mai le tulāfale asiasi i le auala e tutusa. E tautala aliʻi ma le mamafa. O le faʻalavelaveina o se lāuga, o se sopoaga tele. E mafai ona faʻaauau se fono i le vaeluapō; e sosoʻo le taumafataga ma le faʻaiʻuga, ae le o le tulaga faʻafeagai."
+    },
+    {
+      "step": 8,
+      "title_en": "The faʻamatai in the diaspora",
+      "title_sm": "Le faʻamatai i fafo",
+      "body_en": "Distance does not close the system. Diaspora matai carry the same tiute — to the aiga in the country of residence, to the aiga back in the islands, and often to a village fono via calls, remittances, and travel. Aiga councils convene by phone; ʻie tōga travel in checked luggage. When a title is bestowed on someone in the diaspora, the saofaʻi is still held at the village. The formative act of the faʻamatai — service before authority — travels intact.",
+      "body_sm": "E lē tapunia le faʻamatai i le mamao. E umia e matai i fafo tiute tutusa — i le aiga i le atunuʻu o loʻo nonofo ai, i le aiga i le atunuʻu tupuga mai, ma le fono a le nuʻu e ala i telefoni, tupe, ma malaga. E fono aiga i telefoni; e malaga ʻie tōga i totonu o pusa. Pe a tuʻuina atu se suafa i se tagata i fafo, e faia pea le saofaʻi i le nuʻu. O le mataupu silisili o le faʻamatai — o le tautua e muamua ai le pule — e savali atu ma le tumau."
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "reviewer": null,
+    "review_date": null,
+    "varies_by_nuu": true
+  }
+}

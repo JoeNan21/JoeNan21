@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-sand text-ink font-sans antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background: #C9882E;
+    color: #0D1B2A;
+  }
+}
+
+@layer components {
+  .container-tight {
+    @apply mx-auto w-full max-w-3xl px-5 sm:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .rule {
+    @apply border-t border-navy/10;
+  }
+
+  .tile {
+    @apply relative block rounded-sm border border-navy/10 bg-white/60 p-5 transition-all duration-300 hover:border-ochre/60 hover:bg-white;
+  }
+
+  .tile-eyebrow {
+    @apply text-[11px] uppercase tracking-[0.22em] text-ochre font-medium;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-navy/15 bg-white/60 px-3 py-1 text-xs font-medium text-navy/80;
+  }
+
+  .lede {
+    @apply font-serif text-lg sm:text-xl leading-relaxed text-navy/85;
+  }
+
+  .prose-body p {
+    @apply font-serif text-base sm:text-lg leading-relaxed text-ink/90;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-4 py-2.5 text-sm font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn bg-navy text-sand hover:bg-navy-800;
+  }
+
+  .btn-ghost {
+    @apply btn border border-navy/15 text-navy hover:bg-navy/5;
+  }
+
+  .glossary-link {
+    @apply underline decoration-ochre/60 decoration-2 underline-offset-4 hover:decoration-ochre cursor-pointer;
+  }
+}
