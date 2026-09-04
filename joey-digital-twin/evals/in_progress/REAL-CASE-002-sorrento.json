@@ -1,14 +1,14 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "AS_OF_ANCHORED_AWAITING_EVIDENCE_S1_S11",
+  "status": "S1_ENCODED_AWAITING_S2_S11",
   "mode": "sorrento",
   "title": "Existing landscaping/gardening arrangement - inherited supplier",
   "as_of": "2026-09-02",
   "materiality": "medium",
   "question": "Given what was known at the decision point, what should Sorrento do about the existing landscaping arrangement?",
   "entities": [],
-  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md.",
+  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md. ENCODING CONSTRAINT (Joey, \u00a71): an absence of visibility establishes an information/accountability gap, NOT supplier non-performance. No claim or unknown in this case may be routed to oppose retaining the supplier, or to support replacing them, on the basis of missing information alone.",
   "options": [
     {
       "id": "opt_a_continue_unchanged",
@@ -42,8 +42,104 @@
   "constraints": [],
   "reachability_exceptions": [],
   "context": {
-    "claims": [],
-    "unknowns": []
+    "claims": [
+      {
+        "id": "S1-01",
+        "statement": "The landscaping/gardening arrangement was already in place when responsibility for Sorrento was taken over; it was inherited rather than personally negotiated.",
+        "grade": "FACT",
+        "source": "direct involvement at Sorrento",
+        "date": "2026-09-02",
+        "confidence": 0.95,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S1-02",
+        "statement": "As at the decision point, understanding of the arrangement was operational and inherited rather than verifiable against a contract that had been personally reviewed.",
+        "grade": "FACT",
+        "source": "own decision-time knowledge state",
+        "date": "2026-09-02",
+        "confidence": 0.95,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S1-03",
+        "statement": "General operational understanding that the supplier was responsible for landscaping/gardening and maintaining the grounds. This records the operational understanding only and is not evidence of contractual scope.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S1-01",
+          "S1-02"
+        ],
+        "source": "operational understanding at Sorrento",
+        "date": "2026-09-02",
+        "confidence": 0.8,
+        "relevance": 0.5,
+        "tags": [],
+        "polarity": 1
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "U1-CONTRACT",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "contract_terms"
+        ],
+        "question": "Does a written agreement exist, and what does it contain? No contract establishing the complete agreement had been reviewed."
+      },
+      {
+        "id": "U1-SCOPE",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "What exactly was the supplier contracted or expected to do for the amounts charged? No documented scope mapping charges to agreed services or deliverables."
+      },
+      {
+        "id": "U1-FREQUENCY",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "How often was attendance required, and what work was required on each attendance? No documented schedule."
+      },
+      {
+        "id": "U1-STANDARDS",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "What measurable deliverables, service standards or acceptance criteria applied, against which work performed could be reconciled with amounts paid? None known."
+      },
+      {
+        "id": "U1-RATE-BASIS",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "What is the rate basis? PROVISIONAL - may be partly resolved by invoice evidence in section 2."
+      },
+      {
+        "id": "U1-NOTICE",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "contract_terms"
+        ],
+        "question": "What notice period applied?"
+      },
+      {
+        "id": "U1-EXIT",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "contract_terms"
+        ],
+        "question": "What exit provisions or minimum term applied?"
+      }
+    ]
   },
   "hidden": {
     "actual_decision": "",
