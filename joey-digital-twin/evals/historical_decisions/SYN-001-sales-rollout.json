@@ -1,0 +1,40 @@
+{
+  "case_id": "SYN-001",
+  "synthetic": true,
+  "synthetic_notice": "SYNTHETIC FIXTURE. Invented for harness testing. This is NOT Joey's history, NOT a real company, and NOT a real decision. See AGENTS.md section 5.",
+  "mode": "sales",
+  "title": "Full rollout vs paid pilot after a single demo",
+  "as_of": "2026-03-04",
+  "materiality": "high",
+  "question": "Global Freight Systems have asked about rolling out across all 14 depots after one demo. What should we do this quarter?",
+  "entities": ["global-freight-systems"],
+  "options": [
+    {"id": "close_full_rollout", "label": "Push for the 14-depot rollout contract this quarter", "kind": "close", "cost": 0.9, "reversibility": "low"},
+    {"id": "paid_pilot", "label": "Propose a paid two-depot pilot with defined success criteria", "kind": "proof", "cost": 0.2, "reversibility": "high"},
+    {"id": "qualification_meeting", "label": "Book a qualification meeting with the budget holder before proposing anything", "kind": "qualify", "cost": 0.05, "reversibility": "high"}
+  ],
+  "context": {
+    "claims": [
+      {"id": "c1", "statement": "Six operations staff attended the demo; two follow-up emails were sent.", "grade": "FACT", "source": "CRM activity log", "date": "2026-02-20", "confidence": 0.95, "relevance": 0.5, "tags": ["activity"], "polarity": 1, "supports_options": ["close_full_rollout"]},
+      {"id": "c2", "statement": "Operations staff describe an 11 hour per week manual reconciliation process at the demoed depot.", "grade": "INFERENCE", "derived_from": ["c1"], "source": "demo transcript", "date": "2026-02-20", "confidence": 0.7, "relevance": 0.9, "tags": ["pain_verified"], "polarity": 1, "supports_options": ["close_full_rollout", "paid_pilot"]},
+      {"id": "c3", "statement": "All 14 depots are assumed to run the same reconciliation process as the depot demoed.", "grade": "ASSUMPTION", "confidence": 0.4, "relevance": 0.8, "tags": ["risk"], "polarity": 1, "supports_options": ["close_full_rollout"]},
+      {"id": "c4", "statement": "The operations manager confirmed he does not control spend and would not name the budget holder.", "grade": "FACT", "source": "demo transcript", "date": "2026-02-20", "confidence": 0.95, "relevance": 0.9, "tags": ["economic_buyer", "approval_chain"], "polarity": -1, "opposes_options": ["close_full_rollout"], "supports_options": ["qualification_meeting"]},
+      {"id": "c5", "statement": "Two comparable multi-site rollouts took five months and required IT sign-off that was not in the original scope.", "grade": "FACT", "source": "internal delivery log", "date": "2025-11-02", "confidence": 0.9, "relevance": 0.8, "tags": ["historical_outcome"], "polarity": -1, "opposes_options": ["close_full_rollout"], "supports_options": ["paid_pilot"]},
+      {"id": "c6", "statement": "The operations manager described the demo as 'exactly what we need'.", "grade": "FACT", "source": "demo transcript", "date": "2026-02-20", "confidence": 0.9, "relevance": 0.6, "tags": ["sentiment"], "polarity": 1, "supports_options": ["close_full_rollout"]}
+    ],
+    "unknowns": [
+      {"id": "u1", "question": "Who controls the budget for a 14-depot rollout, and what is the approval threshold?", "criticality": "high", "blocks": ["close_full_rollout"], "tags": ["economic_buyer"]},
+      {"id": "u2", "question": "Do all 14 depots actually run the same process as the one demoed?", "criticality": "medium", "blocks": ["close_full_rollout"], "tags": ["risk"]}
+    ]
+  },
+  "hidden": {
+    "actual_decision": "paid_pilot",
+    "actual_decision_label": "Propose a paid two-depot pilot with defined success criteria",
+    "actual_decision_kind": "proof",
+    "reasoning_tags": ["proof_before_scale", "find_the_decision_maker", "do_nothing_is_a_competitor", "what_must_be_true"],
+    "key_evidence_ids": ["c2", "c4", "c5"],
+    "expected_red_team": ["decision_maker_unknown", "missing_evidence", "cost_of_doing_nothing"],
+    "reasoning_notes": "SYNTHETIC. One demo is not proof at 14 sites, the process is unverified beyond one depot, and nobody who can approve spend has been in the room. A paid pilot buys the proof and forces the budget holder to surface.",
+    "outcome": "SYNTHETIC - no real outcome exists."
+  }
+}

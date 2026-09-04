@@ -1,0 +1,39 @@
+{
+  "case_id": "SYN-003",
+  "synthetic": true,
+  "synthetic_notice": "SYNTHETIC FIXTURE. Invented for harness testing. This is NOT Joey's history, NOT a real client, and NOT a real booking. See AGENTS.md section 5.",
+  "mode": "sorrento",
+  "title": "Discounted charity gala on a peak Saturday",
+  "as_of": "2026-03-04",
+  "materiality": "high",
+  "question": "A charity wants a peak Saturday in December for a 250-person gala at 40% below standard rate, offering profile in return. Do we take it?",
+  "entities": ["charity-gala-enquiry"],
+  "options": [
+    {"id": "accept_as_offered", "label": "Accept the booking at the rate offered", "kind": "close", "cost": 0.7, "reversibility": "low"},
+    {"id": "counter_min_spend", "label": "Counter with a minimum spend and a reduced discount", "kind": "advance", "cost": 0.1, "reversibility": "high"},
+    {"id": "decline_booking", "label": "Decline and hold the date for full-rate demand", "kind": "decline", "cost": 0.1, "reversibility": "high"}
+  ],
+  "context": {
+    "claims": [
+      {"id": "c1", "statement": "The equivalent December Saturday sold at full rate in each of the last two years.", "grade": "FACT", "source": "bookings ledger", "date": "2026-01-15", "confidence": 0.95, "relevance": 0.9, "tags": ["date_scarcity", "historical_outcome"], "polarity": 1, "supports_options": ["counter_min_spend", "decline_booking"], "opposes_options": ["accept_as_offered"]},
+      {"id": "c2", "statement": "At the proposed rate, contribution after direct costs is 9% against a 34% average.", "grade": "FACT", "source": "event P&L model", "date": "2026-03-01", "confidence": 0.9, "relevance": 0.95, "tags": ["unit_economics"], "polarity": -1, "supports_options": ["counter_min_spend", "decline_booking"], "opposes_options": ["accept_as_offered"]},
+      {"id": "c3", "statement": "The organiser states the gala is attended by roughly 40 corporate sponsors.", "grade": "FACT", "source": "enquiry email", "date": "2026-02-28", "confidence": 0.6, "relevance": 0.7, "tags": ["referral_potential", "prestige"], "polarity": 1, "supports_options": ["accept_as_offered", "counter_min_spend"]},
+      {"id": "c4", "statement": "Sponsor attendance is assumed to generate future corporate bookings.", "grade": "ASSUMPTION", "confidence": 0.4, "relevance": 0.6, "tags": ["conversion_evidence", "prestige"], "polarity": 1, "supports_options": ["accept_as_offered"], "contradicts": ["c5"]},
+      {"id": "c5", "statement": "No charity event at this venue in three years has produced a traced corporate booking.", "grade": "FACT", "source": "CRM booking-source field, 3 year window", "date": "2026-02-01", "confidence": 0.9, "relevance": 0.8, "tags": ["conversion_evidence"], "polarity": -1, "opposes_options": ["accept_as_offered"], "supports_options": ["decline_booking"]},
+      {"id": "c6", "statement": "The organiser confirmed the charity board must approve any minimum spend commitment.", "grade": "FACT", "source": "enquiry call notes", "date": "2026-02-28", "confidence": 0.9, "relevance": 0.7, "tags": ["economic_buyer", "approval_chain"], "polarity": 1}
+    ],
+    "unknowns": [
+      {"id": "u1", "question": "What minimum spend would the charity board actually approve?", "criticality": "medium", "blocks": ["counter_min_spend"], "tags": ["budget_confirmed"]}
+    ]
+  },
+  "hidden": {
+    "actual_decision": "counter_min_spend",
+    "actual_decision_label": "Counter with a minimum spend and a reduced discount",
+    "actual_decision_kind": "advance",
+    "reasoning_tags": ["prestige_is_not_revenue", "do_nothing_is_a_competitor", "what_must_be_true"],
+    "key_evidence_ids": ["c1", "c2", "c5"],
+    "expected_red_team": ["prestige_as_value", "contradicting_evidence", "missing_evidence"],
+    "reasoning_notes": "SYNTHETIC. Profile is not conversion, and a peak date at 9% contribution is a loss disguised as a booking. But declining outright discards a low-cost, reversible counter that keeps a 250-person event and 40 sponsors in play. Counter first; decline only if the board refuses.",
+    "outcome": "SYNTHETIC - no real outcome exists."
+  }
+}
