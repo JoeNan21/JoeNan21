@@ -1,7 +1,7 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "S1_ENCODED_AWAITING_S2_S11",
+  "status": "S1_S2_ENCODED_AWAITING_S3_S11",
   "mode": "sorrento",
   "title": "Existing landscaping/gardening arrangement - inherited supplier",
   "as_of": "2026-09-02",
@@ -79,6 +79,32 @@
         "relevance": 0.5,
         "tags": [],
         "polarity": 1
+      },
+      {
+        "id": "S2-01",
+        "statement": "Sorrento was receiving and paying invoices from the supplier for gardening/landscaping services under the inherited arrangement. Establishes that ongoing expenditure existed; establishes nothing about its level, basis or reasonableness.",
+        "grade": "FACT",
+        "source": "knowledge of invoices received and paid at Sorrento",
+        "date": "2026-09-02",
+        "confidence": 0.95,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S2-02",
+        "statement": "At the decision point, amounts paid could not be confidently reconciled against a clearly understood scope and verified delivery. This records the information position only; it is not evidence of overcharging or of non-performance.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S1-02",
+          "S2-01"
+        ],
+        "source": "own decision-time information position",
+        "date": "2026-09-02",
+        "confidence": 0.85,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
       }
     ],
     "unknowns": [
@@ -119,7 +145,7 @@
         "tags": [
           "unit_economics"
         ],
-        "question": "What is the rate basis? PROVISIONAL - may be partly resolved by invoice evidence in section 2."
+        "question": "What is the exact rate basis or billing formula? Section 2 confirms this is not established by admissible decision-time evidence."
       },
       {
         "id": "U1-NOTICE",
@@ -138,6 +164,49 @@
           "contract_terms"
         ],
         "question": "What exit provisions or minimum term applied?"
+      },
+      {
+        "id": "U2-TOTAL-COST",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "What was the total cost over a defined period? Not reconstructable from admissible evidence dated on or before as_of."
+      },
+      {
+        "id": "U2-VARIATION",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "Did invoiced amounts vary, by how much, and was any variation contractually explained?"
+      },
+      {
+        "id": "U2-ITEMISATION",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "Did invoices itemise individual work performed in sufficient detail?"
+      },
+      {
+        "id": "U2-BUDGET-SHARE",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "What was the cost relative to a defined grounds/maintenance budget?"
+      },
+      {
+        "id": "U2-BENCHMARK",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "competition"
+        ],
+        "question": "Was a valid market benchmark or comparison figure held on or before as_of? Not established."
       }
     ]
   },
