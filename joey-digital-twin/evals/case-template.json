@@ -1,0 +1,57 @@
+{
+  "case_id": "REAL-001",
+  "synthetic": false,
+  "mode": "sales",
+  "title": "Short description of the decision",
+  "as_of": "YYYY-MM-DD",
+  "materiality": "high",
+  "question": "The question as it actually presented itself, in neutral terms.",
+  "entities": ["memory-record-id-if-any"],
+  "notes": "Optional. Context that is not evidence.",
+
+  "options": [
+    {"id": "option_a", "label": "Plain description", "kind": "close", "cost": 0.8, "reversibility": "low"},
+    {"id": "option_b", "label": "Plain description", "kind": "proof", "cost": 0.2, "reversibility": "high"}
+  ],
+
+  "context": {
+    "claims": [
+      {
+        "id": "c1",
+        "statement": "One fact, as known ON as_of. No hindsight.",
+        "grade": "FACT",
+        "source": "Where this came from. Required for FACT.",
+        "date": "YYYY-MM-DD",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": ["pain_verified"],
+        "polarity": 1,
+        "supports_options": ["option_b"],
+        "opposes_options": []
+      },
+      {
+        "id": "c2",
+        "statement": "Something believed without evidence at the time.",
+        "grade": "ASSUMPTION",
+        "confidence": 0.4,
+        "relevance": 0.7,
+        "tags": ["risk"],
+        "supports_options": ["option_a"]
+      }
+    ],
+    "unknowns": [
+      {"id": "u1", "question": "What was genuinely not known?", "criticality": "high", "blocks": ["option_a"]}
+    ]
+  },
+
+  "hidden": {
+    "actual_decision": "option_b",
+    "actual_decision_label": "What was actually done",
+    "actual_decision_kind": "proof",
+    "reasoning_tags": ["proof_before_scale"],
+    "key_evidence_ids": ["c1"],
+    "expected_red_team": ["missing_evidence"],
+    "reasoning_notes": "The real reasoning, in your own words.",
+    "outcome": "What happened, if known. Recorded separately from the decision."
+  }
+}

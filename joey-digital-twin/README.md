@@ -47,6 +47,9 @@ cd joey-digital-twin
 # The evaluation suite, against a naive baseline
 ./scripts/twin eval --baseline
 
+# Check cases for structural validity and evaluation contamination
+./scripts/twin validate
+
 # Inspect
 ./scripts/twin modes
 ./scripts/twin memory

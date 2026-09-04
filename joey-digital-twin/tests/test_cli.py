@@ -87,3 +87,20 @@ def test_modes_command_lists_all_modes(capsys):
 def test_memory_command_reports_superseded_records(capsys):
     cli.main(["memory"])
     assert "SUPERSEDED" in capsys.readouterr().out
+
+
+def test_validate_command_passes_on_the_committed_suite(capsys):
+    assert cli.main(["validate"]) == 0
+    assert "cases valid" in capsys.readouterr().out
+
+
+def test_validate_command_exits_non_zero_on_a_bad_case(capsys, tmp_path):
+    bad = tmp_path / "bad.json"
+    bad.write_text('{"case_id": "X", "question": "?"}', encoding="utf-8")
+    assert cli.main(["validate", str(bad)]) == 1
+    assert "ERROR" in capsys.readouterr().out
+
+
+def test_validate_command_reports_a_missing_target(capsys):
+    assert cli.main(["validate", "/nonexistent/path"]) == 2
+    assert "no such file" in capsys.readouterr().err

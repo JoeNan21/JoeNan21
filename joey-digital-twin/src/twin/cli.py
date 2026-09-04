@@ -5,7 +5,8 @@ a UI would consume effort that has not yet been earned by evidence.
 
 Commands:
   twin decide --mode career case.json
-  twin eval --suite evals/historical_decisions [--baseline]
+  twin eval --suite evals/historical_decisions
+  twin validate evals/historical_decisions [--baseline]
   twin modes
   twin memory
   twin safety
@@ -21,7 +22,7 @@ from pathlib import Path
 
 from twin import __version__
 from twin.engine.modes import MODES, UnknownModeError, available_modes
-from twin.evals import harness, loader, report
+from twin.evals import harness, loader, report, validate
 from twin.memory.store import MemoryStore
 from twin.providers import registry
 from twin.providers.base import ProviderUnavailable
@@ -133,6 +134,20 @@ def cmd_eval(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_validate(args: argparse.Namespace) -> int:
+    """Check cases for structural validity and evaluation contamination."""
+    target = Path(args.target)
+    if target.is_dir():
+        suite = validate.validate_suite(target)
+    elif target.is_file():
+        suite = validate.SuiteReport(cases=[validate.validate_case(target)])
+    else:
+        print(f"error: no such file or directory: {target}", file=sys.stderr)
+        return 2
+    print(validate.render(suite))
+    return 0 if suite.ok else 1
+
+
 def cmd_modes(_: argparse.Namespace) -> int:
     for name in available_modes():
         m = MODES[name]
@@ -189,6 +204,11 @@ def build_parser() -> argparse.ArgumentParser:
     e.add_argument("--baseline", action="store_true", help="also run the naive baseline")
     e.add_argument("--json", action="store_true")
     e.set_defaults(func=cmd_eval)
+
+    v = sub.add_parser("validate", help="check cases for validity and contamination")
+    v.add_argument("target", nargs="?", default=str(DEFAULT_SUITE),
+                   help="a case file or a suite directory")
+    v.set_defaults(func=cmd_validate)
 
     m = sub.add_parser("modes", help="list decision modes")
     m.set_defaults(func=cmd_modes)

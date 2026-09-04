@@ -19,6 +19,27 @@ scores six dimensions and reports a Decision Agreement Rate.
 they do.** The rules and the fixtures were authored by the same process, which
 makes any agreement rate over them circular.
 
+## Validate before you invest
+
+```bash
+./scripts/twin validate                      # the whole suite
+./scripts/twin validate path/to/case.json    # one case
+```
+
+Start from `../case-template.json`.
+
+The validator blocks two things that silently destroy an evaluation:
+
+- **Hindsight in the context block** — phrases like "turned out", "in hindsight",
+  "we later learned", or a claim dated after `as_of`. Context written knowing the
+  outcome inflates agreement and is invisible in the results.
+- **The decision stated in the context** — "we decided", "we chose". The decision
+  belongs in `hidden` only.
+
+It also warns on suite-level problems: fewer than 25 cases, every case resolving
+to the same decision kind, and no case where the decision was to decline or do
+nothing.
+
 ## Adding real cases
 
 A real case requires, per decision:
