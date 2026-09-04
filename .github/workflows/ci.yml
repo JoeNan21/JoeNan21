@@ -2,8 +2,11 @@
 # Scope is deliberately limited to those three. No build, no publish, no deploy.
 name: CI
 
+# `push` is scoped to main so a commit on a PR branch produces one run, not two
+# (an unscoped `push` fires alongside `pull_request` on the same commit).
 on:
   push:
+    branches: [main]
   pull_request:
 
 permissions:
