@@ -106,6 +106,37 @@ def validate_case(path: Path) -> CaseReport:  # noqa: C901 - a checklist, read t
             if oid not in option_ids:
                 report.errors.append(f"unknown {u.id} blocks unknown option {oid!r}")
 
+    # --- option reachability ---------------------------------------------
+    # An option no claim supports cannot win, whatever the evidence says. That
+    # is an encoding defect, not a finding. It is an ERROR rather than a
+    # warning so it cannot pass unnoticed - but it is waivable in writing,
+    # because the fix must never be to manufacture support for an option the
+    # evidence does not support.
+    if case.claims:
+        waivers = {
+            w.get("option_id"): (w.get("reason") or "").strip()
+            for w in raw.get("reachability_exceptions", [])
+            if isinstance(w, dict)
+        }
+        for option in case.options:
+            supporters = [c.id for c in case.claims if option.id in c.supports_options]
+            if supporters:
+                continue
+            reason = waivers.get(option.id)
+            if reason:
+                report.warnings.append(
+                    f"option {option.id!r} is structurally unreachable (no claim "
+                    f"supports it); waived: {reason}"
+                )
+            else:
+                report.errors.append(
+                    f"option {option.id!r} is structurally unreachable: no claim "
+                    "supports it, so it cannot win regardless of the evidence. "
+                    "Either route the evidence that genuinely bears on it, or "
+                    "record a written waiver in reachability_exceptions. Do not "
+                    "manufacture support."
+                )
+
     drift = unknown_tags({t for c in case.claims for t in c.tags})
     if drift:
         report.warnings.append(

@@ -22,11 +22,19 @@ BASE = {
         {"id": "pilot", "label": "Pilot", "kind": "proof", "cost": 0.2},
     ],
     "context": {
-        "claims": [{
-            "id": "c1", "statement": "Budget confirmed by the CFO.", "grade": "FACT",
-            "source": "email", "date": "2026-01-10", "confidence": 0.9,
-            "relevance": 0.9, "tags": ["economic_buyer"], "supports_options": ["pilot"],
-        }],
+        "claims": [
+            {
+                "id": "c1", "statement": "Budget confirmed by the CFO.", "grade": "FACT",
+                "source": "email", "date": "2026-01-10", "confidence": 0.9,
+                "relevance": 0.9, "tags": ["economic_buyer"], "supports_options": ["pilot"],
+            },
+            {
+                "id": "c2", "statement": "Reference customer in the same sector.",
+                "grade": "FACT", "source": "call", "date": "2026-01-12",
+                "confidence": 0.8, "relevance": 0.8, "tags": ["proof_evidence"],
+                "supports_options": ["close"],
+            },
+        ],
         "unknowns": [{"id": "u1", "question": "Timeline?", "criticality": "medium"}],
     },
     "hidden": {
@@ -208,3 +216,53 @@ def test_the_template_is_not_picked_up_as_an_evaluation_case(suite_root, repo_ro
     names = {p.name for p in loader.discover(suite_root)}
     assert "case-template.json" not in names
     assert (repo_root / "evals" / "case-template.json").parent != suite_root
+
+
+def _unsupported_close(d):
+    """Remove the only claim supporting the 'close' option."""
+    d["context"]["claims"] = [c for c in d["context"]["claims"] if c["id"] != "c2"]
+
+
+def test_an_option_no_claim_supports_is_an_error(tmp_path):
+    """An option nothing supports cannot win. That is an encoding defect."""
+    report = validate.validate_case(_write(tmp_path, _unsupported_close))
+    assert not report.ok
+    assert any("'close' is structurally unreachable" in e for e in report.errors)
+
+
+def test_reachability_error_names_the_two_permitted_remedies(tmp_path):
+    report = validate.validate_case(_write(tmp_path, _unsupported_close))
+    err = next(e for e in report.errors if "structurally unreachable" in e)
+    assert "reachability_exceptions" in err
+    assert "Do not manufacture support" in err
+
+
+def test_a_written_waiver_downgrades_reachability_to_a_warning(tmp_path):
+    def mutate(d):
+        _unsupported_close(d)
+        d["reachability_exceptions"] = [
+            {"option_id": "close", "reason": "no evidence bears on committing"}]
+
+    report = validate.validate_case(_write(tmp_path, mutate))
+    assert report.ok
+    assert any("waived: no evidence bears on committing" in w for w in report.warnings)
+
+
+def test_an_empty_waiver_reason_does_not_satisfy_the_check(tmp_path):
+    def mutate(d):
+        _unsupported_close(d)
+        d["reachability_exceptions"] = [{"option_id": "close", "reason": "   "}]
+
+    report = validate.validate_case(_write(tmp_path, mutate))
+    assert not report.ok
+
+
+def test_all_options_supported_passes_reachability(tmp_path):
+    assert validate.validate_case(_write(tmp_path)).ok
+
+
+def test_reachability_is_not_reported_on_a_case_with_no_claims_yet(tmp_path):
+    """A scaffold's 'no claims' error already covers it; don't add noise."""
+    report = validate.validate_case(
+        _write(tmp_path, lambda d: d["context"].update(claims=[])))
+    assert not any("structurally unreachable" in e for e in report.errors)
