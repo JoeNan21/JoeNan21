@@ -39,6 +39,13 @@ Proven means: implemented, exercised by a passing test, and observed working.
 | U10 | Unstructured input can be mapped to the vocabulary | **Not attempted. Largest gap in the project.** | An extractor plus human agreement measurement |
 | U11 | The 67% synthetic agreement rate means anything | **It does not.** Circular by construction | Real cases |
 
+### Known defects awaiting remediation
+
+| # | Defect | Status |
+|---|---|---|
+| D1 | `ModeConfig.required_signals` is declared in `engine/modes.py` and documented as mandatory in `modes/career.md` and `modes/sales.md`, but is never consulted by `engine/rules.py`. A mode's required signal can be absent with no rule firing and no finding raised. | **Open. Deliberately not fixed during REAL-CASE-001** — changing engine behaviour mid-evaluation would invalidate the run. Remediate after that case closes, with a regression test asserting a finding is raised when a required signal is missing. |
+| D2 | Synthetic memory records were retrieved into a real case, suppressing a red-team finding. | **Fixed** (`engine/retrieval.py`, regression tests in `tests/test_memory.py`). Recorded in `evals/in_progress/outputs/REAL-CASE-001-run-log.md`. |
+
 ## Next milestone (recommended)
 
 **Twenty-five real historical decisions from Joey, in the case format, authored

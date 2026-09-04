@@ -1,14 +1,14 @@
 {
   "case_id": "REAL-CASE-001",
   "synthetic": false,
-  "status": "ENCODED_AWAITING_INFERENCE",
+  "status": "ENCODED_V2_AWAITING_INFERENCE",
   "mode": "career",
   "title": "iPayroll BDM North - decision point after the in-person interview",
   "as_of": "2026-09-03",
   "materiality": "high",
   "question": "Given what was known at this point, should Joey continue pursuing the iPayroll BDM North opportunity, negotiate or reframe material elements before committing, commit if formally offered on the understood structure, or withdraw from further progression?",
   "entities": [],
-  "notes": "Decision point anchored immediately after the 3 September 2026 in-person interview. Claim ids match the evidence packet (E01-E13, U01-U07). The constraints block below is recorded for provenance and is inert: the engine reads claims and unknowns only.",
+  "notes": "Decision point anchored immediately after the 3 September 2026 in-person interview. Claim ids match the evidence packet (E01-E13, U01-U07). v2 re-maps evidence to options so that all four options are structurally reachable. Classification of each negative as RESOLVABLE / STRUCTURAL / DISQUALIFYING is recorded in REAL-CASE-001-mapping.md. The constraints block is recorded for provenance and is inert: the engine reads claims and unknowns only.",
   "options": [
     {
       "id": "opt_a_continue",
@@ -120,7 +120,8 @@
           "opt_c_accept"
         ],
         "supports_options": [
-          "opt_b_negotiate"
+          "opt_b_negotiate",
+          "opt_d_withdraw"
         ]
       },
       {
@@ -137,7 +138,8 @@
         "polarity": -1,
         "opposes_options": [
           "opt_c_accept"
-        ]
+        ],
+        "supports_options": []
       },
       {
         "id": "E06",
@@ -163,8 +165,10 @@
         ],
         "polarity": 1,
         "supports_options": [
-          "opt_a_continue"
-        ]
+          "opt_a_continue",
+          "opt_c_accept"
+        ],
+        "opposes_options": []
       },
       {
         "id": "E08",
@@ -190,8 +194,10 @@
         ],
         "polarity": 1,
         "supports_options": [
-          "opt_a_continue"
-        ]
+          "opt_a_continue",
+          "opt_c_accept"
+        ],
+        "opposes_options": []
       },
       {
         "id": "E10",
@@ -204,8 +210,10 @@
         "tags": [],
         "polarity": 1,
         "supports_options": [
-          "opt_a_continue"
-        ]
+          "opt_a_continue",
+          "opt_c_accept"
+        ],
+        "opposes_options": []
       },
       {
         "id": "E11",
@@ -240,7 +248,8 @@
           "opt_c_accept"
         ],
         "supports_options": [
-          "opt_b_negotiate"
+          "opt_b_negotiate",
+          "opt_d_withdraw"
         ]
       },
       {
