@@ -1,0 +1,57 @@
+{
+  "case_id": "REAL-CASE-001",
+  "synthetic": false,
+  "status": "AWAITING_EVIDENCE_PACKET",
+  "mode": "career",
+  "title": "",
+  "as_of": "",
+  "materiality": "high",
+  "question": "Should Joey accept / continue pursuing this opportunity, negotiate, or walk away?",
+  "entities": [],
+  "notes": "",
+  "options": [
+    {
+      "id": "accept",
+      "label": "",
+      "kind": "close",
+      "cost": 0.0,
+      "reversibility": "medium"
+    },
+    {
+      "id": "negotiate",
+      "label": "",
+      "kind": "advance",
+      "cost": 0.0,
+      "reversibility": "medium"
+    },
+    {
+      "id": "continue_pursuing",
+      "label": "",
+      "kind": "qualify",
+      "cost": 0.0,
+      "reversibility": "medium"
+    },
+    {
+      "id": "walk_away",
+      "label": "",
+      "kind": "decline",
+      "cost": 0.0,
+      "reversibility": "medium"
+    }
+  ],
+  "constraints": [],
+  "context": {
+    "claims": [],
+    "unknowns": []
+  },
+  "hidden": {
+    "actual_decision": "",
+    "actual_decision_label": "",
+    "actual_decision_kind": "",
+    "reasoning_tags": [],
+    "key_evidence_ids": [],
+    "expected_red_team": [],
+    "reasoning_notes": "",
+    "outcome": ""
+  }
+}
