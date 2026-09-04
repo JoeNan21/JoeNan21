@@ -56,11 +56,14 @@ cd joey-digital-twin
 Tests:
 
 ```bash
-pip install pytest ruff mypy   # optional; the engine itself has no dependencies
+pip install -e ".[dev]"   # optional; the engine itself has no dependencies
 pytest -q
 ruff check .
 mypy src/twin
 ```
+
+These same three checks run in CI on every push and pull request
+(`.github/workflows/ci.yml`).
 
 ## What comes out
 

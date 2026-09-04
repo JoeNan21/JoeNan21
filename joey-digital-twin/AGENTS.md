@@ -190,6 +190,10 @@ This is the easiest place to fake success. Do not.
 
 - **Run the tests after any meaningful change.** `pytest -q` from the project root.
 - Do not report success if tests fail. Report the failure and the output.
+- `.github/workflows/ci.yml` runs the same three checks (`pytest`, `ruff check`,
+  `mypy src/twin`) on every push and pull request. CI is a backstop, not a
+  substitute for running them locally first. Never weaken, skip or bypass a
+  check to get CI green — fix the cause or report the failure.
 - New behaviour requires a new test. Bug fixes require a regression test.
 - Architectural changes require an update to `docs/architecture.md`.
 - Changes to scoring require an update to `docs/evaluation-methodology.md`.
