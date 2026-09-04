@@ -43,3 +43,56 @@ The decision is unchanged between runs; confidence and the red-team set are not.
 Arm A only. Arms B and C are not implemented. The hidden block is empty. This
 case has not been scored and must not be until the decision is supplied
 separately and locked.
+
+---
+
+## Run 3 (2026-09-04, v2 encoding, same engine as run 2) — RECORDED RESULT
+
+Encoding v2 committed at `3fe1b97` before this run. Mapping rationale in
+`../REAL-CASE-001-mapping.md`. Engine unchanged from run 2.
+
+```
+DECISION    opt_b_negotiate  [qualify]
+CONFIDENCE  0.165  (Very low / do not act on this alone), no ceiling applied
+
+RANKING     2.163  opt_b_negotiate    [qualify]
+            0.982  opt_d_withdraw     [decline]
+            0.873  opt_a_continue     [advance]
+            0.400  do_nothing         [do_nothing]
+           -2.830  opt_c_accept       [close]
+
+RED TEAM    activity_as_progress (medium), missing_evidence (high),
+            cost_of_doing_nothing (medium), opposite_must_be_true (low),
+            sceptical_executive (low)
+
+MEMORY      retrieved: none; synthetic excluded: 4
+```
+
+### v1 vs v2
+
+| | v1 | v2 |
+|---|---|---|
+| Decision | `opt_b_negotiate` | `opt_b_negotiate` |
+| Confidence | 0.173 | 0.165 |
+| Runner-up | `opt_a_continue` (0.873) | **`opt_d_withdraw` (0.982)** |
+| `opt_c_accept` | −3.703, unreachable | −2.830, reachable |
+| `opt_d_withdraw` | 0.000, unreachable | 0.982, reachable |
+| Red-team findings | identical | identical |
+
+The recommendation is stable across both encodings. What changed is the shape of
+the alternative: with withdrawal reachable, it becomes the strongest case
+against, displacing "continue on the presented structure".
+
+That is the more informative result. It says the evidence supporting continued
+engagement is thinner than the structural case for stepping away, and that the
+gap between them is carried by `opt_b_negotiate` resolving what neither
+alternative resolves.
+
+### Interpretation limits
+
+- Arm A only. Arms B and C are not implemented, so no claim about a digital twin
+  is supported.
+- n = 1. Nothing may be concluded about decision fidelity from this case.
+- Confidence 0.165 is the engine reporting that seven high-criticality unknowns
+  leave it close to the floor. That is the intended behaviour, not a defect.
+- The case remains unscored. The hidden block is empty.
