@@ -68,8 +68,14 @@ def test_caos_retrieval_returns_nothing_from_personal_memory(memory_root):
 
     store = MemoryStore.load(memory_root)
     assert len(store) > 0, "fixture memory is empty; the test would pass vacuously"
-    case = Case(case_id="X", question="?", mode="caos",
+    # synthetic=True so the fixture memory is eligible; otherwise this test
+    # would pass because synthetic records are excluded from real cases, not
+    # because CAOS mode disables personal memory.
+    case = Case(case_id="X", question="?", mode="caos", synthetic=True,
                 entities=("global-freight-systems",))
+    assert retrieve(case, get_mode("general"), store).record_ids, (
+        "control: the same case must retrieve under a non-caos mode"
+    )
     result = retrieve(case, get_mode("caos"), store)
     assert result.claims == () and result.record_ids == ()
 
@@ -80,7 +86,7 @@ def test_non_caos_mode_does_retrieve(memory_root):
     from twin.types import Case
 
     store = MemoryStore.load(memory_root)
-    case = Case(case_id="X", question="?", mode="sales",
+    case = Case(case_id="X", question="?", mode="sales", synthetic=True,
                 entities=("global-freight-systems",))
     assert retrieve(case, get_mode("sales"), store).record_ids
 

@@ -1,0 +1,217 @@
+{
+  "assumptions": [
+    "[E10] Joey believed he could contribute to improving discovery, post-demo next steps, decision-maker involvement, and movement from sales process to go-live."
+  ],
+  "case_id": "REAL-CASE-001",
+  "confidence": 0.173,
+  "confidence_band": "Very low / do not act on this alone",
+  "confidence_ceiling_applied": null,
+  "contradictions": [],
+  "counterargument": "The strongest case against is 'Continue pursuing on the presented structure' (score 0.873). If the evidence weighting is wrong - in particular if suppressed signals (activity, prestige, sentiment) are in fact predictive here - this option wins instead.",
+  "decision": "opt_b_negotiate",
+  "decision_kind": "qualify",
+  "decision_label": "Continue, but negotiate/reframe material elements before committing",
+  "evidence_used": [
+    "E03",
+    "E04",
+    "E12",
+    "E13"
+  ],
+  "facts": [
+    "[E01] The opportunity is for Business Development Manager - North Region.",
+    "[E02] The North sales region covers Bombay Hills north.",
+    "[E03] The BDM structure carries a minimum target of 200 new sales per annum.",
+    "[E04] Direct SME leads up to 99 employees may be allocated to BDMs; leads at 100+ employees, including enterprise/franchise opportunities, are handled exclusively by the Group Manager - Sales.",
+    "[E05] Commission is paid monthly in arrears for up to 12 months after a customer reaches Live status.",
+    "[E06] The exact base and OTE for the 2026 opportunity are not established by the available material, which describes compensation only in general terms (base plus commission or bonus, medical insurance, references to car/mobile allowances).",
+    "[E07] Joey previously progressed through iPayroll recruitment and was offered an iPayroll BDM - Waikato position in December 2023.",
+    "[E08] During the earlier process iPayroll represented itself as a small, inclusive team and referenced trans-Tasman opportunities and employee benefits. This records the representation, not an assessment of it.",
+    "[E09] Joey stated that the new North structure, the PSP opportunity and team growth plans had strengthened his interest in the opportunity.",
+    "[E11] The recruitment process progressed to an in-person interview involving regional sales leadership and into reference/MOJ-check territory."
+  ],
+  "inferences": [
+    "[E12] Pre-decision assessment raised the possibility that Joey is overqualified for a BDM role focused predominantly on SME/channel-partner payroll sales. A hypothesis, not an established fact.",
+    "[E13] Pre-decision assessment raised the possibility that the base salary might fall below Joey's desired compensation threshold. A hypothesis; the actual compensation remains unknown."
+  ],
+  "mode": "career",
+  "option_ranking": [
+    {
+      "drivers": [
+        "direct_evidence"
+      ],
+      "gate_reasons": [],
+      "gated_out": false,
+      "kind": "qualify",
+      "label": "Continue, but negotiate/reframe material elements before committing",
+      "option_id": "opt_b_negotiate",
+      "score": 2.163
+    },
+    {
+      "drivers": [
+        "direct_evidence"
+      ],
+      "gate_reasons": [],
+      "gated_out": false,
+      "kind": "advance",
+      "label": "Continue pursuing on the presented structure",
+      "option_id": "opt_a_continue",
+      "score": 0.873
+    },
+    {
+      "drivers": [
+        "do_nothing_is_a_competitor"
+      ],
+      "gate_reasons": [],
+      "gated_out": false,
+      "kind": "do_nothing",
+      "label": "Do nothing / maintain current position",
+      "option_id": "do_nothing",
+      "score": 0.4
+    },
+    {
+      "drivers": [],
+      "gate_reasons": [],
+      "gated_out": false,
+      "kind": "decline",
+      "label": "Withdraw from further progression",
+      "option_id": "opt_d_withdraw",
+      "score": 0.0
+    },
+    {
+      "drivers": [
+        "direct_evidence",
+        "proof_before_scale"
+      ],
+      "gate_reasons": [],
+      "gated_out": false,
+      "kind": "close",
+      "label": "Commit if formally offered on the understood structure",
+      "option_id": "opt_c_accept",
+      "score": -3.703
+    }
+  ],
+  "provenance": {
+    "authority": "READ_ONLY",
+    "confidence_components": {
+      "assumption_penalty": -0.0041,
+      "base": 0.5,
+      "contradiction_penalty": -0.0,
+      "evidence_support": 0.2673,
+      "framing_penalty": 0.0,
+      "margin_bonus": 0.0968,
+      "red_team_penalty": -0.22,
+      "unknown_penalty": -0.4667
+    },
+    "excluded_synthetic_memory": [
+      "global-freight-systems",
+      "lesson-multisite-rollout",
+      "lesson-profile-events-current",
+      "meridian-logistics"
+    ],
+    "injected_options": [
+      "do_nothing"
+    ],
+    "kind": "deterministic",
+    "mode": "career",
+    "model": null,
+    "network": false,
+    "provider": "deterministic",
+    "red_team_severity": {
+      "high": 1,
+      "low": 2,
+      "medium": 2
+    },
+    "retrieval_reason": "matched on 0 entity refs and 7 case tags",
+    "retrieved_memory_ids": [],
+    "rule_notes": [
+      "no evidenced cost of inaction: do_nothing is credible"
+    ],
+    "score_margin": 1.29,
+    "skipped_superseded": [
+      "lesson-profile-events-old"
+    ],
+    "unrecognised_tags": [],
+    "version": "0.1.0"
+  },
+  "reasoning_tags": [
+    "direct_evidence",
+    "do_nothing_is_a_competitor",
+    "proof_before_scale"
+  ],
+  "recommended_next_action": "Continue, but negotiate/reframe material elements before committing - and record the outcome so this decision can be scored later.",
+  "red_team": [
+    {
+      "challenge": "Is activity being mistaken for progress?",
+      "evidence_ids": [
+        "E11"
+      ],
+      "finding": "Effort/volume evidence is present with no evidence of stage advancement or commercial outcome.",
+      "id": "activity_as_progress",
+      "severity": "medium",
+      "targets_option": "opt_b_negotiate"
+    },
+    {
+      "challenge": "What evidence is missing?",
+      "evidence_ids": [
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U07"
+      ],
+      "finding": "Unresolved: [high] What is the exact 2026 base salary?; [high] What is the exact OTE and realistic first-year earnings?; [high] What is the mix of inbound, partner, outbound and other sources sufficient to reach 200 new sales per annum?; [high] What percentage of existing BDMs achieve the expected target and economic outcome?; [high] Is there an established path from BDM into enterprise sales, sales leadership or another more senior commercial role?",
+      "id": "missing_evidence",
+      "severity": "high",
+      "targets_option": "opt_b_negotiate"
+    },
+    {
+      "challenge": "What is the cost of doing nothing?",
+      "evidence_ids": [],
+      "finding": "No evidenced cost of inaction. Without it, the null action is not demonstrably worse than acting, and acting carries the cost.",
+      "id": "cost_of_doing_nothing",
+      "severity": "medium",
+      "targets_option": "opt_b_negotiate"
+    },
+    {
+      "challenge": "What must be true for the opposite decision to be correct?",
+      "evidence_ids": [],
+      "finding": "For the opposite decision to be correct, at least one must hold: the case for 'Continue pursuing on the presented structure' rests on evidence not present here.",
+      "id": "opposite_must_be_true",
+      "severity": "low",
+      "targets_option": "opt_b_negotiate"
+    },
+    {
+      "challenge": "What would a sceptical executive challenge?",
+      "evidence_ids": [],
+      "finding": "Ask for: the number this changes, by when, measured how, and what the same effort would return if spent on the current best use.",
+      "id": "sceptical_executive",
+      "severity": "low",
+      "targets_option": "opt_b_negotiate"
+    }
+  ],
+  "unknowns": [
+    "[U01] (high) What is the exact 2026 base salary?",
+    "[U02] (high) What is the exact OTE and realistic first-year earnings?",
+    "[U03] (high) What is the mix of inbound, partner, outbound and other sources sufficient to reach 200 new sales per annum?",
+    "[U04] (high) What percentage of existing BDMs achieve the expected target and economic outcome?",
+    "[U05] (high) Is there an established path from BDM into enterprise sales, sales leadership or another more senior commercial role?",
+    "[U06] (high) Given that 100+ employee enterprise/franchise leads are reserved for the Group Manager - Sales, is there another credible path for this BDM role to participate materially in enterprise opportunities?",
+    "[U07] (high) What are the final employment terms?"
+  ],
+  "what_must_be_true": [
+    "The claims supporting 'Continue, but negotiate/reframe material elements before committing' remain accurate as at 2026-09-03."
+  ],
+  "what_would_change_my_mind": [
+    "Answering: What is the exact 2026 base salary?",
+    "Answering: What is the exact OTE and realistic first-year earnings?",
+    "Answering: What is the mix of inbound, partner, outbound and other sources sufficient to reach 200 new sales per annum?",
+    "Answering: What percentage of existing BDMs achieve the expected target and economic outcome?",
+    "Answering: Is there an established path from BDM into enterprise sales, sales leadership or another more senior commercial role?",
+    "Answering: Given that 100+ employee enterprise/franchise leads are reserved for the Group Manager - Sales, is there another credible path for this BDM role to participate materially in enterprise opportunities?",
+    "Answering: What are the final employment terms?",
+    "Resolving the red-team finding 'missing_evidence': What evidence is missing?"
+  ],
+  "why": "'Continue, but negotiate/reframe material elements before committing' ranks highest on net evidence weight (2.163). Driving rules: direct_evidence."
+}

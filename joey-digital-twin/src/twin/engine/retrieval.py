@@ -24,6 +24,7 @@ class RetrievalResult:
     record_ids: tuple[str, ...]
     skipped_superseded: tuple[str, ...]
     reason: str
+    excluded_synthetic: tuple[str, ...] = ()
 
 
 def retrieve(case: Case, mode: ModeConfig, store: MemoryStore,
@@ -31,16 +32,26 @@ def retrieve(case: Case, mode: ModeConfig, store: MemoryStore,
     """Retrieve memory records relevant to a case and convert them to claims."""
     if not mode.use_personal_memory:
         # modes/caos.md: CAOS must not depend on Joey's personal memory.
-        return RetrievalResult((), (), (), f"personal memory disabled for mode '{mode.name}'")
+        return RetrievalResult(
+            (), (), (), f"personal memory disabled for mode '{mode.name}'"
+        )
 
     entities = {e.lower() for e in case.entities}
     case_tags = {t for c in case.claims for t in c.tags}
     scored: list[tuple[float, MemoryRecord]] = []
     skipped: list[str] = []
+    excluded_synthetic: list[str] = []
 
     for record in store.records:
         if not record.active:
             skipped.append(record.id)
+            continue
+        # Synthetic records exist to exercise the harness. Letting them into a
+        # real case contaminates a real evaluation: observed on REAL-CASE-001,
+        # where a synthetic LESSON tagged `historical_outcome` suppressed the
+        # activity_as_progress red-team check.
+        if record.synthetic and not case.synthetic:
+            excluded_synthetic.append(record.id)
             continue
         score = 0.0
         if record.id.lower() in entities or record.label.lower() in entities:
@@ -85,5 +96,6 @@ def retrieve(case: Case, mode: ModeConfig, store: MemoryStore,
         claims=tuple(claims),
         record_ids=tuple(r.id for _, r in top),
         skipped_superseded=tuple(sorted(skipped)),
+        excluded_synthetic=tuple(sorted(excluded_synthetic)),
         reason=f"matched on {len(entities)} entity refs and {len(case_tags)} case tags",
     )

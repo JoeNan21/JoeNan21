@@ -113,3 +113,32 @@ def test_store_loads_both_object_and_array_files(tmp_path):
 
 def test_missing_memory_root_yields_an_empty_store(tmp_path):
     assert len(MemoryStore.load(tmp_path / "nope")) == 0
+
+
+def test_synthetic_memory_never_reaches_a_real_case(memory_root):
+    """Regression: REAL-CASE-001 retrieved synthetic fixture records, and a
+    synthetic LESSON tagged `historical_outcome` suppressed a red-team check."""
+    from twin.engine.modes import get_mode
+    from twin.engine.retrieval import retrieve
+    from twin.types import Case
+
+    store = MemoryStore.load(memory_root)
+    assert any(r.synthetic for r in store.records), "fixture memory has no synthetic records"
+
+    real = Case(case_id="R", question="?", mode="career", synthetic=False,
+                entities=("meridian-logistics",))
+    result = retrieve(real, get_mode("career"), store)
+    assert result.claims == ()
+    assert result.record_ids == ()
+    assert "meridian-logistics" in result.excluded_synthetic
+
+
+def test_synthetic_memory_is_still_available_to_synthetic_cases(memory_root):
+    from twin.engine.modes import get_mode
+    from twin.engine.retrieval import retrieve
+    from twin.types import Case
+
+    store = MemoryStore.load(memory_root)
+    synthetic = Case(case_id="S", question="?", mode="career", synthetic=True,
+                     entities=("meridian-logistics",))
+    assert retrieve(synthetic, get_mode("career"), store).record_ids

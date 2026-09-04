@@ -55,6 +55,7 @@ class Pipeline:
             "retrieved_memory_ids": list(retrieval.record_ids),
             "retrieval_reason": retrieval.reason,
             "skipped_superseded": list(retrieval.skipped_superseded),
+            "excluded_synthetic_memory": list(retrieval.excluded_synthetic),
             "injected_options": [o.id for o in enriched.options if o.injected],
             "unrecognised_tags": unknown_tags({t for c in enriched.claims for t in c.tags}),
             "red_team_severity": red_team.severity_counts(findings),
