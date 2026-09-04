@@ -1,42 +1,42 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "STRUCTURE_ONLY_AWAITING_EVIDENCE",
+  "status": "AS_OF_ANCHORED_AWAITING_EVIDENCE_S1_S11",
   "mode": "sorrento",
   "title": "Existing landscaping/gardening arrangement - inherited supplier",
-  "as_of": "",
-  "materiality": "",
+  "as_of": "2026-09-02",
+  "materiality": "medium",
   "question": "Given what was known at the decision point, what should Sorrento do about the existing landscaping arrangement?",
   "entities": [],
-  "notes": "Structure only. NO evidence has been populated. The decision context supplied in prose is present-day characterisation, not dated decision-time evidence, and has deliberately NOT been converted into claims. Option cost and reversibility values below are PROPOSALS awaiting confirmation; both affect scoring.",
+  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md.",
   "options": [
     {
       "id": "opt_a_continue_unchanged",
       "kind": "do_nothing",
       "label": "Continue the existing arrangement unchanged",
       "cost": 0.0,
-      "reversibility": "high"
+      "reversibility": "medium"
     },
     {
       "id": "opt_b_retain_redefine",
       "kind": "advance",
       "label": "Retain the supplier but clarify/redefine scope, deliverables and commercial terms",
-      "cost": 0.25,
-      "reversibility": "high"
+      "cost": 0.0,
+      "reversibility": "medium"
     },
     {
       "id": "opt_c_market_test",
       "kind": "qualify",
       "label": "Obtain competing quotes / test the market before deciding",
-      "cost": 0.15,
-      "reversibility": "high"
+      "cost": 0.0,
+      "reversibility": "medium"
     },
     {
       "id": "opt_d_replace_exit",
       "kind": "exit",
       "label": "Replace or exit the existing arrangement",
-      "cost": 0.7,
-      "reversibility": "low"
+      "cost": 0.0,
+      "reversibility": "medium"
     }
   ],
   "constraints": [],
