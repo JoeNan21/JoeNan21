@@ -3,12 +3,12 @@
   "synthetic": false,
   "status": "AWAITING_EVIDENCE_PACKET",
   "mode": "career",
-  "title": "",
-  "as_of": "",
+  "title": "iPayroll opportunity - decision point after the in-person interview",
+  "as_of": "2026-09-03",
   "materiality": "high",
   "question": "Should Joey accept / continue pursuing this opportunity, negotiate, or walk away?",
   "entities": [],
-  "notes": "",
+  "notes": "Decision point anchored immediately after the 3 September 2026 in-person interview, before subsequent analysis. All evidence must be dated on or before as_of.",
   "options": [
     {
       "id": "accept",

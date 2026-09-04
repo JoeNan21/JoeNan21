@@ -31,7 +31,8 @@ Proven means: implemented, exercised by a passing test, and observed working.
 | U3 | The 15 decision principles describe how Joey actually decides | **Unproven — they are hypotheses** | Per-rule fire/agree analysis across a real suite |
 | U4 | Mode weightings are correct | **Unproven — hand-set judgement** | Sensitivity analysis on a real suite |
 | U5 | Confidence is calibrated | **Unproven** | Brier over 25+ real cases; 3 synthetic cases cannot calibrate |
-| U6 | The Twin beats a generic frontier LLM | **Not tested. Adapters not implemented.** | Implement adapters, run identical cases |
+| U6 | The Twin beats a generic frontier LLM | **Not tested. Arms B and C not implemented.** | Three-arm run (see below) on identical cases |
+| U6a | That this project is a *digital twin* at all | **Unproven. Arm A is a rules engine, not a model-based twin.** | Arm B existing and being measured |
 | U7 | Structured memory beats a large prompt | **Unproven** | A/B the same suite |
 | U8 | Retrieval surfaces what matters | **Unproven** | Precision/recall against human-marked relevant records |
 | U9 | The signal vocabulary is sufficient | **Unproven** | Tag real cases and count vocabulary misses |
@@ -64,8 +65,26 @@ number on real cases is far more valuable than a high number on synthetic ones.
    among options with comparable support. Specified because `SYN-003` failed on it;
    deliberately not implemented until it can be measured against more than one
    case (AGENTS.md §8).
-3. **LLM adapter implementation** + the generic-LLM comparison (U6). Requires a
-   redaction layer first (threat T2).
+3. **Three-arm evaluation** (U6, U6a). Required design, recorded before any
+   implementation so the comparison cannot be shaped after seeing results:
+
+   - **Arm A** — deterministic Joey decision-rules engine. Implemented. It is a
+     competing model of Joey, **not** a control.
+   - **Arm B** — model-based Joey Digital Twin over the Joey cognition, memory
+     and evidence architecture. **Not implemented.**
+   - **Arm C** — generic LLM control, identical evidence packet, no Joey
+     architecture. **Not implemented.**
+   - `baseline_naive` is reported alongside all three as the floor.
+
+   Binding conditions: identical decision-time evidence to every arm; all arms
+   blind to the decision; all outputs committed in one commit before the outcome
+   is revealed; B and C prompts rendered mechanically from the case file, never
+   hand-written; the C prompt fixed and committed before the first run.
+
+   Sequencing: the 25-case suite comes first. Running three arms over three
+   synthetic cases would produce a number with no meaning and a strong
+   temptation to quote it. Requires a redaction layer before B or C sees real
+   personal data (threat T2, `security-model.md`).
 4. **Rule attribution analysis** — for each rule, how often it fires and whether
    firing correlates with agreement. This is how U3 gets tested and how rules get
    revised on evidence rather than instinct.

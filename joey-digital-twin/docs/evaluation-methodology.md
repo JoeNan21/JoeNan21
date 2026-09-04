@@ -54,6 +54,66 @@ reasoning that has nothing to do with Joey's. Six dimensions are scored:
 `test_agreement_without_matching_reasoning_is_visible` exists specifically to prove
 that a right answer for the wrong reasons does not score as success.
 
+## Three-arm evaluation (REQUIRED — arms B and C not implemented)
+
+The deterministic provider is **Arm A, not proof of an AI digital twin.** It is a
+hand-written encoding of hypothesised decision rules. Until Arm B exists, this
+project has a decision-rules engine, and calling it a digital twin overstates it.
+
+| Arm | What it is | Status |
+|---|---|---|
+| **A** | Deterministic Joey decision-rules engine | Implemented (`deterministic`) |
+| **B** | Model-based Joey Digital Twin using the Joey cognition / memory / evidence architecture | **Not implemented** |
+| **C** | Generic LLM control, identical evidence packet, no Joey architecture | **Not implemented** |
+
+### Arm A is not the control
+
+A control is a system with no model of Joey in it. Arm A has Joey's hypothesised
+rules written into it, so it is a competing *model* of Joey, not a floor.
+
+The floor is `baseline_naive`. Reporting A against C without also reporting the
+naive floor invites reading "A beat C" as "the architecture works", when part of
+that gap may be nothing more than structured evidence handling that C would also
+gain from any structured prompt.
+
+So the run is four arms: `baseline_naive` (floor), A, B, C.
+
+### Conditions every arm must satisfy
+
+1. **Identical decision-time evidence.** The same case file, the same context
+   block, the same `as_of`. No arm receives a richer packet.
+2. **Blind to the decision.** The `hidden` block reaches no arm. Structurally
+   guaranteed for A; for B and C the same `Case` object is the only input, and
+   the canary tests in `tests/test_eval_leakage.py` cover the prompt path.
+3. **Outputs committed before reveal.** All arms' outputs in **one** commit,
+   before Joey discloses the decision. Committing arms separately leaks ordering
+   and lets a later arm be tuned against an earlier one.
+4. **Prompts generated mechanically.** B and C prompts must be rendered from the
+   case file by code, never hand-written per case. A human who knows the outcome
+   writing a prompt is the leak that no canary test can catch.
+5. **The C prompt is fixed and committed before the first run.** A control that
+   can be re-worded after seeing its score is not a control. C must be a
+   competent, neutral prompt — a deliberately weak C proves nothing.
+
+### What a B > C result would and would not show
+
+B differs from C on several dimensions simultaneously: Joey memory, the evidence
+grading model, the decision rules, and the prompt. A single B > C result
+identifies **none** of them as the cause.
+
+Attributing the gap requires ablations — B without memory, B without rules, B
+with C's prompt — and those are only worth running once B > C is established on
+a suite large enough to mean anything.
+
+### Statistical honesty
+
+- **n = 1 proves nothing.** On one case, agreement or disagreement across arms is
+  noise. Nothing may be concluded before the 25-case suite exists.
+- **More arms inflate false positives.** With four arms on a small suite, one
+  will look best by chance. The primary comparison must be pre-registered —
+  stated in writing before the run — rather than selected afterwards from
+  whichever pairing looks most favourable.
+
 ## Baseline comparison
 
 An agreement rate with no baseline is not evidence. Every run can be compared
