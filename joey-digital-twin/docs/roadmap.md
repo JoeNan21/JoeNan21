@@ -46,6 +46,21 @@ Proven means: implemented, exercised by a passing test, and observed working.
 | D1 | `ModeConfig.required_signals` is declared in `engine/modes.py` and documented as mandatory in `modes/career.md` and `modes/sales.md`, but is never consulted by `engine/rules.py`. A mode's required signal can be absent with no rule firing and no finding raised. | **Open. Deliberately not fixed during REAL-CASE-001** — changing engine behaviour mid-evaluation would invalidate the run. Remediate after that case closes, with a regression test asserting a finding is raised when a required signal is missing. |
 | D2 | Synthetic memory records were retrieved into a real case, suppressing a red-team finding. | **Fixed** (`engine/retrieval.py`, regression tests in `tests/test_memory.py`). Recorded in `evals/in_progress/outputs/REAL-CASE-001-run-log.md`. |
 
+### Architectural gaps identified by REAL-CASE-001
+
+Hypotheses, not conclusions. n=1. Each is falsifiable against a larger suite and
+none should be implemented on the strength of one case.
+
+| # | Gap | Evidence |
+|---|---|---|
+| A1 | **No constraint-incompatibility gate.** The engine has gates that remove options (`proof_before_scale`), but nothing that removes an option because it is structurally incompatible with a stated decision constraint. A structural exclusion and a resolvable uncertainty enter the ranking identically, as additive weight. | REAL-CASE-001 |
+| A2 | **Additive scoring structurally advantages `negotiate`.** It accumulates support from every class of negative; `withdraw` accumulates only from the structural subset. Withdrawal is arithmetically incapable of winning whenever any concern is resolvable. Not a weighting error - a property of the model's shape. | REAL-CASE-001 v2: negotiate 2.163 vs withdraw 0.982 |
+| A3 | **Decision constraints are inert.** The case schema carries constraints; the engine never reads them. "Disqualifying relative to a constraint" is not expressible. | REAL-CASE-001 C01/C03 |
+| A4 | **Cannot distinguish "insufficient information to decide" from "sufficient information to decline".** Unresolved unknowns always push toward the unknown-resolving option and toward low confidence. A known structural fact cannot settle a decision while unknowns remain. | REAL-CASE-001: decided with U01-U07 open, confidence HIGH |
+| A5 | **No factor-dependency model.** Every claim contributes independently. "Compensation compounds the problem rather than causing it" cannot be represented. | REAL-CASE-001 E13 |
+| A6 | **Vocabulary gap: role level and seniority positioning.** No signal expresses transaction volume as a proxy for the level a role is designed for, nor an individual's positioning as an asset with an opportunity cost. | REAL-CASE-001 E03, E12 |
+| A7 | **Documented principles that no rule emits.** `no_is_a_strong_recommendation` and `state_what_changes_my_mind` appear in `cognition/decision-rules.md` but are never produced as reasoning tags, so they can never match a human's reasoning in scoring. | REAL-CASE-001 reasoning similarity 0.00 |
+
 ## Next milestone (recommended)
 
 **Twenty-five real historical decisions from Joey, in the case format, authored

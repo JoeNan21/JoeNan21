@@ -1,0 +1,374 @@
+{
+  "case_id": "REAL-CASE-001",
+  "synthetic": false,
+  "status": "CLOSED_V1_GROUND_TRUTH_LOCKED",
+  "mode": "career",
+  "title": "iPayroll BDM North - decision point after the in-person interview",
+  "as_of": "2026-09-03",
+  "materiality": "high",
+  "question": "Given what was known at this point, should Joey continue pursuing the iPayroll BDM North opportunity, negotiate or reframe material elements before committing, commit if formally offered on the understood structure, or withdraw from further progression?",
+  "entities": [],
+  "notes": "Decision point anchored immediately after the 3 September 2026 in-person interview. Claim ids match the evidence packet (E01-E13, U01-U07). The constraints block below is recorded for provenance and is inert: the engine reads claims and unknowns only. FROZEN: v1 is retained as the original run. Its mapping left opt_c_accept and opt_d_withdraw structurally unable to win. Superseded by v2 for the recorded evaluation.",
+  "options": [
+    {
+      "id": "opt_a_continue",
+      "label": "Continue pursuing on the presented structure",
+      "kind": "advance",
+      "cost": 0.2,
+      "reversibility": "high"
+    },
+    {
+      "id": "opt_b_negotiate",
+      "label": "Continue, but negotiate/reframe material elements before committing",
+      "kind": "qualify",
+      "cost": 0.25,
+      "reversibility": "high"
+    },
+    {
+      "id": "opt_c_accept",
+      "label": "Commit if formally offered on the understood structure",
+      "kind": "close",
+      "cost": 0.8,
+      "reversibility": "low"
+    },
+    {
+      "id": "opt_d_withdraw",
+      "label": "Withdraw from further progression",
+      "kind": "decline",
+      "cost": 0.1,
+      "reversibility": "medium"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "C01",
+      "statement": "Whether a further BDM position supports or weakens the longer-term commercial/enterprise trajectory.",
+      "type": "decision_constraint"
+    },
+    {
+      "id": "C02",
+      "statement": "The opportunity needs to make financial sense relative to alternatives and compensation requirements. No threshold established in decision-time evidence.",
+      "type": "decision_constraint"
+    },
+    {
+      "id": "C03",
+      "statement": "The separation between SME BDM ownership and 100+ employee enterprise ownership is materially relevant to role scope.",
+      "type": "decision_constraint"
+    },
+    {
+      "id": "C04",
+      "statement": "North-region/Auckland oriented; no obvious relocation requirement on available evidence.",
+      "type": "fact_low_concern"
+    }
+  ],
+  "context": {
+    "claims": [
+      {
+        "id": "E01",
+        "statement": "The opportunity is for Business Development Manager - North Region.",
+        "grade": "FACT",
+        "source": "iPayroll recruitment/interview material",
+        "date": "2026-09-03",
+        "confidence": 0.95,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "E02",
+        "statement": "The North sales region covers Bombay Hills north.",
+        "grade": "FACT",
+        "source": "iPayroll role/sales structure material",
+        "date": "2026-09-03",
+        "confidence": 0.95,
+        "relevance": 0.3,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "E03",
+        "statement": "The BDM structure carries a minimum target of 200 new sales per annum.",
+        "grade": "FACT",
+        "source": "iPayroll sales/commission structure material",
+        "date": "2026-09-03",
+        "confidence": 0.9,
+        "relevance": 0.85,
+        "tags": [
+          "risk"
+        ],
+        "polarity": 1,
+        "opposes_options": [
+          "opt_c_accept"
+        ],
+        "supports_options": [
+          "opt_b_negotiate"
+        ]
+      },
+      {
+        "id": "E04",
+        "statement": "Direct SME leads up to 99 employees may be allocated to BDMs; leads at 100+ employees, including enterprise/franchise opportunities, are handled exclusively by the Group Manager - Sales.",
+        "grade": "FACT",
+        "source": "iPayroll sales structure material",
+        "date": "2026-09-03",
+        "confidence": 0.9,
+        "relevance": 0.9,
+        "tags": [
+          "enterprise_relevance"
+        ],
+        "polarity": -1,
+        "opposes_options": [
+          "opt_c_accept"
+        ],
+        "supports_options": [
+          "opt_b_negotiate"
+        ]
+      },
+      {
+        "id": "E05",
+        "statement": "Commission is paid monthly in arrears for up to 12 months after a customer reaches Live status.",
+        "grade": "FACT",
+        "source": "iPayroll sales/commission structure material",
+        "date": "2026-09-03",
+        "confidence": 0.9,
+        "relevance": 0.5,
+        "tags": [
+          "compensation"
+        ],
+        "polarity": -1,
+        "opposes_options": [
+          "opt_c_accept"
+        ]
+      },
+      {
+        "id": "E06",
+        "statement": "The exact base and OTE for the 2026 opportunity are not established by the available material, which describes compensation only in general terms (base plus commission or bonus, medical insurance, references to car/mobile allowances).",
+        "grade": "FACT",
+        "source": "iPayroll recruitment material / job listing",
+        "date": "2026-09-03",
+        "confidence": 0.9,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "E07",
+        "statement": "Joey previously progressed through iPayroll recruitment and was offered an iPayroll BDM - Waikato position in December 2023.",
+        "grade": "FACT",
+        "source": "prior iPayroll recruitment correspondence; 2026 recruitment discussion",
+        "date": "2023-12-01",
+        "confidence": 0.9,
+        "relevance": 0.55,
+        "tags": [
+          "employer_quality"
+        ],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue"
+        ]
+      },
+      {
+        "id": "E08",
+        "statement": "During the earlier process iPayroll represented itself as a small, inclusive team and referenced trans-Tasman opportunities and employee benefits. This records the representation, not an assessment of it.",
+        "grade": "FACT",
+        "source": "2023 iPayroll offer/recruitment correspondence",
+        "date": "2023-12-01",
+        "confidence": 0.9,
+        "relevance": 0.35,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "E09",
+        "statement": "Joey stated that the new North structure, the PSP opportunity and team growth plans had strengthened his interest in the opportunity.",
+        "grade": "FACT",
+        "source": "Joey's pre-decision discussion",
+        "date": "2026-09-01",
+        "confidence": 0.9,
+        "relevance": 0.7,
+        "tags": [
+          "sentiment"
+        ],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue"
+        ]
+      },
+      {
+        "id": "E10",
+        "statement": "Joey believed he could contribute to improving discovery, post-demo next steps, decision-maker involvement, and movement from sales process to go-live.",
+        "grade": "ASSUMPTION",
+        "source": "Joey's pre-decision assessment",
+        "date": "2026-09-01",
+        "confidence": 0.5,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue"
+        ]
+      },
+      {
+        "id": "E11",
+        "statement": "The recruitment process progressed to an in-person interview involving regional sales leadership and into reference/MOJ-check territory.",
+        "grade": "FACT",
+        "source": "iPayroll recruitment correspondence/process",
+        "date": "2026-09-03",
+        "confidence": 0.95,
+        "relevance": 0.5,
+        "tags": [
+          "activity"
+        ],
+        "polarity": 1
+      },
+      {
+        "id": "E12",
+        "statement": "Pre-decision assessment raised the possibility that Joey is overqualified for a BDM role focused predominantly on SME/channel-partner payroll sales. A hypothesis, not an established fact.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "E01",
+          "E04"
+        ],
+        "source": "pre-decision opportunity assessment",
+        "date": "2026-09-03",
+        "confidence": 0.5,
+        "relevance": 0.8,
+        "tags": [
+          "seniority"
+        ],
+        "polarity": -1,
+        "opposes_options": [
+          "opt_c_accept"
+        ],
+        "supports_options": [
+          "opt_b_negotiate"
+        ]
+      },
+      {
+        "id": "E13",
+        "statement": "Pre-decision assessment raised the possibility that the base salary might fall below Joey's desired compensation threshold. A hypothesis; the actual compensation remains unknown.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "E06"
+        ],
+        "source": "pre-decision opportunity assessment",
+        "date": "2026-09-03",
+        "confidence": 0.45,
+        "relevance": 0.75,
+        "tags": [
+          "compensation"
+        ],
+        "polarity": -1,
+        "opposes_options": [
+          "opt_c_accept"
+        ],
+        "supports_options": [
+          "opt_b_negotiate"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "U01",
+        "question": "What is the exact 2026 base salary?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": [
+          "compensation"
+        ]
+      },
+      {
+        "id": "U02",
+        "question": "What is the exact OTE and realistic first-year earnings?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": [
+          "compensation"
+        ]
+      },
+      {
+        "id": "U03",
+        "question": "What is the mix of inbound, partner, outbound and other sources sufficient to reach 200 new sales per annum?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": [
+          "risk"
+        ]
+      },
+      {
+        "id": "U04",
+        "question": "What percentage of existing BDMs achieve the expected target and economic outcome?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": [
+          "risk"
+        ]
+      },
+      {
+        "id": "U05",
+        "question": "Is there an established path from BDM into enterprise sales, sales leadership or another more senior commercial role?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": [
+          "trajectory"
+        ]
+      },
+      {
+        "id": "U06",
+        "question": "Given that 100+ employee enterprise/franchise leads are reserved for the Group Manager - Sales, is there another credible path for this BDM role to participate materially in enterprise opportunities?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": [
+          "enterprise_relevance"
+        ]
+      },
+      {
+        "id": "U07",
+        "question": "What are the final employment terms?",
+        "criticality": "high",
+        "blocks": [
+          "opt_c_accept"
+        ],
+        "tags": []
+      }
+    ]
+  },
+  "hidden": {
+    "actual_decision": "opt_d_withdraw",
+    "actual_decision_label": "Withdraw from further progression",
+    "actual_decision_kind": "decline",
+    "reasoning_tags": [
+      "evidence_before_optimism",
+      "no_is_a_strong_recommendation",
+      "what_must_be_true",
+      "state_what_changes_my_mind",
+      "role_scope_alignment",
+      "opportunity_cost_of_seniority",
+      "compensation_compounds_not_causes"
+    ],
+    "key_evidence_ids": [
+      "E03",
+      "E04",
+      "E12",
+      "E13"
+    ],
+    "expected_red_team": [
+      "missing_evidence",
+      "cost_of_doing_nothing",
+      "structural_constraint_incompatibility"
+    ],
+    "reasoning_notes": "Decisive factor: ROLE / CAREER ALIGNMENT. The role does not make enough sense commercially or professionally. 200 deals per annum is misaligned with the level at which Joey sees himself operating; his strongest value is in enterprise and complex commercial selling - fewer, larger, higher-value opportunities where discovery, stakeholder management, business-case development and senior decision-maker engagement matter. The structure reinforced this: 100+ employee opportunities are handled by the Group Manager - Sales, so the part of the market that most closely aligns with where he adds value is not his to own. Compensation COMPOUNDS the problem rather than creating it - improved compensation alone would not solve the underlying issue while the role remained ~200 predominantly SME deals with enterprise outside his ownership. This was not a predetermined rejection: he liked the people, saw where he could contribute, and progressed seriously. Progressing through the process produced clarity about the actual job, and the clearer the economics, volume and scope became, the less it aligned. Only a materially different role - real enterprise/strategic ownership, broader commercial responsibility, matching seniority and aligned compensation - could have changed the decision. Joey's confidence: HIGH.",
+    "outcome": "Not recorded. The decision is the ground truth; no outcome has been observed."
+  }
+}
