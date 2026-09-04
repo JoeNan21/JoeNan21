@@ -1,15 +1,44 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "AWAITING_EVIDENCE_PACKET",
+  "status": "STRUCTURE_ONLY_AWAITING_EVIDENCE",
   "mode": "sorrento",
-  "title": "",
+  "title": "Existing landscaping/gardening arrangement - inherited supplier",
   "as_of": "",
   "materiality": "",
-  "question": "",
+  "question": "Given what was known at the decision point, what should Sorrento do about the existing landscaping arrangement?",
   "entities": [],
-  "notes": "",
-  "options": [],
+  "notes": "Structure only. NO evidence has been populated. The decision context supplied in prose is present-day characterisation, not dated decision-time evidence, and has deliberately NOT been converted into claims. Option cost and reversibility values below are PROPOSALS awaiting confirmation; both affect scoring.",
+  "options": [
+    {
+      "id": "opt_a_continue_unchanged",
+      "kind": "do_nothing",
+      "label": "Continue the existing arrangement unchanged",
+      "cost": 0.0,
+      "reversibility": "high"
+    },
+    {
+      "id": "opt_b_retain_redefine",
+      "kind": "advance",
+      "label": "Retain the supplier but clarify/redefine scope, deliverables and commercial terms",
+      "cost": 0.25,
+      "reversibility": "high"
+    },
+    {
+      "id": "opt_c_market_test",
+      "kind": "qualify",
+      "label": "Obtain competing quotes / test the market before deciding",
+      "cost": 0.15,
+      "reversibility": "high"
+    },
+    {
+      "id": "opt_d_replace_exit",
+      "kind": "exit",
+      "label": "Replace or exit the existing arrangement",
+      "cost": 0.7,
+      "reversibility": "low"
+    }
+  ],
   "constraints": [],
   "reachability_exceptions": [],
   "context": {
