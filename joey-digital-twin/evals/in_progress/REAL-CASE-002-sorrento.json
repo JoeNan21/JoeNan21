@@ -1,7 +1,7 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "S1_S2_ENCODED_AWAITING_S3_S11",
+  "status": "S1_S3_ENCODED_AWAITING_S4_S11",
   "mode": "sorrento",
   "title": "Existing landscaping/gardening arrangement - inherited supplier",
   "as_of": "2026-09-02",
@@ -103,6 +103,109 @@
         "date": "2026-09-02",
         "confidence": 0.85,
         "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S3-01",
+        "statement": "The supplier was personally observed mowing and trimming on a few occasions during August 2026. Exact dates not recorded.",
+        "grade": "FACT",
+        "source": "direct personal observation",
+        "date": "2026-08-31",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-02",
+        "statement": "Some areas of the grounds were observed to be in good condition.",
+        "grade": "FACT",
+        "source": "direct personal observation",
+        "date": "2026-08-31",
+        "confidence": 0.9,
+        "relevance": 0.75,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-03",
+        "statement": "No reporting or communication of work performed was received from the supplier other than invoices.",
+        "grade": "FACT",
+        "source": "own knowledge of communications received",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S3-04",
+        "statement": "The observable condition of the grounds was the standard actually used to judge the arrangement: the grounds looking good was treated as sufficient. This records the informal test applied; it is not a defined or measurable acceptance criterion.",
+        "grade": "FACT",
+        "source": "own decision-time practice",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S3-05",
+        "statement": "The supplier gauged the work according to events coming up each month, such as weddings. BASIS UNSTATED - how this was known has not been established; to be confirmed in section 4.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S3-01"
+        ],
+        "source": "own understanding of the supplier's working method",
+        "date": "2026-09-02",
+        "confidence": 0.6,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-06",
+        "statement": "Work was being performed under the arrangement.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S3-01",
+          "S3-02"
+        ],
+        "source": "generalisation from direct observation",
+        "date": "2026-09-02",
+        "confidence": 0.8,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-07",
+        "statement": "The overall condition of the grounds could not be attributed to the supplier's performance, because the scope was not known well enough to establish responsibility.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S1-03",
+          "S3-02"
+        ],
+        "source": "own decision-time information position",
+        "date": "2026-09-02",
+        "confidence": 0.85,
+        "relevance": 0.6,
         "tags": [],
         "polarity": 1
       }
@@ -207,6 +310,20 @@
           "competition"
         ],
         "question": "Was a valid market benchmark or comparison figure held on or before as_of? Not established."
+      },
+      {
+        "id": "U3-ATTENDANCE",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "What was the supplier's actual attendance? Observation was occasional and no reliable means of knowing actual attendance was held. CRITICALITY UNGRADED BY JOEY - proposed medium, awaiting confirmation."
+      },
+      {
+        "id": "U3-ATTRIBUTION",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "Was the observed condition of the grounds attributable to the supplier? Not establishable without knowing the scope. CRITICALITY UNGRADED BY JOEY - proposed medium, awaiting confirmation."
       }
     ]
   },
