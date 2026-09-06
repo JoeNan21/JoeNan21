@@ -1,14 +1,14 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "S1_S4_ENCODED_AWAITING_S5_S11",
+  "status": "S1_S5_ENCODED_AWAITING_S6_S11",
   "mode": "sorrento",
   "title": "Existing landscaping/gardening arrangement - inherited supplier",
   "as_of": "2026-09-02",
   "materiality": "medium",
   "question": "Given what was known at the decision point, what should Sorrento do about the existing landscaping arrangement?",
   "entities": [],
-  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md. ENCODING CONSTRAINT (Joey, \u00a71): an absence of visibility establishes an information/accountability gap, NOT supplier non-performance. No claim or unknown in this case may be routed to oppose retaining the supplier, or to support replacing them, on the basis of missing information alone. ENCODING CONSTRAINTS (Joey, \u00a73): (a) an absence of personal observation is encodable only as a fact about what was observed, never as a fact about whether work was performed; (b) an observed condition of the grounds may not be attributed to the supplier without evidence establishing responsibility, and alternative causes known at the time must be recorded alongside it. ENCODING CONSTRAINT (Joey, \u00a74): the concerns held do not establish that the supplier was dishonest, was not working, or was overcharging. No claim may be routed on any of those readings.",
+  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md. ENCODING CONSTRAINT (Joey, \u00a71): an absence of visibility establishes an information/accountability gap, NOT supplier non-performance. No claim or unknown in this case may be routed to oppose retaining the supplier, or to support replacing them, on the basis of missing information alone. ENCODING CONSTRAINTS (Joey, \u00a73): (a) an absence of personal observation is encodable only as a fact about what was observed, never as a fact about whether work was performed; (b) an observed condition of the grounds may not be attributed to the supplier without evidence establishing responsibility, and alternative causes known at the time must be recorded alongside it. ENCODING CONSTRAINT (Joey, \u00a74): the concerns held do not establish that the supplier was dishonest, was not working, or was overcharging. No claim may be routed on any of those readings. ENCODING CONSTRAINT (Joey, \u00a75): service-performance expectations were never explicitly communicated to the supplier after the arrangement was inherited, so no claim may judge performance against an unstated standard. The evidenced issue is commercial authorisation/approval, which is distinct from service performance and must be kept distinct.",
   "options": [
     {
       "id": "opt_a_continue_unchanged",
@@ -45,7 +45,7 @@
     "claims": [
       {
         "id": "S1-01",
-        "statement": "The landscaping/gardening arrangement was already in place when responsibility for Sorrento was taken over; it was inherited rather than personally negotiated.",
+        "statement": "The landscaping/gardening arrangement was inherited from Sorrento's previous owners; it was already in place when responsibility was taken over and was not personally negotiated.",
         "grade": "FACT",
         "source": "direct involvement at Sorrento",
         "date": "2026-09-02",
@@ -277,6 +277,46 @@
         "relevance": 0.7,
         "tags": [],
         "polarity": 1
+      },
+      {
+        "id": "S5-01",
+        "statement": "No new or explicit set of service expectations was communicated to the supplier after the arrangement was inherited and before as_of.",
+        "grade": "FACT",
+        "source": "own knowledge of what had been communicated",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_a_continue_unchanged",
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S5-02",
+        "statement": "The supplier had begun charging for things that had not been brought to Sorrento's attention for approval beforehand; awareness of those charges came when they appeared for payment rather than through prior approval.",
+        "grade": "FACT",
+        "source": "own knowledge of charges received",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.9,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S5-03",
+        "statement": "Additional work resulting in additional charges was expected to be brought to Sorrento's attention for approval beforehand. This records the expectation held; whether it had been communicated to the supplier is not established.",
+        "grade": "FACT",
+        "source": "own decision-time expectation",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": 1
       }
     ],
     "unknowns": [
@@ -421,6 +461,20 @@
         "blocks": [],
         "tags": [],
         "question": "What records of communications with the supplier were held before as_of? Not established. CRITICALITY PROPOSED medium."
+      },
+      {
+        "id": "U5-APPROVAL-COMMUNICATED",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "Had the expectation of prior approval for additional chargeable work been communicated to the supplier? Not established. This determines whether the charges in S5-02 departed from an understood expectation or from an unstated one. CRITICALITY PROPOSED high."
+      },
+      {
+        "id": "U5-EXTENT",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "What were the unapproved charges, how many were there, and what value did they represent? Not established. CRITICALITY PROPOSED medium."
       }
     ]
   },
