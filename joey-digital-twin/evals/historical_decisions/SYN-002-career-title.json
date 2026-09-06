@@ -1,0 +1,40 @@
+{
+  "case_id": "SYN-002",
+  "synthetic": true,
+  "synthetic_notice": "SYNTHETIC FIXTURE. Invented for harness testing. This is NOT Joey's history, NOT a real employer, and NOT a real decision. See AGENTS.md section 5.",
+  "mode": "career",
+  "title": "Senior title at a declining employer",
+  "as_of": "2026-03-04",
+  "materiality": "high",
+  "question": "Obviously I should take the Head of Sales title at Meridian Logistics - it's a clear step up, right?",
+  "entities": ["meridian-logistics"],
+  "options": [
+    {"id": "accept_offer", "label": "Accept the Head of Sales offer as presented", "kind": "close", "cost": 0.8, "reversibility": "low"},
+    {"id": "negotiate_scope", "label": "Go back and negotiate scope, budget authority and the variable split", "kind": "advance", "cost": 0.2, "reversibility": "high"},
+    {"id": "decline_offer", "label": "Decline the offer", "kind": "decline", "cost": 0.1, "reversibility": "high"}
+  ],
+  "context": {
+    "claims": [
+      {"id": "c1", "statement": "Meridian's filed accounts show revenue down 18% across the last two financial years.", "grade": "FACT", "source": "public accounts filing", "date": "2026-02-10", "confidence": 0.9, "relevance": 0.8, "tags": ["employer_quality"], "polarity": -1, "supports_options": ["decline_offer"], "opposes_options": ["accept_offer"]},
+      {"id": "c2", "statement": "Base salary is 12% above current base, but 40% of OTE is variable against a target no representative reached last year.", "grade": "FACT", "source": "offer letter and recruiter call notes", "date": "2026-02-26", "confidence": 0.9, "relevance": 0.85, "tags": ["compensation"], "polarity": -1, "supports_options": ["negotiate_scope"], "opposes_options": ["accept_offer"]},
+      {"id": "c3", "statement": "The role has no direct reports and no budget authority.", "grade": "FACT", "source": "role scope document", "date": "2026-02-26", "confidence": 0.95, "relevance": 0.85, "tags": ["seniority"], "polarity": -1, "supports_options": ["decline_offer"], "opposes_options": ["accept_offer"]},
+      {"id": "c4", "statement": "The title 'Head of Sales' is nominally more senior than the current title.", "grade": "FACT", "source": "offer letter", "date": "2026-02-26", "confidence": 0.95, "relevance": 0.6, "tags": ["prestige"], "polarity": 1, "supports_options": ["accept_offer"]},
+      {"id": "c5", "statement": "The title is assumed to make future enterprise roles easier to obtain.", "grade": "ASSUMPTION", "confidence": 0.5, "relevance": 0.8, "tags": ["trajectory"], "polarity": 1, "supports_options": ["accept_offer"]},
+      {"id": "c6", "statement": "Leaving before December forfeits an unvested retention entitlement under the current contract.", "grade": "FACT", "source": "current employment contract", "date": "2025-12-01", "confidence": 0.9, "relevance": 0.8, "tags": ["opportunity_cost"], "polarity": 1, "supports_options": ["decline_offer"], "opposes_options": ["accept_offer"]}
+    ],
+    "unknowns": [
+      {"id": "u1", "question": "What was the actual attainment rate against the variable target across the team last year?", "criticality": "medium", "tags": ["compensation"]},
+      {"id": "u2", "question": "Who would this role report to after the announced restructure?", "criticality": "medium", "tags": ["decision_maker_access"]}
+    ]
+  },
+  "hidden": {
+    "actual_decision": "decline_offer",
+    "actual_decision_label": "Decline the offer",
+    "actual_decision_kind": "decline",
+    "reasoning_tags": ["prestige_is_not_revenue", "evidence_before_optimism", "persuasive_is_not_correct", "what_must_be_true"],
+    "key_evidence_ids": ["c1", "c3", "c6"],
+    "expected_red_team": ["leading_question", "prestige_as_value", "what_if_joey_is_wrong"],
+    "reasoning_notes": "SYNTHETIC. A bigger title with no reports, no budget and a variable plan nobody hits at an employer losing revenue is a weaker position, not a stronger one. The framing of the question assumes the answer.",
+    "outcome": "SYNTHETIC - no real outcome exists."
+  }
+}

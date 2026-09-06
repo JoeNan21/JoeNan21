@@ -1,0 +1,41 @@
+# Enforces the checks AGENTS.md section 10 already requires: tests, lint, types.
+# Scope is deliberately limited to those three. No build, no publish, no deploy.
+name: CI
+
+# `push` is scoped to main so a commit on a PR branch produces one run, not two
+# (an unscoped `push` fires alongside `pull_request` on the same commit).
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: joey-digital-twin
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # The engine itself has no runtime dependencies; [dev] pulls only the
+      # three checkers, with versions declared in pyproject.toml.
+      - name: Install
+        run: python -m pip install --upgrade pip && pip install -e ".[dev]"
+
+      - name: Tests
+        run: pytest -q
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Types
+        run: mypy src/twin

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "global-freight-systems",
+    "type": "COMPANY",
+    "label": "Global Freight Systems (SYNTHETIC)",
+    "attributes": {"sites": 14, "sector": "logistics", "note": "Invented for harness testing."},
+    "tags": ["economic_buyer", "approval_chain"],
+    "grade": "FACT",
+    "confidence": 0.8,
+    "source": "synthetic fixture",
+    "provenance": "seed:synthetic-v0.1",
+    "recorded_at": "2026-03-01",
+    "occurred_at": "2026-02-20",
+    "synthetic": true,
+    "approved": true
+  },
+  {
+    "id": "meridian-logistics",
+    "type": "COMPANY",
+    "label": "Meridian Logistics (SYNTHETIC)",
+    "attributes": {"note": "Invented for harness testing."},
+    "tags": ["employer_quality"],
+    "grade": "FACT",
+    "confidence": 0.7,
+    "source": "synthetic fixture",
+    "provenance": "seed:synthetic-v0.1",
+    "recorded_at": "2026-03-01",
+    "synthetic": true,
+    "approved": true
+  }
+]

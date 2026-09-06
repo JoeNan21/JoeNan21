@@ -1,0 +1,491 @@
+{
+  "case_id": "REAL-CASE-002",
+  "synthetic": false,
+  "status": "S1_S5_ENCODED_AWAITING_S6_S11",
+  "mode": "sorrento",
+  "title": "Existing landscaping/gardening arrangement - inherited supplier",
+  "as_of": "2026-09-02",
+  "materiality": "medium",
+  "question": "Given what was known at the decision point, what should Sorrento do about the existing landscaping arrangement?",
+  "entities": [],
+  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md. ENCODING CONSTRAINT (Joey, \u00a71): an absence of visibility establishes an information/accountability gap, NOT supplier non-performance. No claim or unknown in this case may be routed to oppose retaining the supplier, or to support replacing them, on the basis of missing information alone. ENCODING CONSTRAINTS (Joey, \u00a73): (a) an absence of personal observation is encodable only as a fact about what was observed, never as a fact about whether work was performed; (b) an observed condition of the grounds may not be attributed to the supplier without evidence establishing responsibility, and alternative causes known at the time must be recorded alongside it. ENCODING CONSTRAINT (Joey, \u00a74): the concerns held do not establish that the supplier was dishonest, was not working, or was overcharging. No claim may be routed on any of those readings. ENCODING CONSTRAINT (Joey, \u00a75): service-performance expectations were never explicitly communicated to the supplier after the arrangement was inherited, so no claim may judge performance against an unstated standard. The evidenced issue is commercial authorisation/approval, which is distinct from service performance and must be kept distinct.",
+  "options": [
+    {
+      "id": "opt_a_continue_unchanged",
+      "kind": "do_nothing",
+      "label": "Continue the existing arrangement unchanged",
+      "cost": 0.0,
+      "reversibility": "medium"
+    },
+    {
+      "id": "opt_b_retain_redefine",
+      "kind": "advance",
+      "label": "Retain the supplier but clarify/redefine scope, deliverables and commercial terms",
+      "cost": 0.0,
+      "reversibility": "medium"
+    },
+    {
+      "id": "opt_c_market_test",
+      "kind": "qualify",
+      "label": "Obtain competing quotes / test the market before deciding",
+      "cost": 0.0,
+      "reversibility": "medium"
+    },
+    {
+      "id": "opt_d_replace_exit",
+      "kind": "exit",
+      "label": "Replace or exit the existing arrangement",
+      "cost": 0.0,
+      "reversibility": "medium"
+    }
+  ],
+  "constraints": [],
+  "reachability_exceptions": [],
+  "context": {
+    "claims": [
+      {
+        "id": "S1-01",
+        "statement": "The landscaping/gardening arrangement was inherited from Sorrento's previous owners; it was already in place when responsibility was taken over and was not personally negotiated.",
+        "grade": "FACT",
+        "source": "direct involvement at Sorrento",
+        "date": "2026-09-02",
+        "confidence": 0.95,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S1-02",
+        "statement": "As at the decision point, understanding of the arrangement was operational and inherited rather than verifiable against a contract that had been personally reviewed.",
+        "grade": "FACT",
+        "source": "own decision-time knowledge state",
+        "date": "2026-09-02",
+        "confidence": 0.95,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S1-03",
+        "statement": "General operational understanding that the supplier was responsible for landscaping/gardening and maintaining the grounds. This records the operational understanding only and is not evidence of contractual scope.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S1-01",
+          "S1-02"
+        ],
+        "source": "operational understanding at Sorrento",
+        "date": "2026-09-02",
+        "confidence": 0.8,
+        "relevance": 0.5,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S2-01",
+        "statement": "Sorrento was receiving and paying invoices from the supplier for gardening/landscaping services under the inherited arrangement. Establishes that ongoing expenditure existed; establishes nothing about its level, basis or reasonableness.",
+        "grade": "FACT",
+        "source": "knowledge of invoices received and paid at Sorrento",
+        "date": "2026-09-02",
+        "confidence": 0.95,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S2-02",
+        "statement": "At the decision point, amounts paid could not be confidently reconciled against a clearly understood scope and verified delivery. This records the information position only; it is not evidence of overcharging or of non-performance.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S1-02",
+          "S2-01"
+        ],
+        "source": "own decision-time information position",
+        "date": "2026-09-02",
+        "confidence": 0.85,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S3-01",
+        "statement": "The supplier was personally observed mowing and trimming on a few occasions during August 2026 (year confirmed by Joey). Exact dates not recorded.",
+        "grade": "FACT",
+        "source": "direct personal observation",
+        "date": "2026-08-31",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-02",
+        "statement": "Some areas of the grounds were observed to be in good condition.",
+        "grade": "FACT",
+        "source": "direct personal observation",
+        "date": "2026-08-31",
+        "confidence": 0.9,
+        "relevance": 0.75,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-03",
+        "statement": "No reporting or communication of work performed was received from the supplier other than invoices.",
+        "grade": "FACT",
+        "source": "own knowledge of communications received",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S3-04",
+        "statement": "The observable condition of the grounds was the standard actually used to judge the arrangement: the grounds looking good was treated as sufficient. This records the informal test applied; it is not a defined or measurable acceptance criterion.",
+        "grade": "FACT",
+        "source": "own decision-time practice",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S3-05",
+        "statement": "The supplier appeared to gauge the work required around events coming up each month. Basis confirmed as the observed operating pattern rather than anything the supplier stated; this is NOT evidence of an agreed schedule.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S3-01",
+          "S4-02"
+        ],
+        "source": "own understanding of the supplier's working method",
+        "date": "2026-09-02",
+        "confidence": 0.5,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-06",
+        "statement": "Work was being performed under the arrangement.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S3-01",
+          "S3-02"
+        ],
+        "source": "generalisation from direct observation",
+        "date": "2026-09-02",
+        "confidence": 0.8,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": 1,
+        "supports_options": [
+          "opt_a_continue_unchanged"
+        ]
+      },
+      {
+        "id": "S3-07",
+        "statement": "The overall condition of the grounds could not be attributed to the supplier's performance, because the scope was not known well enough to establish responsibility.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S1-03",
+          "S3-02"
+        ],
+        "source": "own decision-time information position",
+        "date": "2026-09-02",
+        "confidence": 0.85,
+        "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S4-01",
+        "statement": "No schedule of attendance was known to Sorrento.",
+        "grade": "FACT",
+        "source": "own knowledge of the arrangement",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.75,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S4-02",
+        "statement": "Work was performed at the supplier's discretion, with the timing and the necessity of the work judged by him.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S4-01",
+          "S3-01"
+        ],
+        "source": "observed operating pattern",
+        "date": "2026-09-02",
+        "confidence": 0.8,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S4-03",
+        "statement": "What specifically had been done was often not known to Sorrento despite an invoice being received for the work.",
+        "grade": "FACT",
+        "source": "own knowledge of communications and invoices received",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.85,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S4-04",
+        "statement": "The supplier expected invoices to be paid immediately or very promptly, and took issue on occasions when payment was held for a few days.",
+        "grade": "FACT",
+        "source": "own dealings with the supplier",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S4-05",
+        "statement": "Sorrento sometimes needed several days to align outgoing payment with incoming cash.",
+        "grade": "FACT",
+        "source": "own knowledge of Sorrento cash flow",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S5-01",
+        "statement": "No new or explicit set of service expectations was communicated to the supplier after the arrangement was inherited and before as_of.",
+        "grade": "FACT",
+        "source": "own knowledge of what had been communicated",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_a_continue_unchanged",
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S5-02",
+        "statement": "The supplier had begun charging for things that had not been brought to Sorrento's attention for approval beforehand; awareness of those charges came when they appeared for payment rather than through prior approval.",
+        "grade": "FACT",
+        "source": "own knowledge of charges received",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.9,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S5-03",
+        "statement": "Additional work resulting in additional charges was expected to be brought to Sorrento's attention for approval beforehand. This records the expectation held; whether it had been communicated to the supplier is not established.",
+        "grade": "FACT",
+        "source": "own decision-time expectation",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": 1
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "U1-CONTRACT",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "contract_terms"
+        ],
+        "question": "Does a written agreement exist, and what does it contain? No contract establishing the complete agreement had been reviewed."
+      },
+      {
+        "id": "U1-SCOPE",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "What exactly was the supplier contracted or expected to do for the amounts charged? No documented scope mapping charges to agreed services or deliverables."
+      },
+      {
+        "id": "U1-FREQUENCY",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "How often was attendance required, and what work was required on each attendance? No documented schedule."
+      },
+      {
+        "id": "U1-STANDARDS",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "What measurable deliverables, service standards or acceptance criteria applied, against which work performed could be reconciled with amounts paid? None known."
+      },
+      {
+        "id": "U1-RATE-BASIS",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "What is the exact rate basis or billing formula? Section 2 confirms this is not established by admissible decision-time evidence."
+      },
+      {
+        "id": "U1-NOTICE",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "contract_terms"
+        ],
+        "question": "What notice period applied?"
+      },
+      {
+        "id": "U1-EXIT",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "contract_terms"
+        ],
+        "question": "What exit provisions or minimum term applied?"
+      },
+      {
+        "id": "U2-TOTAL-COST",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "What was the total cost over a defined period? Not reconstructable from admissible evidence dated on or before as_of."
+      },
+      {
+        "id": "U2-VARIATION",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "Did invoiced amounts vary, by how much, and was any variation contractually explained?"
+      },
+      {
+        "id": "U2-ITEMISATION",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "Did invoices itemise individual work performed in sufficient detail?"
+      },
+      {
+        "id": "U2-BUDGET-SHARE",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [
+          "unit_economics"
+        ],
+        "question": "What was the cost relative to a defined grounds/maintenance budget?"
+      },
+      {
+        "id": "U2-BENCHMARK",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [
+          "competition"
+        ],
+        "question": "Was a valid market benchmark or comparison figure held on or before as_of? Not established."
+      },
+      {
+        "id": "U3-ATTENDANCE",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "What was the supplier's actual attendance? Observation was occasional and no reliable means of knowing actual attendance was held. This contributed directly to the inability to reconcile work performed with invoices received."
+      },
+      {
+        "id": "U3-ATTRIBUTION",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "Was the observed condition of the grounds attributable to the supplier? Work had been observed and areas were observed in good condition, but the entire condition could not be reliably attributed."
+      },
+      {
+        "id": "U4-MODE",
+        "criticality": "low",
+        "blocks": [],
+        "tags": [],
+        "question": "In what form did contact with the supplier take place (in person, phone, text, email)? Not established. CRITICALITY PROPOSED low."
+      },
+      {
+        "id": "U4-FREQUENCY",
+        "criticality": "low",
+        "blocks": [],
+        "tags": [],
+        "question": "How often did contact with the supplier occur? Not established. CRITICALITY PROPOSED low."
+      },
+      {
+        "id": "U4-RAISED",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "Had scope, cost or performance been raised with the supplier before as_of, and had either party proposed changing the arrangement? NOT ESTABLISHED - awaiting a direct answer. Must not be inferred from the concerns held. CRITICALITY PROPOSED high."
+      },
+      {
+        "id": "U4-RECORDS",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "What records of communications with the supplier were held before as_of? Not established. CRITICALITY PROPOSED medium."
+      },
+      {
+        "id": "U5-APPROVAL-COMMUNICATED",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "Had the expectation of prior approval for additional chargeable work been communicated to the supplier? Not established. This determines whether the charges in S5-02 departed from an understood expectation or from an unstated one. CRITICALITY PROPOSED high."
+      },
+      {
+        "id": "U5-EXTENT",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "What were the unapproved charges, how many were there, and what value did they represent? Not established. CRITICALITY PROPOSED medium."
+      }
+    ]
+  },
+  "hidden": {
+    "actual_decision": "",
+    "actual_decision_label": "",
+    "actual_decision_kind": "",
+    "reasoning_tags": [],
+    "key_evidence_ids": [],
+    "expected_red_team": [],
+    "reasoning_notes": "",
+    "outcome": ""
+  }
+}

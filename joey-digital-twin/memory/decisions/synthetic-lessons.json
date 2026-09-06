@@ -1,0 +1,59 @@
+[
+  {
+    "id": "lesson-multisite-rollout",
+    "type": "LESSON",
+    "label": "SYNTHETIC: multi-site rollouts sold on a single-site demo have historically slipped on IT sign-off.",
+    "tags": [
+      "historical_outcome",
+      "risk"
+    ],
+    "grade": "INFERENCE",
+    "confidence": 0.6,
+    "source": "synthetic fixture",
+    "provenance": "seed:synthetic-v0.1",
+    "recorded_at": "2026-03-01",
+    "occurred_at": "2025-11-02",
+    "supersedes": [],
+    "synthetic": true,
+    "approved": true
+  },
+  {
+    "id": "lesson-profile-events-old",
+    "type": "LESSON",
+    "label": "SYNTHETIC (SUPERSEDED): profile events were believed to drive corporate enquiries.",
+    "tags": [
+      "prestige",
+      "conversion_evidence"
+    ],
+    "grade": "ASSUMPTION",
+    "confidence": 0.4,
+    "provenance": "seed:synthetic-v0.1",
+    "recorded_at": "2025-06-01",
+    "superseded_by": "lesson-profile-events-current",
+    "synthetic": true,
+    "approved": true
+  },
+  {
+    "id": "lesson-profile-events-current",
+    "type": "LESSON",
+    "label": "SYNTHETIC: profile events have not been traced to corporate bookings in the CRM source data.",
+    "tags": [
+      "conversion_evidence"
+    ],
+    "grade": "FACT",
+    "confidence": 0.8,
+    "source": "synthetic fixture",
+    "provenance": "seed:synthetic-v0.1",
+    "recorded_at": "2026-02-01",
+    "occurred_at": "2026-02-01",
+    "supersedes": [
+      "lesson-profile-events-old"
+    ],
+    "contradicts": [
+      "lesson-profile-events-old"
+    ],
+    "synthetic": true,
+    "approved": true,
+    "polarity": -1
+  }
+]
