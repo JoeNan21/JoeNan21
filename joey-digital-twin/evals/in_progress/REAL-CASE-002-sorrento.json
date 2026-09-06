@@ -1,14 +1,14 @@
 {
   "case_id": "REAL-CASE-002",
   "synthetic": false,
-  "status": "S1_S3_ENCODED_AWAITING_S4_S11",
+  "status": "S1_S4_ENCODED_AWAITING_S5_S11",
   "mode": "sorrento",
   "title": "Existing landscaping/gardening arrangement - inherited supplier",
   "as_of": "2026-09-02",
   "materiality": "medium",
   "question": "Given what was known at the decision point, what should Sorrento do about the existing landscaping arrangement?",
   "entities": [],
-  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md. ENCODING CONSTRAINT (Joey, \u00a71): an absence of visibility establishes an information/accountability gap, NOT supplier non-performance. No claim or unknown in this case may be routed to oppose retaining the supplier, or to support replacing them, on the basis of missing information alone. ENCODING CONSTRAINTS (Joey, \u00a73): (a) an absence of personal observation is encodable only as a fact about what was observed, never as a fact about whether work was performed; (b) an observed condition of the grounds may not be attributed to the supplier without evidence establishing responsibility, and alternative causes known at the time must be recorded alongside it.",
+  "notes": "as_of 2026-09-02, anchored to a contemporaneous discussion on that date in which the arrangement was being questioned and no course of action had yet been settled. The date anchor ONLY: no claims are derived from that discussion or from any later one. Anything learned after 2026-09-02 is inadmissible unless independently shown to have been known on or before it. OPTION PARAMETERS ARE UNSET: cost and reversibility are deliberately IDENTICAL across all four options so they introduce no differential bias into the ranking, and will be set only from decision-time evidence. See REAL-CASE-002-MAPPING-PROPOSAL.md. ENCODING CONSTRAINT (Joey, \u00a71): an absence of visibility establishes an information/accountability gap, NOT supplier non-performance. No claim or unknown in this case may be routed to oppose retaining the supplier, or to support replacing them, on the basis of missing information alone. ENCODING CONSTRAINTS (Joey, \u00a73): (a) an absence of personal observation is encodable only as a fact about what was observed, never as a fact about whether work was performed; (b) an observed condition of the grounds may not be attributed to the supplier without evidence establishing responsibility, and alternative causes known at the time must be recorded alongside it. ENCODING CONSTRAINT (Joey, \u00a74): the concerns held do not establish that the supplier was dishonest, was not working, or was overcharging. No claim may be routed on any of those readings.",
   "options": [
     {
       "id": "opt_a_continue_unchanged",
@@ -161,14 +161,15 @@
       },
       {
         "id": "S3-05",
-        "statement": "The supplier gauged the work according to events coming up each month, such as weddings. BASIS UNSTATED - how this was known has not been established; to be confirmed in section 4.",
+        "statement": "The supplier appeared to gauge the work required around events coming up each month. Basis confirmed as the observed operating pattern rather than anything the supplier stated; this is NOT evidence of an agreed schedule.",
         "grade": "INFERENCE",
         "derived_from": [
-          "S3-01"
+          "S3-01",
+          "S4-02"
         ],
         "source": "own understanding of the supplier's working method",
         "date": "2026-09-02",
-        "confidence": 0.6,
+        "confidence": 0.5,
         "relevance": 0.7,
         "tags": [],
         "polarity": 1,
@@ -206,6 +207,74 @@
         "date": "2026-09-02",
         "confidence": 0.85,
         "relevance": 0.6,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S4-01",
+        "statement": "No schedule of attendance was known to Sorrento.",
+        "grade": "FACT",
+        "source": "own knowledge of the arrangement",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.75,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S4-02",
+        "statement": "Work was performed at the supplier's discretion, with the timing and the necessity of the work judged by him.",
+        "grade": "INFERENCE",
+        "derived_from": [
+          "S4-01",
+          "S3-01"
+        ],
+        "source": "observed operating pattern",
+        "date": "2026-09-02",
+        "confidence": 0.8,
+        "relevance": 0.7,
+        "tags": [],
+        "polarity": 1
+      },
+      {
+        "id": "S4-03",
+        "statement": "What specifically had been done was often not known to Sorrento despite an invoice being received for the work.",
+        "grade": "FACT",
+        "source": "own knowledge of communications and invoices received",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.85,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S4-04",
+        "statement": "The supplier expected invoices to be paid immediately or very promptly, and took issue on occasions when payment was held for a few days.",
+        "grade": "FACT",
+        "source": "own dealings with the supplier",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.8,
+        "tags": [],
+        "polarity": -1,
+        "supports_options": [
+          "opt_b_retain_redefine"
+        ]
+      },
+      {
+        "id": "S4-05",
+        "statement": "Sorrento sometimes needed several days to align outgoing payment with incoming cash.",
+        "grade": "FACT",
+        "source": "own knowledge of Sorrento cash flow",
+        "date": "2026-09-02",
+        "confidence": 0.9,
+        "relevance": 0.7,
         "tags": [],
         "polarity": 1
       }
@@ -313,17 +382,45 @@
       },
       {
         "id": "U3-ATTENDANCE",
-        "criticality": "medium",
+        "criticality": "high",
         "blocks": [],
         "tags": [],
-        "question": "What was the supplier's actual attendance? Observation was occasional and no reliable means of knowing actual attendance was held. CRITICALITY UNGRADED BY JOEY - proposed medium, awaiting confirmation."
+        "question": "What was the supplier's actual attendance? Observation was occasional and no reliable means of knowing actual attendance was held. This contributed directly to the inability to reconcile work performed with invoices received."
       },
       {
         "id": "U3-ATTRIBUTION",
         "criticality": "medium",
         "blocks": [],
         "tags": [],
-        "question": "Was the observed condition of the grounds attributable to the supplier? Not establishable without knowing the scope. CRITICALITY UNGRADED BY JOEY - proposed medium, awaiting confirmation."
+        "question": "Was the observed condition of the grounds attributable to the supplier? Work had been observed and areas were observed in good condition, but the entire condition could not be reliably attributed."
+      },
+      {
+        "id": "U4-MODE",
+        "criticality": "low",
+        "blocks": [],
+        "tags": [],
+        "question": "In what form did contact with the supplier take place (in person, phone, text, email)? Not established. CRITICALITY PROPOSED low."
+      },
+      {
+        "id": "U4-FREQUENCY",
+        "criticality": "low",
+        "blocks": [],
+        "tags": [],
+        "question": "How often did contact with the supplier occur? Not established. CRITICALITY PROPOSED low."
+      },
+      {
+        "id": "U4-RAISED",
+        "criticality": "high",
+        "blocks": [],
+        "tags": [],
+        "question": "Had scope, cost or performance been raised with the supplier before as_of, and had either party proposed changing the arrangement? NOT ESTABLISHED - awaiting a direct answer. Must not be inferred from the concerns held. CRITICALITY PROPOSED high."
+      },
+      {
+        "id": "U4-RECORDS",
+        "criticality": "medium",
+        "blocks": [],
+        "tags": [],
+        "question": "What records of communications with the supplier were held before as_of? Not established. CRITICALITY PROPOSED medium."
       }
     ]
   },
